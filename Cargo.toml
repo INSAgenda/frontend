@@ -1,9 +1,7 @@
 [package]
-name = "web-front"
+name = "web-app"
 version = "0.1.0"
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-yew = {version = "0.18"}
+yew = "0.18"
