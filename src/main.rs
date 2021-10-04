@@ -1,25 +1,36 @@
+use agenda_parser::Event;
 use chrono::offset::FixedOffset;
 use chrono::Datelike;
 use chrono::TimeZone;
 use wasm_bindgen::{JsCast, JsValue};
 use yew::prelude::*;
+use yew::{
+    format::Nothing,
+    services::fetch::{FetchService, FetchTask, Request, Response},
+};
 
 #[allow(unused_macros)]
 macro_rules! log {
     ($($t:tt)*) => (web_sys::console::log_1(&format_args!($($t)*).to_string().into()))
 }
 
-enum Msg {}
+enum Msg {
+    FetchSuccess(Vec<Event>),
+    FetchFailure(anyhow::Error),
+}
 
 struct App {
     weekstart: i64,
+    events: Vec<Event>,
+    fetch_task: Option<FetchTask>,
+    link: ComponentLink<Self>,
 }
 
 impl Component for App {
     type Message = Msg;
     type Properties = ();
 
-    fn create(_props: Self::Properties, _link: ComponentLink<Self>) -> Self {
+    fn create(_props: Self::Properties, link: ComponentLink<Self>) -> Self {
         let date = chrono::Local::now();
         let date = date.with_timezone(&chrono::offset::FixedOffset::east(2 * 3600));
 
@@ -28,11 +39,25 @@ impl Component for App {
             weekstart += 7 * 86400;
         }
 
-        Self { weekstart }
+        let mut app = Self {
+            weekstart,
+            fetch_task: None,
+            events: Vec::new(),
+            link,
+        };
+        app.new_fetch_task(0..i64::MAX);
+
+        app
     }
 
     fn update(&mut self, msg: Self::Message) -> ShouldRender {
-        match msg {}
+        match msg {
+            Msg::FetchSuccess(events) => {
+                self.events = events;
+                true
+            }
+            Msg::FetchFailure(_) => todo!(),
+        }
     }
 
     fn change(&mut self, _props: Self::Properties) -> ShouldRender {
@@ -61,9 +86,23 @@ impl Component for App {
                 _ => unreachable!(),
             };
 
+            let mut events = Vec::new();
+            for event in &self.events {
+                if (event.start_unixtime as i64) > datetime.timestamp()
+                    && (event.start_unixtime as i64) < datetime.timestamp() + 86400
+                {
+                    events.push(html! {
+                        <div>
+                            {format!("{:?}", event.kind)}
+                        </div>
+                    });
+                }
+            }
+
             days.push(html! {
                 <div>
                     { format!("{} {}", day, month) }
+                    { events }
                 </div>
             });
         }
@@ -73,6 +112,49 @@ impl Component for App {
                 { days }
             </main>
         }
+    }
+}
+
+impl App {
+    fn new_fetch_task(&mut self, time_range: std::ops::Range<i64>) {
+        let request = Request::get(format!(
+            "http://127.0.0.1:8080/get/schedule/Stpi1/E-1/ALL/{}-{}",
+            time_range.start, time_range.end
+        ))
+        .body(Nothing)
+        .expect("Could not build request.");
+
+        let callback = self
+            .link
+            .callback(|response: Response<Result<String, anyhow::Error>>| {
+                if response.status() != 200 {
+                    return Msg::FetchFailure(anyhow::Error::msg(format!(
+                        "Failed request. {:?}",
+                        response.into_body()
+                    )));
+                }
+
+                let body = match response.into_body() {
+                    Ok(body) => body,
+                    Err(e) => {
+                        return Msg::FetchFailure(anyhow::Error::msg(format!(
+                            "Cannot read response body. {:?}",
+                            e
+                        )));
+                    }
+                };
+
+                match serde_json::from_str(&body) {
+                    Ok(results) => Msg::FetchSuccess(results),
+                    Err(e) => Msg::FetchFailure(anyhow::Error::msg(format!(
+                        "Cannot deserialize response. {:?}",
+                        e
+                    ))),
+                }
+            });
+
+        let task = FetchService::fetch(request, callback).expect("failed to start request");
+        self.fetch_task = Some(task);
     }
 }
 
