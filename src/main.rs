@@ -1,5 +1,5 @@
 use agenda_parser::Event;
-use chrono::{offset::FixedOffset, Weekday, Datelike, TimeZone};
+use chrono::{offset::FixedOffset, Weekday, Datelike, TimeZone, Timelike};
 use wasm_bindgen::{JsCast, JsValue};
 use yew::{
     prelude::*,
@@ -77,7 +77,7 @@ impl Component for App {
         let mut days = Vec::new();
         for offset in 0..6 {
             let datetime =
-                FixedOffset::west(2 * 3600).timestamp(self.weekstart + offset * 86400, 0);
+                FixedOffset::east(2 * 3600).timestamp(self.weekstart + offset * 86400, 0);
             let day = datetime.day();
             let month = match datetime.month() {
                 1 => "Janvier",
@@ -110,8 +110,25 @@ impl Component for App {
                 if (event.start_unixtime as i64) > datetime.timestamp()
                     && (event.start_unixtime as i64) < datetime.timestamp() + 86400
                 {
+                    let start_time = FixedOffset::east(2 * 3600).timestamp(event.start_unixtime as i64, 0);
+                    let end_time = FixedOffset::east(2 * 3600).timestamp(event.end_unixtime as i64, 0);
+                    let start_time_is_common = [(8,0), (9,30), (9,45), (11,15), (11,30), (13,0), (15,0), (16,30), (16,45), (18,15)]
+                        .contains(&(start_time.hour(), start_time.minute()));
+                    let end_time_is_common = [(8,0), (9,30), (9,45), (11,15), (11,30), (13,0), (15,0), (16,30), (16,45), (18,15)]
+                        .contains(&(end_time.hour(), end_time.minute()));
+                    let times_are_common = start_time_is_common && end_time_is_common;
+                    
                     events.push(html! {
                         <div>
+                            {
+                                match times_are_common {
+                                    true => html!(),
+                                    false => html! {<>
+                                        {format!("{}h{} - {}h{}", start_time.hour(), start_time.minute(), end_time.hour(), end_time.minute())}
+                                        <br/> 
+                                    </>},
+                                }
+                            }
                             {format!("{:?}", event.kind)}
                         </div>
                     });
