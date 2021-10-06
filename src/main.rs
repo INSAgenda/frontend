@@ -1,10 +1,8 @@
 use agenda_parser::Event;
-use chrono::offset::FixedOffset;
-use chrono::Datelike;
-use chrono::TimeZone;
+use chrono::{offset::FixedOffset, Weekday, Datelike, TimeZone};
 use wasm_bindgen::{JsCast, JsValue};
-use yew::prelude::*;
 use yew::{
+    prelude::*,
     format::Nothing,
     services::fetch::{FetchService, FetchTask, Request, Response},
 };
@@ -99,6 +97,16 @@ impl Component for App {
                 _ => unreachable!(),
             };
 
+            let dayname = match datetime.weekday() {
+                Weekday::Mon => "Lundi",
+                Weekday::Tue => "Mardi",
+                Weekday::Wed => "Mercredi",
+                Weekday::Thu => "Jeudi",
+                Weekday::Fri => "Vendredi",
+                Weekday::Sat => "Samedi",
+                Weekday::Sun => "Dimanche",
+            };
+
             let mut events = Vec::new();
             for event in &self.events {
                 if (event.start_unixtime as i64) > datetime.timestamp()
@@ -114,7 +122,7 @@ impl Component for App {
 
             days.push(html! {
                 <div>
-                    { format!("{} {}", day, month) }
+                    { format!("{} {} {}", dayname, day, month) }
                     { events }
                 </div>
             });
