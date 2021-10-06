@@ -40,8 +40,6 @@ impl Component for App {
             weekstart += 7 * 86400;
         }
 
-        log!("weekstart: {}", weekstart);
-
         let mut app = Self {
             weekstart,
             fetch_task: None,
