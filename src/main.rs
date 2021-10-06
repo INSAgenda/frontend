@@ -17,6 +17,8 @@ macro_rules! log {
 enum Msg {
     FetchSuccess(Vec<Event>),
     FetchFailure(anyhow::Error),
+    PreviousWeek,
+    NextWeek,
 }
 
 struct App {
@@ -34,10 +36,13 @@ impl Component for App {
         let date = chrono::Local::now();
         let date = date.with_timezone(&chrono::offset::FixedOffset::east(2 * 3600));
 
-        let mut weekstart = date.timestamp() - (date.timestamp() + 2 * 3600) % 86400;
+        let daystart = date.timestamp() - (date.timestamp() + 2 * 3600) % 86400;
+        let mut weekstart = daystart - (date.weekday().number_from_monday() as i64 - 1) * 86400;
         if date.weekday().number_from_monday() >= 6 {
             weekstart += 7 * 86400;
         }
+
+        log!("weekstart: {}", weekstart);
 
         let mut app = Self {
             weekstart,
@@ -57,6 +62,14 @@ impl Component for App {
                 true
             }
             Msg::FetchFailure(_) => todo!(),
+            Msg::PreviousWeek => {
+                self.weekstart -= 7 * 86400;
+                true
+            }
+            Msg::NextWeek => {
+                self.weekstart += 7 * 86400;
+                true
+            }
         }
     }
 
@@ -109,7 +122,11 @@ impl Component for App {
 
         html! {
             <main>
-                { days }
+                <button onclick=self.link.callback(|_| Msg::PreviousWeek)>{"Semaine précédente"}</button>
+                <div id="days">
+                    { days }
+                </div>
+                <button onclick=self.link.callback(|_| Msg::NextWeek)>{"Semaine suivante"}</button>
             </main>
         }
     }
@@ -118,7 +135,7 @@ impl Component for App {
 impl App {
     fn new_fetch_task(&mut self, time_range: std::ops::Range<i64>) {
         let request = Request::get(format!(
-            "http://127.0.0.1:8080/get/schedule/Stpi1/E-1/ALL/{}-{}",
+            "http://127.0.0.1:8080/api/schedule/Stpi1/E-1/ALL/{}-{}",
             time_range.start, time_range.end
         ))
         .body(Nothing)
