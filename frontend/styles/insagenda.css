@@ -1,0 +1,44 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arimo', sans-serif;
+}
+
+body{
+    background-color: var(--grey);
+}
+
+a{
+    cursor: pointer;
+}
+
+/* Red button */
+
+.red-button{
+    background-color: var(--red);
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: filter 0.2s;
+}
+.red-button:hover{
+    filter: brightness(0.9);
+}
+.red-button:active{
+    filter: brightness(0.8);
+}
+
+/* Header */
+
+#header-object{
+    width: 100%;
+    max-height: 100px;
+    height: 5vw;
+    min-height: 70px;
+}

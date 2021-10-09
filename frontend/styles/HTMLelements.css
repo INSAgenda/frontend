@@ -1,0 +1,21 @@
+/* Header */
+
+header{
+    background-color: var(--white);
+    max-width: 100vw;
+    max-height: 100px;
+    min-height: 70px;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw 0 4vw;
+}
+
+#header-logo{
+    height: 70%;
+}
+
+#EDT-button{
+    padding: 8px 32px;
+}
