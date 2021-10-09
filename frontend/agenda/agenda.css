@@ -1,0 +1,87 @@
+/* Section calendar */
+
+#calendar{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Section in calendar */
+
+#classes, #option{
+    box-shadow: 0px 0px 7px #00000029;
+    border-radius: 15px;
+    background-color: var(--white);
+    max-height: 831px;
+    height: 80vh;
+}
+
+/* Section classes */
+
+#classes{
+    width: 80%;
+}
+
+/* Section option */
+
+#option{
+    width: 18%;
+}
+
+/* Table */
+
+table{
+    width: 100%;
+    margin: 2vw 0;
+}
+
+tr{
+    display: flex;
+}
+
+td{
+    width: 20%;
+    background-color: var(--grey);
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    margin: 0 5px;
+    /* border-width:2px;  
+    border-style:dotted none;
+    border-color: #00000027; */
+}
+
+.time{
+    width: 42px;
+    font-size: 13px;
+    background-color: transparent;
+    height: 14px;
+    margin: 9px;
+}
+
+.day{
+    background-color: transparent;
+    display: flex;
+    margin: 0 0 10px 0;
+    height: 14px;
+
+}
+
+.table-divider-bar{
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+
+/* For mobile */
+
+@media screen and (max-width: 1280px){
+    #calendar{
+        justify-content: center;
+    }
+    #classes{
+        width: 95%;
+    }
+    #option{
+        display: none;
+    }
+}
