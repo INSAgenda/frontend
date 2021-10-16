@@ -35,13 +35,12 @@
 #left-part-classes{
     display: flex;
     flex-direction: column;
-    margin: 28px 0 0 0;
-    margin: 20px 0 5px 0;
+    margin: 20px 0 0 0;
 }
 
 #left-part-classes span{
     max-width: 70px;
-    min-height: 70px;
+    height: 14.28%;
     font-size: 13px;
 }
 
@@ -51,10 +50,8 @@
     position: absolute;
     width: 99%;
     margin: 0 5px;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 .line{
     height:2px;
@@ -62,8 +59,8 @@
     background-position: bottom;
     background-size: 17px 2px;;
     background-repeat: repeat-x;
+    margin: 105px 0 0 0;
     z-index: 2;
-
 }
 
 #right-part-classes{
@@ -82,6 +79,7 @@
     display: flex;
     justify-content: center;
     margin: 0 5px;
+    align-items: center;
 }
 
 #day-container{
@@ -103,16 +101,54 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     justify-content: center;
+    text-align: center;
     font-size: 0.8em;
-    height: 12.49%;
     cursor: pointer;
-    z-index: 2;
     position: relative;
 }
 .pause{
     cursor: auto;
+}
+
+/* Lesson détails */
+.lesson-details{
+    width: 214px;
+    min-height: 346px;
+    position: absolute;
+    background-color: var(--grey);
+    top: 0;
+    right: -214px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 6px #00000029;
+    z-index: 4;
+    cursor: auto;
+    text-align-last: start;
+    text-align: start;
+}
+.lesson-details-header{
+    height: 36px;
+    background-color: #BFE3BA;
+    border-radius: 15px 15px 0 0;
+    font-size: 1em;
+    font-weight: 500;
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+.lesson-details-content{
+    margin: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.lesson-details-title{
+    font-size: 1.05em;
+}
+.lesson-details-results{
+    margin: 5px 0 8px 3px;
+    color: var(--dark_grey);
+    font-size: 1em;
 }
 
 
@@ -125,7 +161,21 @@
     #classes{
         width: 95%;
     }
+    #classes-content{
+        margin: 36px 10px 25px 10px;
+    }
     #option{
         display: none;
+    }
+    #legend-container span, .day{
+        display: none;
+        max-width: none;
+    }
+    .day-mobile-active{
+        display: flex !important;
+        flex-direction: column;
+    }
+    #line-container{
+        margin: 0;
     }
 }
