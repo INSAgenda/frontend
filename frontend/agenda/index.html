@@ -39,7 +39,8 @@
                 </div>
                 <div id="right-part-classes">
                     <div id="legend-container">
-                        <span class="day-mobile-active">Lundi 3 janvier</span>
+                        <input id="input-date" type="date" value="2021-07-22" min="2021-09-01" max="2021-08-01">
+                        <!-- <span class="day-mobile-active">Lundi 3 janvier</span> -->
                         <span>Mardi 4 janvier</span>
                         <span>Mercredi 5 janvier</span>
                         <span>Jeudi 6 janvier</span>
@@ -101,9 +102,17 @@
             </div>
         </div>
         <div id="option">
-            <h2>test</h2>
+            <div id="option-header">
+                <span>Options</span>
+                <div class="divider-bar-option"></div>
+            </div>
+            <div id="option-content">
+                <span class="option-name">Calendrier :</span>
+                <input type="date" id="start" name="trip-start"
+                    value="2018-07-22"
+                    min="2018-01-01" max="2018-12-31">
+            </div>
         </div>
     </section>
-    <script src="/frontend/agenda/script.js"></script>
 </body>
 </html>
