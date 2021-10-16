@@ -22,470 +22,71 @@
     </section>
     <section id="calendar">
         <div id="classes">
-            <table>
-                <thead>
-                    <!-- Pour la version mobile -->
-                </thead>
-                <tbody>
-                    <tr> 
-                        <td class="time"></td>
-                        <td class="day">Lundi 3 Janvier</td>
-                        <td class="day">mardi 4 janvier</td>
-                        <td class="day">Mercredi 5 janvier</td>
-                        <td class="day">Jeudi 6 janvier</td>
-                        <td class="day">Vendredi 7 janvier</td>
-                        <td class="day">Samedi 8 janvier</td>
-                    </tr>
-                    <tr>
-                        <td class="time">08h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
+            <div id="classes-content">
+                <div id="left-part-classes">
+                    <span>08:00</span>
+                    <span>09:00</span>
+                    <span>10:00</span>
+                    <span>11:00</span>
+                    <span>12:00</span>
+                    <span>13:00</span>
+                    <span>14:00</span>
+                    <span>15:00</span>
+                    <span>16:00</span>
+                    <span>17:00</span>
+                    <span>18:00</span>
+                    <span>19:00</span>
+                </div>
+                <div id="right-part-classes">
+                    <div id="legend-container">
+                        <span>Lundi 3 janvier</span>
+                        <span>Mardi 4 janvier</span>
+                        <span>Mercredi 5 janvier</span>
+                        <span>Jeudi 6 janvier</span>
+                        <span>Vendredi 7 janvier</span>
+                        <span>Samedi 8 janvier</span>
+                    </div>
+                    <div id="day-container">
+                        <div id="line-container">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="day">
                             <div style="background-color: #BFE3BA;" class="event">
                                 <span>Td - Soutien Maths</span>
                                 <span>M. Adioui</span>
                                 <span>DumontDurville - B - Rj - 11</span>
                             </div>
-                        </td>
-                        <td>
-                            <div class="event">
+                            <!-- Pause -->
+                            <div class="event pause" style="height: 2.11%;"></div>
+                            <div title="test" style="background-color: red; height: 12.49%;" class="event">
                                 <span>Td - Soutien Maths</span>
                                 <span>M. Adioui</span>
                                 <span>DumontDurville - B - Rj - 11</span>
                             </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">09h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div> 3 Janvier</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">10h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">11h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">12h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">13h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">14h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="time">15h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="time">16h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="time">17h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="time">18h00</td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="event">
-                                <span>Td - Soutien Maths</span>
-                                <span>M. Adioui</span>
-                                <span>DumontDurville - B - Rj - 11</span>
-                            </div>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="time">19h00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                </tbody>
-            </table>
+                        </div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="option">
             <h2>test</h2>
         </div>
     </section>
 </body>
+<script src="/frontend/agenda/script.js"></script>
 </html>

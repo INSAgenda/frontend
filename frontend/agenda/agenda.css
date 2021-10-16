@@ -14,75 +14,107 @@
     min-height: 80vh;
 }
 
-/* Section classes */
-
-#classes{
-    width: 80%;
-}
-
 /* Section option */
 
 #option{
     width: 18%;
 }
 
-/* Table */
+/* Classes */
 
-table{
-    width: 100%;
-    margin: 2vw 0;
-}
-
-tr{
+#classes-content{
+    margin: 36px 32px 25px 32px;
     display: flex;
 }
 
-td{
-    width: 20%;
-    background-color: var(--grey);
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-    margin: 0 5px;
-    /* border-width:2px;  
-    border-style:dotted none;
-    border-color: #00000027; */
+
+#classes{
+    width: 80%;
 }
 
-.time{
-    width: 42px;
+#left-part-classes{
+    display: flex;
+    flex-direction: column;
+    margin: 28px 0 0 0;
+    margin: 20px 0 5px 0;
+}
+
+#left-part-classes span{
+    max-width: 70px;
+    min-height: 70px;
     font-size: 13px;
-    background-color: transparent;
-    height: 14px;
-    margin: 9px;
+}
+
+/* Lines */
+
+#line-container{
+    position: absolute;
+    width: 99%;
+    margin: 0 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.line{
+    height:2px;
+    background-image: url(/frontend/assets/elements/line-border.svg);
+    background-position: bottom;
+    background-size: 17px 2px;;
+    background-repeat: repeat-x;
+    z-index: 2;
+
+}
+
+#right-part-classes{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+}
+
+#legend-container{
+    display: flex;
+    margin: 0 0 10px 0;
+}
+#legend-container span{
+    max-width: 234px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+#day-container{
+    display: flex;
+    min-height: 742px;
+    height: 100%;
+    position: relative;
 }
 
 .day{
-    background-color: transparent;
-    display: flex;
-    margin: 0 0 10px 0;
-    height: 14px;
-
-}
-
-.table-divider-bar{
+    height: 100%;
     width: 100%;
-    height: 2px;
-    background-color: red;
+    margin: 0 5px;
+    background-color: var(--grey);
+    max-width: 234px;
 }
-
-/* event */
 
 .event{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 0.8em;
-    height: 100%;
-    width: 100%;
     justify-content: center;
+    font-size: 0.8em;
+    height: 12.49%;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
 }
+.pause{
+    cursor: auto;
+}
+
 
 /* For mobile */
 
