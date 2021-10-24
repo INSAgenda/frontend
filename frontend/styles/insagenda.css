@@ -80,3 +80,15 @@ header{
     background-color: var(--red);
     margin: 5px 0 20px 0;
 }
+
+/* Mobile */
+
+@media screen and (max-width: 1280px){
+    .page-title{
+        font-size: 1.3em;  
+    }
+    .divider-bar{
+        height: 4px;
+        width: 85px;
+    }
+}

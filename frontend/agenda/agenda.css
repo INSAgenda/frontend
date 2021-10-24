@@ -71,20 +71,25 @@
 #right-part-classes{
     display: flex;
     flex-direction: column;
-    width: 98%;
+    width: 88%;
 }
 
 #legend-container{
     display: flex;
     margin: 0 0 10px 0;
 }
-#legend-container span{
+#legend-container span, #legend-mobile{
     max-width: 234px;
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 0 5px;
     align-items: center;
+}
+#legend-mobile{
+    display: none;
+    color: black;
+    text-decoration: none;
 }
 
 #day-container{
@@ -278,18 +283,55 @@
     #calendar{
         justify-content: center;
     }
+    #small-calendar{
+        position: absolute;
+        display: flex;
+        top: 1px;
+        left: 1;
+    }
     #classes{
         width: 95%;
     }
     #classes-content{
-        margin: 36px 10px 25px 10px;
+        margin: 20px 10px 25px 10px;
     }
     #option{
         display: none;
     }
+    .lesson-details{
+        right: inherit;
+        top: 107px;
+    }
+    #right-part-classes{
+        width: 100%;
+        margin: 0 32px 0 0;
+    }
+    #classes-arrow-left, #classes-arrow-right{
+        background-image: url(/frontend/assets/elements/red-arrow.svg);
+        height: 18px;
+        width: 11px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #classes-arrow-right{
+        transform: rotate(180deg);
+    }
+    #left-part-classes{
+        margin: 35px 0 0 0;
+    }
+    #legend-container{
+        align-self: center;
+        margin: 0 0 24px 0;
+        width: 100%;
+        justify-content: space-between;
+    }
     #legend-container span, .day{
         display: none;
         max-width: none;
+    }
+    #legend-mobile{
+        display: flex;
     }
     .day-mobile-active{
         display: flex !important;
