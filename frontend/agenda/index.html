@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/frontend/styles/colors.css">
     <link rel="stylesheet" href="/frontend/styles/insagenda.css">
     <link rel="icon" href="../styles/flaticon.ico" />  
+    <link rel="stylesheet" href="/frontend/agenda/agenda.css">
 </head>
 <body>
     <header>
@@ -15,5 +16,171 @@
           <img src="/frontend/assets/elements/webLogo.svg" alt="Insagenda logo">
         </a>
     </header>
+    <section class="section-page-title">
+        <h2 class="page-title">Mon emploi du temps</h2>
+        <div class="divider-bar"></div>
+    </section>
+    <section id="calendar">
+        <div id="classes">
+            <div id="classes-content">
+                <div id="left-part-classes">
+                    <span>08:00</span>
+                    <span>09:45</span>
+                    <span>11:30</span>
+                    <span>13:15</span>
+                    <span>15:00</span>
+                    <span>16:45</span>
+                    <span>18:30</span>
+                </div>
+                <div id="right-part-classes">
+                    <div id="legend-container">
+                        <a id="classes-arrow-left"></a>
+                        <a id="legend-mobile">Lundi 3 janvier</a>
+                        <a id="classes-arrow-right"></a>
+                        <span>Lundi 3 janvier</span>
+                        <span>Mardi 4 janvier</span>
+                        <span>Mercredi 5 janvier</span>
+                        <span>Jeudi 6 janvier</span>
+                        <span>Vendredi 7 janvier</span>
+                        <span>Samedi 8 janvier</span>
+                    </div>
+                    <div id="day-container">
+                        <div id="line-container">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="day day-mobile-active">
+                            <div style="background-color: #BFE3BA; height: 14.22%;" class="event">
+                                <span class="name">Td - Soutien Maths</span>
+                                <span class="teacher">M. Adioui</span>
+                                <span>Dumont Durville - B - Rj - 11</span>
+                                <!-- div with more info about the lesson  -->
+                                <div class="lesson-details">
+                                    <div class="lesson-details-header">
+                                        <span>01h00 - Lundi 3 janvier</span>
+                                    </div>
+                                    <div class="lesson-details-content">
+                                        <span class="lesson-details-title">Horaires :</span>
+                                        <span id="schedule" class="lesson-details-results">08h00 - 08h55</span>
+                                        <span class="lesson-details-title">Matière :</span>
+                                        <span id="lesson" class="lesson-details-results">Td - Soutien Maths</span>
+                                        <span class="lesson-details-title">Professeur :</span>
+                                        <span id="teacher" class="lesson-details-results">M. Adioui</span>
+                                        <span class="lesson-details-title">Bâtiment :</span>
+                                        <span id="building" class="lesson-details-results">Dumont Durville</span>
+                                        <span class="lesson-details-title">Zone du bâtiment :</span>
+                                        <span id="zoned" class="lesson-details-results">Zone B</span>
+                                        <span class="lesson-details-title">Niveau :</span>
+                                        <span id="stage" class="lesson-details-results">RJ</span>
+                                        <span class="lesson-details-title">Numéro de salle :</span>
+                                        <span id="room" class="lesson-details-results">11</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pause -->
+                            <div class="event pause" style="height: 2.11%;"></div>
+                            <div title="test" style="background-color: red; height: 12.49%;" class="event">
+                                <span>Td - Soutien Maths</span>
+                                <span>M. Adioui</span>
+                                <span>Dumont Durville - B - Rj - 11</span>
+                            </div>
+                        </div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="option">
+            <div id="option-header">
+                <span>Options</span>
+                <div class="divider-bar-option"></div>
+            </div>
+            <div id="option-content">
+                <span class="option-name">Calendrier :</span>
+            </div>
+            <!-- Calendar -->
+            <div id="small-calendar">
+                <div id="calendar-header">
+                    <button class="calendar-button" id="calendar-before"></button>
+                    <span id="calendar-title">Janvier 2022</span>
+                    <button class="calendar-button" id="calendar-after"></button>
+                </div>
+                <div id="calendar-content">
+                    <div id="calendar-days">
+                        <span>Lun</span>
+                        <span>Mar</span>
+                        <span>Mer</span>
+                        <span>Jeu</span>
+                        <span>Ven</span>
+                        <span>Sam</span>
+                        <span>Dim</span>
+                    </div>
+                    <div id="week1" class="calendar-week">
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                    </div>
+                    <div id="week2" class="calendar-week">
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                    </div>
+                    <div id="week3" class="calendar-week">
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                    </div>
+                    <div id="week4" class="calendar-week">
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                    </div>
+                    <div id="week5" class="calendar-week">
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                    </div>
+                    <div id="week6" class="calendar-week">
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                        <span class="calendar-case"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/frontend/agenda/script.js"></script>
 </body>
 </html>
