@@ -81,6 +81,40 @@ header{
     margin: 5px 0 20px 0;
 }
 
+/* Input Styles */
+
+.input{
+    max-width: 627px;
+    max-height: 64px;
+    font-size: 15px;
+    border-radius: 34px;
+    padding: 0 33px;
+    border: none;
+}
+.input::placeholder{
+    color: var(--dark_grey);
+    opacity: 0.6;
+}
+
+.form-button{
+    max-width: 240px;
+    max-height: 50px;
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    font-size: 19px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+.form-button:hover{
+    filter: brightness(0.9);
+}
+.form-button:active{
+    filter: brightness(0.8);
+}
+
 /* Mobile */
 
 @media screen and (max-width: 1280px){
