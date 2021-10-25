@@ -71,7 +71,7 @@
 #right-part-classes{
     display: flex;
     flex-direction: column;
-    width: 88%;
+    width: 100%;
 }
 
 #legend-container{
