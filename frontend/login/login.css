@@ -1,0 +1,34 @@
+/* login-section */
+
+#login-section{
+    display: flex;
+    margin: 3vw 0 0 0;
+}
+
+/* All sections */
+#left-part, #right-part{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 75vh; 
+}
+
+.login-title{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.login-subtitle{
+    font-size: 0.9em;
+}
+
+#login-divider-bar{
+    background-color: var(--red);
+    width: 5px;
+    border-radius: 3px;
+}
+
+/* Section left-part */
+
+
+
