@@ -41,6 +41,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: -webkit-fill-available;
 }
 
 /* Input */
@@ -65,8 +66,15 @@
     display: flex;
     border-radius: 32px;
     overflow: hidden;
+    margin: 15px 0;
 }
 
+.language-checkbox:first-child{
+    border-radius: 32px 0 0 32px;
+}
+.language-checkbox:last-child{
+    border-radius: 0 32px 32px 0;
+}
 .language-checkbox{
     width: 20%;
     height: 100%;
@@ -77,10 +85,27 @@
     text-align: center;
     border: solid 1px var(--grey);
     color: #44444499;
+    padding: 0 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: filter 0.2s, background-color 0.2s;
 }
-.language-checkbox input{
+.language-checkbox:hover{
+    filter: brightness(0.9);
+}
+.language-checkbox input, .group-checkbox input{
     display: none;
 }
+
+.group-checkbox{
+    width: 50%;
+}
+
+label > input{
+    background-color: red;
+}
+
+  
 
 /* Section left-part */
 

@@ -99,7 +99,7 @@ header{
 .form-button{
     max-width: 240px;
     max-height: 50px;
-    background-color: red;
+    background-color: var(--red);
     border: none;
     border-radius: 25px;
     font-size: 19px;
