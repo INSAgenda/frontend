@@ -97,7 +97,7 @@ header{
 }
 
 .form-button{
-    max-width: 240px;
+    min-width: 240px;
     max-height: 50px;
     background-color: var(--red);
     border: none;
@@ -107,6 +107,7 @@ header{
     font-weight: 400;
     cursor: pointer;
     transition: filter 0.2s;
+    padding: 0 43px;
 }
 .form-button:hover{
     filter: brightness(0.9);
