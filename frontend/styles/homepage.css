@@ -1,0 +1,65 @@
+/* Start section */
+#start-page{
+    width: 100%;
+    height: 90vh;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 3vh 0;
+}
+
+#start-page-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    width: 90%;
+    
+}
+
+#welcome{
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+}
+
+#welcome img{
+    margin: 0 13px;
+    max-width: 180px;
+    width: 25%;
+}
+
+#welcome-message{
+    font-size: 4em;
+    font-weight: 500;
+    color: var(--calendar-text);
+}
+
+#acces-button{
+    padding: 12px 32px;
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+#description{
+    max-width: 623px;
+    font-size: 2em;
+    font-weight: 400;
+    color: var(--calendar-text);
+}
+#acces-button{
+    margin: 41px auto 0 auto;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 1280px){
+    #welcome-message{
+        font-size: 2.5em;
+    }
+    #description{
+        font-size: 1.5em;
+    }
+}
