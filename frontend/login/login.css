@@ -41,7 +41,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: -webkit-fill-available;
 }
 
 /* Input */
@@ -50,15 +49,17 @@
     width: 78%;
     height: 10vw;
     margin: 15px 0;
+    min-height: 42px;
 }
 
 .form-button{
     height: 100%;
     margin: 15px 0;
+    min-height: 38px;
 }
 
 .checkbox-content{
-    width: 78%;
+    width: 89%;
     height: 100%;
     max-width: 693px;
     max-height: 64px;
@@ -66,6 +67,7 @@
     border-radius: 32px;
     overflow: hidden;
     margin: 15px 0;
+    min-height: 42px;
 }
 
 .language-checkbox:first-child{
@@ -87,6 +89,7 @@
     padding: 0 10px;
     cursor: pointer;
     user-select: none;
+    font-size: 15px;
     transition: filter 0.2s, background-color 0.2s;
 }
 .language-checkbox:hover{
@@ -98,15 +101,45 @@
 
 .group-checkbox{
     width: 50%;
+    justify-content: start;
+    padding: 0 26px;
 }
 
-label > input{
+input:checked + .language-checkbox {
     background-color: red;
 }
 
   
 
-/* Section left-part */
+/* Mobile */
 
-
+@media screen and (max-width: 1280px){
+    #login-section{
+        flex-direction: column;
+    }
+    #left-part, #right-part{
+        width: 100%;
+        margin: 44px 0;
+        height: auto;
+    }
+    .login-title{
+        text-align: center;   
+    }
+    #login-divider-bar{
+        height: 3px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .checkbox-content{
+        width: 95%;
+    }
+    .language-checkbox{
+        font-size: 12px;    
+        height: auto;
+        min-height: 42px;
+    }
+    .login-input-content{
+        margin: 6% 0;
+    }
+}
 
