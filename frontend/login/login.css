@@ -23,9 +23,11 @@
 .login-title{
     font-size: 1.5em;
     font-weight: 500;
+    color: var(--title-color);
 }
 .login-subtitle{
     font-size: 0.9em;
+    color: var(--title-color);
 }
 
 #login-divider-bar{
@@ -50,6 +52,8 @@
     height: 10vw;
     margin: 15px 0;
     min-height: 42px;
+    background-color: var(--input-color);
+    color: var(--input-text);
 }
 
 .form-button{
@@ -80,12 +84,12 @@
     width: 20%;
     height: 100%;
     display: flex;
-    background-color: var(--white);
+    background-color: var(--input-color);
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: solid 1px var(--grey);
-    color: #44444499;
+    border: solid 1px var(--background);
+    color: var(--input-text);
     padding: 0 10px;
     cursor: pointer;
     user-select: none;
