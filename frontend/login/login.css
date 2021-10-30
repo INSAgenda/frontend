@@ -1,0 +1,145 @@
+/* login-section */
+
+#login-section{
+    display: flex;
+    margin: 3vw 0 0 0;
+}
+
+/* All sections */
+#left-part, #right-part{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh; 
+}
+
+.login-title-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-title{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.login-subtitle{
+    font-size: 0.9em;
+}
+
+#login-divider-bar{
+    background-color: var(--red);
+    width: 5px;
+    border-radius: 3px;
+}
+
+.login-input-content{
+    width: 100%;
+    min-height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Input */
+
+.input{
+    width: 78%;
+    height: 10vw;
+    margin: 15px 0;
+    min-height: 42px;
+}
+
+.form-button{
+    height: 100%;
+    margin: 15px 0;
+    min-height: 38px;
+}
+
+.checkbox-content{
+    width: 89%;
+    height: 100%;
+    max-width: 693px;
+    max-height: 64px;
+    display: flex;
+    border-radius: 32px;
+    overflow: hidden;
+    margin: 15px 0;
+    min-height: 42px;
+}
+
+.language-checkbox:first-child{
+    border-radius: 32px 0 0 32px;
+}
+.language-checkbox:last-child{
+    border-radius: 0 32px 32px 0;
+}
+.language-checkbox{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    background-color: var(--white);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: solid 1px var(--grey);
+    color: #44444499;
+    padding: 0 10px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 15px;
+    transition: filter 0.2s, background-color 0.2s;
+}
+.language-checkbox:hover{
+    filter: brightness(0.9);
+}
+.language-checkbox input, .group-checkbox input{
+    display: none;
+}
+
+.group-checkbox{
+    width: 50%;
+    justify-content: start;
+    padding: 0 26px;
+}
+
+input:checked + .language-checkbox {
+    background-color: red;
+}
+
+  
+
+/* Mobile */
+
+@media screen and (max-width: 1280px){
+    #login-section{
+        flex-direction: column;
+    }
+    #left-part, #right-part{
+        width: 100%;
+        margin: 44px 0;
+        height: auto;
+    }
+    .login-title{
+        text-align: center;   
+    }
+    #login-divider-bar{
+        height: 3px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .checkbox-content{
+        width: 95%;
+    }
+    .language-checkbox{
+        font-size: 12px;    
+        height: auto;
+        min-height: 42px;
+    }
+    .login-input-content{
+        margin: 6% 0;
+    }
+}
+
