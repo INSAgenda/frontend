@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: var(--grey);
+    background-color: var(--background);
 }
 
 a{
@@ -37,7 +37,7 @@ a{
 /* Header */
 
 header{
-    background-color: var(--white);
+    background-color: var(--header-color);
     max-width: 100vw;
     max-height: 100px;
     min-height: 70px;
@@ -71,6 +71,7 @@ header{
 .page-title{
     font-weight: bold;
     font-size: 1.5em;
+    color: var(--title-color);
 }
 
 .divider-bar{
@@ -92,8 +93,7 @@ header{
     border: none;
 }
 .input::placeholder{
-    color: var(--dark_grey);
-    opacity: 0.6;
+    color: var(--input-text);
 }
 
 .form-button{

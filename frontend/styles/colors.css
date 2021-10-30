@@ -6,4 +6,25 @@
     --dark_grey: #444444;
     --grey: #F0F0F0;
     --white: #FFFFFF;
+    --background: #F0F0F0;
+    --title-color: #000000;
+    --header-color: #FFFFFF;
+    --input-color: #FFFFFF;
+    --input-text: #44444499;
+    --calendar-color: #FFFFFF;
+    --calendar-text: #444444;
+}
+
+/* Dark-thème */
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --background: #2E2E2E;
+        --title-color: #FFFFFF;
+        --header-color:#242424;
+        --input-color: #242424;
+        --input-text: #ffffff99;
+        --calendar-color: #242424;
+        --calendar-text: #E3E3E3;
+    }
 }

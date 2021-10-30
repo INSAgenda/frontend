@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ins'agenda - Login</title>
-    <link rel="stylesheet" href="/frontend/styles/colors.css">
-    <link rel="stylesheet" href="/frontend/styles/insagenda.css">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/insagenda.css">
     <link rel="icon" href="../styles/flaticon.ico" />  
-    <link rel="stylesheet" href="/frontend/login/login.css">
+    <link rel="stylesheet" href="../login/login.css">
 </head>
 <body>
     <header>
-        <a id="header-logo" href="/frontend/index.html">
-          <img src="/frontend/assets/elements/webLogo.svg" alt="Insagenda logo">
+        <a id="header-logo" href="../index.html">
+          <img src="../assets/elements/webLogo.svg" alt="Insagenda logo">
         </a>
     </header>
     <section class="section-page-title">
@@ -21,7 +21,7 @@
         <div class="divider-bar"></div>
     </section>
     <section id="login-section">
-        <section id="left-part">
+        <section class="login-section">
             <div class="login-title-content">
                 <span class="login-title">S’identifier avec son Email étudiant</span>
                 <span class="login-subtitle">Un accès plus rapide.</span>    
@@ -32,7 +32,7 @@
             </form>
         </section>
         <div id="login-divider-bar"></div>
-        <section id="right-part">
+        <section class="login-section">
             <div class="login-title-content">
                 <span class="login-title">Rester anonyme</span>
                 <span class="login-subtitle">Un accès anonyme.</span>    
@@ -44,7 +44,7 @@
                     <label title="Allemand" class="language-checkbox"><input name="lang" type="radio">Allemand</label>
                     <label title="Allemand débutant" class="language-checkbox"><input name="lang" type="radio">Allemand débutant</label>
                     <label title="Espagnol" class="language-checkbox"><input name="lang" type="radio">Espagnol</label>
-                    <label title="Espagnol Débutant" class="language-checkbox"><input name="lang" type="radio">Espagnol Débutant</label>
+                    <label title="Espagnol débutant" class="language-checkbox"><input name="lang" type="radio">Espagnol débutant</label>
                     <label title="Français langue étrangère" class="language-checkbox"><input name="lang" type="radio">Français langue étrangère</label>
                 </div>
                 <div class="checkbox-content">
@@ -55,6 +55,6 @@
             </form>
         </section>    
     </section>
-    <script src="/frontend/login/script.js"></script>
+    <script src="../login/script.js"></script>
 </body>
 </html>

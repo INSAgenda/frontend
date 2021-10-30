@@ -6,12 +6,13 @@
 }
 
 /* All sections */
-#left-part, #right-part{
+.login-section{
     width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 75vh; 
+    min-height: 400px;
 }
 
 .login-title-content{
@@ -23,9 +24,11 @@
 .login-title{
     font-size: 1.5em;
     font-weight: 500;
+    color: var(--title-color);
 }
 .login-subtitle{
     font-size: 0.9em;
+    color: var(--title-color);
 }
 
 #login-divider-bar{
@@ -41,15 +44,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 90%;
 }
 
 /* Input */
 
 .input{
     width: 78%;
-    height: 10vw;
+    height: 10vh;
     margin: 15px 0;
     min-height: 42px;
+    background-color: var(--input-color);
+    color: var(--input-text);
 }
 
 .form-button{
@@ -60,7 +66,7 @@
 
 .checkbox-content{
     width: 89%;
-    height: 100%;
+    height: 10vh;
     max-width: 693px;
     max-height: 64px;
     display: flex;
@@ -80,12 +86,12 @@
     width: 20%;
     height: 100%;
     display: flex;
-    background-color: var(--white);
+    background-color: var(--input-color);
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: solid 1px var(--grey);
-    color: #44444499;
+    border: solid 1px var(--background);
+    color: var(--input-text);
     padding: 0 10px;
     cursor: pointer;
     user-select: none;
@@ -117,10 +123,11 @@ input:checked + .language-checkbox {
     #login-section{
         flex-direction: column;
     }
-    #left-part, #right-part{
+    .login-section{
         width: 100%;
         margin: 44px 0;
         height: auto;
+        min-height: 0;
     }
     .login-title{
         text-align: center;   
