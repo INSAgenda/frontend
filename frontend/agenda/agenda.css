@@ -219,7 +219,7 @@
 }
 
 .calendar-button{
-    background-image: url(/frontend/assets/elements/calendar-arrow.png.svg);
+    background-image: url(/frontend/assets/elements/calendar-arrow.svg);
     height: 15px;
     width: 9px;
     border: none;
