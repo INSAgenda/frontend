@@ -50,9 +50,9 @@ function calendrier(year, month) {
     let cld = [{dayStart : 2, length: 31, year: 2020, month: "Janvier"}]
 
     for (let i = 0; i < monthNb - 1; i++) {
-        let yearSimulé = 2020 + Math.floor(i / 12)
-        const monthsSimuleLongueur = [31, getFévrierLength(yearSimulé), 31, 30, 31, 30, 31,31, 30, 31, 30, 31]
-        let monthSimuleIndex = (i + 1) - (yearSimulé - 2020) * 12
+        let yearSimule = 2020 + Math.floor(i / 12)
+        const monthsSimuleLongueur = [31, getFebruaryLength(yearSimule), 31, 30, 31, 30, 31,31, 30, 31, 30, 31]
+        let monthSimuleIndex = (i + 1) - (yearSimule - 2020) * 12
 
         cld[i + 1] = {
             dayStart: (cld[i].dayStart + monthsSimuleLongueur[monthSimuleIndex - 1]) % 7,
@@ -78,7 +78,7 @@ function calendrier(year, month) {
 }
 calendrier(year, month)
 
-function getFévrierLength(year) {
+function getFebruaryLength(year) {
     if (year % 4 === 0) return 29
     else return 28
 }
