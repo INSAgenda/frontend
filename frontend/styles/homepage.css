@@ -94,7 +94,9 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 200px 50px;}
+    margin: 200px 50px;
+}
+
 .description-title{
     font-weight: bold;
     font-size: 2em;
@@ -106,6 +108,9 @@
     font-size: 1.1em;
     text-align: end;
     color: var(--black-homepage);
+}
+.description:nth-of-type(2) .description-title, .description:nth-of-type(2) .description-text{
+    text-align: start;
 }
 
 /* Mobile */
