@@ -13,6 +13,7 @@
     --input-text: #44444499;
     --calendar-color: #FFFFFF;
     --calendar-text: #444444;
+    --black-homepage: #222222;
 }
 
 /* Dark-thème */
@@ -26,5 +27,6 @@
         --input-text: #ffffff99;
         --calendar-color: #242424;
         --calendar-text: #E3E3E3;
+        --black-homepage: #E3E3E3;
     }
 }

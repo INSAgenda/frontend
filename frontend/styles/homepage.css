@@ -100,10 +100,12 @@
     font-size: 2em;
     text-align: end;
     margin: 0 0 20px 0;
+    color: var(--black-homepage);
 }
 .description-text{
     font-size: 1.1em;
     text-align: end;
+    color: var(--black-homepage);
 }
 
 /* Mobile */
