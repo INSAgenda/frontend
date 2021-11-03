@@ -10,36 +10,36 @@ const monthName = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juill
 const UP_MONTH = 'upMonth';
 const DOWN_MONTH = 'downMonth';
 
-function CALENDRIER_REDUCER(action){
+function CALENDRIER_REDUCER(action) {
     switch (action) {
         case UP_MONTH:
             if (month < 12) month++
-            else {
-                year++
-                month = 1
-            }
+                else {
+                    year++
+                    month = 1
+                }
             break;
 
         case DOWN_MONTH:
             if (month > 0) month--
-            else{
-                year--
-                month = 12
-            }
+                else {
+                    year--
+                    month = 12
+                }
             break;
-        
+
         default:
             break;
     }
     calendrier(year, month)
 }
 
-document.getElementById('calendar-before').onclick = function(){
+document.getElementById('calendar-before').onclick = function() {
     CALENDRIER_REDUCER(DOWN_MONTH)
     console.log(month)
 }
 
-document.getElementById('calendar-after').onclick = function(){
+document.getElementById('calendar-after').onclick = function() {
     CALENDRIER_REDUCER(UP_MONTH)
     console.log(month)
 }
@@ -47,11 +47,11 @@ document.getElementById('calendar-after').onclick = function(){
 function calendrier(year, month) {
     const monthNb = month + 12 * (year - 2020)
 
-    let cld = [{dayStart : 2, length: 31, year: 2020, month: "Janvier"}]
+    let cld = [{ dayStart: 2, length: 31, year: 2020, month: "Janvier" }]
 
     for (let i = 0; i < monthNb - 1; i++) {
         let yearSimulé = 2020 + Math.floor(i / 12)
-        const monthsSimuleLongueur = [31, getFévrierLength(yearSimulé), 31, 30, 31, 30, 31,31, 30, 31, 30, 31]
+        const monthsSimuleLongueur = [31, getFévrierLength(yearSimulé), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         let monthSimuleIndex = (i + 1) - (yearSimulé - 2020) * 12
 
         cld[i + 1] = {
