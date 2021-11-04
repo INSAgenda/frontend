@@ -67,6 +67,7 @@
     display: flex;
     justify-content: center;
     min-height: 500px;
+    align-self: center;
 }
 .parallelogramme img{
     transform: skew(13deg); 
@@ -126,6 +127,11 @@
     .description{
         margin: -8vh 86px;
         width: 70%;
+        margin: -10vh 30px 0 auto;
+        max-width: 374px;
+    }
+    .section-description:nth-of-type(3) .description{
+        margin: 0 auto -10vh 30px;
     }
     .section-description{
         flex-direction: column;
@@ -143,14 +149,29 @@
         transform: skew(-42deg) translate(-28vh,0px);
         height: 50vh;
         width: 100%;
+        margin: 0 85px 0 0;
     }
     .parallelogramme img{
-        transform: skew(42deg); 
+        -webkit-transform: skew(42deg) translate(28vh,0px);
+        -moz-transform: skew(42deg) translate(28vh,0px);
+        -o-transform: skew(42deg) translate(28vh,0px);
+        transform: skew(42deg) translate(28vh,0px);
     }
     .section-description:nth-of-type(3) .parallelogramme{
         -webkit-transform: skew(-42deg) translate(28vh,0px);
         -moz-transform: skew(-42deg) translate(28vh,0px);
         -o-transform: skew(-42deg) translate(28vh,0px);
         transform: skew(-42deg) translate(28vh,0px);
+        margin: 0 0 0 85px;
+    }
+    .section-description:nth-of-type(3) .parallelogramme img{
+        -webkit-transform: skew(42deg) translate(-28vh,0px);
+        -moz-transform: skew(42deg) translate(-28vh,0px);
+        -o-transform: skew(42deg) translate(-28vh,0px);
+        transform: skew(42deg) translate(-28vh,0px);
+    }
+    .section-description:nth-of-type(3){
+        flex-direction: column-reverse;
+        justify-content: flex-end;
     }
 }
