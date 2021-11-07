@@ -34,6 +34,34 @@ a{
     filter: brightness(0.8);
 }
 
+/* White button */
+
+.white-button{
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--red);
+    font-weight: bold;
+    border-radius: 25px;
+    min-width: 240px;
+    max-height: 50px;
+    height: 12vw;
+    min-height: 38px;
+    transition: filter 0.2s;
+    border: 2px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    margin: 15px 0;
+    -webkit-appearance: none;
+}
+.white-button:hover{
+    filter: brightness(0.9);
+}
+.white-button:active{
+    filter: brightness(0.8);
+}
+
 /* Header */
 
 header{
@@ -90,17 +118,29 @@ header{
     font-size: 16px;
     border-radius: 34px;
     padding: 0 33px;
-    border: none;
+    border: 1px solid transparent;
+    outline: none;
 }
 .input::placeholder{
     color: var(--input-text);
 }
+
+/*
+
+.input:invalid{
+    border: 1px solid var(--red);
+}
+
+.input:valid:focus:not(:placeholder-shown){
+    border: 1px solid #28a745;
+} */
 
 .form-button{
     min-width: 240px;
     max-height: 50px;
     background-color: var(--red);
     border: none;
+    -webkit-appearance: none;
     border-radius: 25px;
     font-size: 19px;
     color: white;
@@ -108,6 +148,7 @@ header{
     cursor: pointer;
     transition: filter 0.2s;
     padding: 0 43px;
+    font-weight: bold;
 }
 .form-button:hover{
     filter: brightness(0.9);

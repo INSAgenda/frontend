@@ -27,10 +27,25 @@
             <span class="login-subtitle">Un accès plus rapide.</span>    
         </div>
         <form class="login-input-content" action="">
-            <input id="email-input" class="input" placeholder="prenom.nom@insa-rouen.fr" type="email">
-            <input class="input" placeholder="Mot de passe" type="password">
+            <!-- Input email -->
+            <div class="input-container">
+                <input id="email-input" class="input" placeholder="prenom.nom@insa-rouen.fr" type="email">
+                <!-- Error message Email -->
+                <span class="error-message-text">Veuillez entrer une adresse email valide</span>    
+            </div>
+            <!-- Input password -->
+            <div class="input-container">
+                <input class="input" placeholder="Mot de passe" type="password">
+                <!-- Error message Password -->
+                <span class="error-message-text">Veuillez entrer un mot de passe valide</span>    
+            </div>
+            <!-- Password forget -->
+            <a title="Mot de passe oublié ?" class="forget-password" href="#">Mot de passe oublié ?</a>
             <input type="button" title="Continuer" value="Continuer" class="form-button">
         </form>
+        <!-- Another possibility -->
+        <span class="possibility-title">Vous n’avez pas encore de compte ?</span>
+        <a title="Créer un compte" class="white-button" href="#">Créer un compte</a>
     </section>
     <script src="../login/script.js"></script>
 </body>
