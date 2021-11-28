@@ -15,7 +15,7 @@
     --calendar-text: #444444;
 }
 
-/* Dark-thème */
+/* Dark theme */
 
 @media (prefers-color-scheme: dark) {
     :root{
