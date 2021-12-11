@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="50 245.928 218.69 229.072" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="color-0" bx:pinned="true">
+      <title>Background</title>
+      <stop style="stop-color: rgb(233, 51, 41);"/>
+    </linearGradient>
+    <linearGradient id="color-1" bx:pinned="true">
+      <title>Inside</title>
+      <stop style="stop-color: rgb(240, 240, 240);"/>
+    </linearGradient>
+  </defs>
+  <circle style="fill: url(#color-0);" cx="231.19" cy="437.5" r="37.5" bx:origin="-2.582533 -5.333333"/>
+  <rect x="169.01" y="353.651" width="170" height="75" style="fill: url(#color-0);" transform="matrix(-0.422618, 0.906308, -0.906308, -0.422618, 585.275024, 295.560028)"/>
+  <circle style="fill: url(#color-0);" cx="159.345" cy="283.428" r="37.5" bx:origin="-1.6246 -3.27904"/>
+  <circle style="fill: url(#color-0);" cx="87.5" cy="437.5" r="37.5" bx:origin="-0.666667 -5.333333"/>
+  <rect x="54.449" y="241.87" width="170" height="75" style="fill: url(#color-0);" transform="matrix(0.422618, 0.906308, -0.906308, 0.422618, 389.529236, 116.013306)" bx:origin="-1.907146 0.828455"/>
+  <rect style="fill: url(#color-1);" transform="matrix(0.422618, 0.906308, -0.906308, 0.422618, 427.915802, -1.972605)" x="145.158" y="351.523" width="190" height="25"/>
+  <rect style="fill: url(#color-0);" transform="matrix(0.422618, 0.906308, -0.906308, 0.422618, 261.665344, 72.179283)" x="148.214" y="175.761" width="194" height="12.5"/>
+  <circle style="fill: url(#color-1);" cx="159.345" cy="283.428" r="12.5"/>
+  <rect style="fill: url(#color-1);" transform="matrix(-0.422618, 0.906308, -0.906308, -0.422618, 523.914124, 320.158722)" x="120.784" y="333.435" width="192" height="25"/>
+  <rect x="239.182" y="448" width="13.645" height="13" style="fill: url(#color-0);"/>
+  <rect x="65.217" y="448" width="41.31" height="15" style="fill: url(#color-0);"/>
+  <rect x="119.253" y="350.293" width="63.618" height="12.5" style="fill: url(#color-1);"/>
+  <rect x="213.344" y="437.968" width="22.645" height="25.581" style="fill: url(#color-0);"/>
+</svg>
