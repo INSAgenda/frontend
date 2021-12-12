@@ -17,20 +17,37 @@ a{
     cursor: pointer;
 }
 
-/* Red button */
+/* Buttons */
 
-.red-button{
-    background-color: var(--red);
+.red-button, .white-button {
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 2rem;
+    border-radius: 1rem;
     text-decoration: none;
-    color: white;
     font-weight: bold;
-    border-radius: 20px;
+    text-align: center;
     transition: filter 0.2s;
 }
-.red-button:hover{
+
+.red-button {
+    background-color: var(--red);
+    color: white;
+}
+
+.white-button {
+    height: calc(2rem - 4px);
+    line-height: calc(2rem - 4px);
+    background-color: var(--background);
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
+.red-button:hover, .white-button:hover {
     filter: brightness(0.9);
 }
-.red-button:active{
+
+.red-button:active, .white-button:active {
     filter: brightness(0.8);
 }
 
@@ -38,17 +55,14 @@ a{
 
 header{
     background-color: var(--header-color);
-    max-width: 100vw;
-    max-height: 100px;
-    min-height: 70px;
     height: 3vw;
+    padding: 0 4vw 0 4vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 4vw 0 4vw;
 }
 
-#header-logo{
+#header-logo {
     height: 70%;
     user-select: none;
 }
@@ -84,6 +98,8 @@ header{
 
 /* Input Styles */
 
+/*
+THERE ARE FUCKING CONFLICTS WITH THESE THINGS
 .input{
     max-width: 627px;
     max-height: 64px;
@@ -114,7 +130,7 @@ header{
 }
 .form-button:active{
     filter: brightness(0.8);
-}
+}*/
 
 /* Mobile */
 
