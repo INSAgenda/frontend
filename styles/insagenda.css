@@ -96,6 +96,55 @@ header{
     margin: 5px 0 20px 0;
 }
 
+/* Labeled input */
+
+.labeled-input {
+    position: relative;
+    margin-top: 1rem;
+    width: 100%;
+    min-width: 20rem;
+}
+
+.labeled-input>input {
+    width: calc(100% - 3rem);
+    height: 3rem;
+    padding: 0 1.5rem;
+    border-radius: 1.5rem;
+    display: block;
+    background-color: var(--input-color);
+    color: var(--faint-text);
+    border: none;
+    outline: none;
+}
+
+.labeled-input>label {
+    position: absolute;
+    bottom: 0;
+    line-height: 3rem;
+    padding-left: 1.5rem;
+    display: block;
+    color: var(--faint-text);
+    font-size: .9rem;
+    transition: .3s;
+}
+
+.labeled-input>input::placeholder {
+    color: transparent;
+}
+
+.labeled-input>input:focus ~ label {
+    bottom: 1.5rem;
+    color: var(--text);
+}
+
+.labeled-input>input:focus {
+    color: var(--text);
+}
+
+.labeled-input>input:not(:placeholder-shown) ~ label {
+    bottom: 1.5rem;
+}
+
 /* Input Styles */
 
 /*
