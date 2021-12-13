@@ -39,7 +39,6 @@ form {
 #forgotten-password-link {
     align-self: flex-end;
     color: var(--red);
-    margin-bottom: 1.5rem;
 }
 
 #register-link {
@@ -57,4 +56,8 @@ form {
 .white-button {
     width: calc(40% - 4px);
     min-width: calc(10rem - 4px);
+}
+
+#submit-button {
+    margin-top: 1.5rem;
 }

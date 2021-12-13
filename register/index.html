@@ -2,20 +2,44 @@
 <html>
 
 <head>
-    <title>INSAgenda - Register</title>
+    <title>Register - INSAgenda</title>
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/insagenda.css">
+    <link rel="icon" href="../styles/flaticon.ico" />  
+    <link rel="stylesheet" href="../login/login-and-register.css">
 </head>
 
 <body>
-    <form>
-        <label for="email-input">Email :</label><br/>
-        <input type="text" placeholder="email" id="email-input" /><br/>
-        <label for="password-input1">Password :</label><br/>
-        <input type="password" id="password-input1" /><br/>
-        <label for="password-input2">Repeat password :</label><br/>
-        <input type="password" id="password-input2" /><br/>
-        <button type="button" id="submit-button">Register</button>
-        <div id="error-message" style="display: none;"></div>
-    </form>
+    <header>
+        <div id="header-logo"><img src="../assets/logo/logo.svg"/></div>
+    </header>
+
+    <main>
+        <h1 class="login-title">Inscription</h1>
+        <form>
+            <div class="labeled-input">
+                <input type="text" placeholder="email" id="email-input" autocomplete=off />
+                <label for="email-input">Email</label>
+            </div>
+
+            <div class="labeled-input">
+                <input type="password" placeholder="password" id="password-input1" />
+                <label for="password-input1">Mot de passe</label>
+            </div>
+
+            <div class="labeled-input">
+                <input type="password" placeholder="password (confirmation)" id="password-input2" />
+                <label for="password-input2">Mot de passe (confirmation)</label>
+            </div>
+
+            <div type="button" class="red-button" id="submit-button">S'inscrire</div>
+
+            <a id="register-link" href="login">Déjà inscrit ?</a>
+            <div type="button" class="white-button">Se connecter</div>
+
+            <div id="error-message" style="display: none;"></div>
+        </form>
+    </main>
 
     <script type="text/javascript" src="register.js"></script>
 </body>

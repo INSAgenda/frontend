@@ -130,6 +130,7 @@ header{
 
 .labeled-input>input::placeholder {
     color: transparent;
+    user-select: none;
 }
 
 .labeled-input>input:focus ~ label {
