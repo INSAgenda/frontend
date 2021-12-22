@@ -79,6 +79,15 @@ header{
 #header-logo{
     height: 70%;
     user-select: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#header-name{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--title-color);
 }
 
 #header-logo img{
@@ -160,6 +169,9 @@ header{
 /* Mobile */
 
 @media screen and (max-width: 1280px){
+    #header-name{
+        display: none;
+    }
     .page-title{
         font-size: 1.3em;  
     }
