@@ -168,6 +168,10 @@ input:checked + .language-checkbox {
     }
     .login-title{
         text-align: center;   
+        font-size: 1.3em;
+    }
+    .login-subtitle{
+        font-size: 0.8em;
     }
     #login-divider-bar{
         height: 3px;
