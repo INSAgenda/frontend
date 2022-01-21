@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="../styles/colors.css">
     <link rel="stylesheet" href="../styles/insagenda.css">
     <link rel="icon" href="../styles/flaticon.ico" />  
-    <link rel="stylesheet" href="../login/login-and-register.css">
+    <link rel="stylesheet" href="../styles/identification.css">
 </head>
 
 <body>
     <header>
-        <div id="header-logo"><img src="../assets/logo/logo.svg"/></div>
-    </header>
-
+        <a id="header-logo" href="../index.html">
+          <img src="../assets/elements/webLogo.svg" alt="Insagenda logo"> 
+          <span id="header-name">INSAgenda</span>
+        </a>
+        <a title="Boutton vers l'EDT" class="red-button" id="EDT-button" href="/login/index.html">Voir mon EDT</a>
+      </header>
+    
     <main>
         <h1 class="login-title">Connexion</h1>
         <form>
@@ -30,7 +34,7 @@
             
             <a id="forgotten-password-link" href="forgotten-password">Mot de passe oublié</a>
 
-            <div type="button" class="red-button" id="submit-button">Connexion</div>
+            <a type="button" class="red-button" id="submit-button">Connexion</a>
 
             <a id="register-link" href="register">Pas encore inscrit ?</a>
             <a class="white-button" href="register">Créer un compte</a>

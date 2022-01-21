@@ -48,10 +48,6 @@ form {
 
 /* Buttons */
 
-.red-button {
-    width: 40%;
-    min-width: 10rem;
-}
 
 .white-button {
     width: calc(40% - 4px);

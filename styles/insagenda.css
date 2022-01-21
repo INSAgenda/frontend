@@ -19,22 +19,50 @@ a{
 
 /* Buttons */
 
-.red-button, .white-button {
-    height: 2rem;
-    line-height: 2rem;
-    padding: 0 2rem;
-    border-radius: 1rem;
+/* Red button */
+
+.red-button{
+    background-color: var(--red);
     text-decoration: none;
+    color: white;
     font-weight: bold;
-    text-align: center;
+    border-radius: 20px;
     transition: filter 0.2s;
 }
-
-.red-button {
-    background-color: var(--red);
-    color: white;
+.red-button:hover{
+    filter: brightness(0.9);
+}
+.red-button:active{
+    filter: brightness(0.8);
 }
 
+/* White button */
+
+.white-button{
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--red);
+    font-weight: bold;
+    border-radius: 25px;
+    min-width: 240px;
+    max-height: 50px;
+    height: 12vw;
+    min-height: 38px;
+    transition: filter 0.2s;
+    border: 2px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    margin: 15px 0;
+    -webkit-appearance: none;
+}
+.white-button:hover{
+    filter: brightness(0.9);
+}
+.white-button:active{
+    filter: brightness(0.8);
+}
 .white-button {
     height: calc(2rem - 4px);
     line-height: calc(2rem - 4px);
@@ -55,16 +83,28 @@ a{
 
 header{
     background-color: var(--header-color);
+    max-width: 100vw;
+    max-height: 100px;
+    min-height: 70px;
     height: 3vw;
-    padding: 0 4vw 0 4vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 4vw 0 4vw;
 }
 
-#header-logo {
+#header-logo{
     height: 70%;
     user-select: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#header-name{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--title-color);
 }
 
 #header-logo img{
@@ -74,6 +114,7 @@ header{
 #EDT-button{
     padding: 8px 32px;
 }
+
 
 /* Section title page */
 
