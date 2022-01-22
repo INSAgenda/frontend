@@ -3,6 +3,7 @@
 :root{
     --red: #d74536;
     --black: #222222;
+    --black-homepage: #222222;
     --dark_grey: #444444;
     --grey: #F0F0F0;
     --white: #FFFFFF;
@@ -23,6 +24,7 @@
     :root{
         --background: #2E2E2E;
         --title-color: #FFFFFF;
+        --black-homepage: #E3E3E3;
         --header-color:#242424;
         --input-color: #242424;
         --input-text: #ffffff99;
