@@ -107,6 +107,10 @@ main {
     display: none;
 }
 
+#error-message{
+    color : var(--red);
+}
+
 /* Forget password */
 
 .forget-password{

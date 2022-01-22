@@ -4,43 +4,60 @@
 <head>
     <title>Register - INSAgenda</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
     <link rel="stylesheet" href="../styles/colors.css">
     <link rel="stylesheet" href="../styles/insagenda.css">
     <link rel="icon" href="../styles/flaticon.ico" />  
     <link rel="stylesheet" href="../login/login-and-register.css">
+    <link rel="stylesheet" href="../styles/identification.css">
 </head>
 
 <body>
     <header>
-        <div id="header-logo"><img src="../assets/logo/logo.svg"/></div>
+        <a id="header-logo" href="../index.html">
+          <img src="../assets/elements/webLogo.svg" alt="Insagenda logo"> 
+          <span id="header-name">INSAgenda</span>
+        </a>
     </header>
+    <section class="section-page-title">
+        <h2 class="page-title">Inscription</h2>
+        <div class="divider-bar"></div>
+    </section>    
+    <section class="identification-section">
+        <main>
+            <h1 class="login-title">S’inscrire avec son email étudiant</h1>
+            <form>
+                <!-- Email -->
+                <div class="labeled-input">
+                    <input type="text" placeholder="email" id="email-input" autocomplete=off />
+                    <label for="email-input">Email</label>
+                    <!-- Error message Email -->
+                    <span class="error-message-text">Veuillez entrer une adresse email valide.</span>
+                </div>
+                <!-- Password -->
+                <div class="labeled-input">
+                    <input type="password" placeholder="password" id="password-input1" />
+                    <label for="password-input1">Mot de passe</label>
+                    <!-- Error message password -->
+                    <span class="error-message-text">Veuillez entrer un mot de passe valide.</span>
+                </div>
+                <!-- Password confirmation -->
+                <div class="labeled-input">
+                    <input type="password" placeholder="password (confirmation)" id="password-input2" />
+                    <label for="password-input2">Mot de passe (confirmation)</label>
+                    <!-- Error message confirmation password -->
+                    <span class="error-message-text">Les deux mots de passe sont différents.</span>
+                </div>
+                <!-- Register button -->
+                <div type="button" class="red-button form-button" id="submit-button">Continuer</div>
 
-    <main>
-        <h1 class="login-title">Inscription</h1>
-        <form>
-            <div class="labeled-input">
-                <input type="text" placeholder="email" id="email-input" autocomplete=off />
-                <label for="email-input">Email</label>
-            </div>
+                <span id="register-link">Vous avez déjà un compte ?</span>
+                <a class="white-button" href="../login/">Se connecter</a>
 
-            <div class="labeled-input">
-                <input type="password" placeholder="password" id="password-input1" />
-                <label for="password-input1">Mot de passe</label>
-            </div>
-
-            <div class="labeled-input">
-                <input type="password" placeholder="password (confirmation)" id="password-input2" />
-                <label for="password-input2">Mot de passe (confirmation)</label>
-            </div>
-
-            <div type="button" class="red-button" id="submit-button">S'inscrire</div>
-
-            <a id="register-link" href="login">Déjà inscrit ?</a>
-            <a class="white-button" href="login">Se connecter</a>
-
-            <div id="error-message" style="display: none;"></div>
-        </form>
-    </main>
+                <div id="error-message" style="display: none;"></div>
+            </form>
+        </main>
+    </section>
 
     <script type="text/javascript" src="../register/register.js"></script>
 </body>
