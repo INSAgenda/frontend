@@ -45,8 +45,8 @@ a{
     font-weight: bold;
     border-radius: 25px;
     min-width: 240px;
-    max-height: 50px;
-    height: 12vw;
+    max-height: 47px;
+    height: 3vw;
     min-height: 38px;
     transition: filter 0.2s;
     border: 2px solid var(--red);
@@ -56,19 +56,16 @@ a{
     background-color: var(--background);
     margin: 15px 0;
     -webkit-appearance: none;
+    line-height: calc(2rem - 4px);
+    color: var(--red);
+    border: 2px solid var(--red);
+
 }
 .white-button:hover{
     filter: brightness(0.9);
 }
 .white-button:active{
     filter: brightness(0.8);
-}
-.white-button {
-    height: calc(2rem - 4px);
-    line-height: calc(2rem - 4px);
-    background-color: var(--background);
-    color: var(--red);
-    border: 2px solid var(--red);
 }
 
 .red-button:hover, .white-button:hover {
@@ -148,25 +145,28 @@ header{
 
 .labeled-input>input {
     width: calc(100% - 3rem);
-    height: 3rem;
+    height: 3.5rem;
     padding: 0 1.5rem;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     display: block;
     background-color: var(--input-color);
     color: var(--faint-text);
     border: none;
     outline: none;
+    font-size: 0.8em;
 }
 
 .labeled-input>label {
     position: absolute;
     bottom: 0;
-    line-height: 3rem;
+    line-height: 3.5rem;
     padding-left: 1.5rem;
     display: block;
     color: var(--faint-text);
     font-size: .9rem;
     transition: .3s;
+    user-select: none;
+    font-size: 16px;
 }
 
 .labeled-input>input::placeholder {
@@ -189,8 +189,6 @@ header{
 
 /* Input Styles */
 
-/*
-THERE ARE FUCKING CONFLICTS WITH THESE THINGS
 .input{
     max-width: 627px;
     max-height: 64px;
@@ -204,8 +202,9 @@ THERE ARE FUCKING CONFLICTS WITH THESE THINGS
 }
 
 .form-button{
+    max-height: 47px;
+    height: 3vw;
     min-width: 240px;
-    max-height: 50px;
     background-color: var(--red);
     border: none;
     border-radius: 25px;
@@ -214,14 +213,29 @@ THERE ARE FUCKING CONFLICTS WITH THESE THINGS
     font-weight: 400;
     cursor: pointer;
     transition: filter 0.2s;
-    padding: 0 43px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
+    margin: 31px 0 10px 0;
 }
 .form-button:hover{
-    filter: brightness(0.9);
+    filter: brightness(0.8);
 }
 .form-button:active{
-    filter: brightness(0.8);
-}*/
+    filter: brightness(0.6);
+}
+
+/* Input autofill */
+
+input:autofill, input:-webkit-autofill-strong-password, input:-webkit-autofill-strong-password-viewable {
+    background-color: red;
+}
+
+/* Autofill button */
+
+
 
 /* Mobile */
 
