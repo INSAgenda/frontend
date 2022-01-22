@@ -1,0 +1,178 @@
+/* Start section */
+#start-page{
+    width: 100%;
+    height: 90vh;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 3vh 0;
+}
+
+#start-page-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    width: 90%;
+}
+
+#welcome{
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+}
+
+#welcome img{
+    margin: 0 13px;
+    max-width: 180px;
+    width: 25%;
+}
+
+#welcome-message{
+    font-size: 3em;
+    font-weight: 500;
+    color: var(--calendar-text);
+        width: fit-content;
+}
+
+#acces-button{
+    padding: 12px 32px;
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+#description{
+    max-width: 623px;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--calendar-text);
+    width: inherit;
+}
+#acces-button{
+    margin: 41px auto 0 auto;
+}
+
+/* Section */
+
+.parallelogramme{
+    width: 55vw;
+    height: 100vh;
+    background-color: #444445;
+    tranform:skew(-13deg) translate(-18vh,0px);
+    -webkit-transform:skew(-13deg) translate(-18vh,0px);
+	-moz-transform:skew(-13deg) translate(-18vh,0px);
+	-o-transform:skew(-13deg) translate(-18vh,0px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    min-height: 500px;
+    align-self: center;
+}
+.parallelogramme img{
+    transform: skew(13deg); 
+}
+
+.section-description{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.section-description:nth-of-type(3){
+    flex-direction: row-reverse;
+}
+.section-description:nth-of-type(3) .parallelogramme{
+    tranform:skew(-13deg) translate(18vh,0px);
+    -webkit-transform:skew(-13deg) translate(18vh,0px);
+	-moz-transform:skew(-13deg) translate(18vh,0px);
+	-o-transform:skew(-13deg) translate(18vh,0px);
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 770px;
+    margin: 28vh 50px;
+}
+
+.description-title{
+    font-weight: bold;
+    font-size: 2em;
+    text-align: end;
+    margin: 0 0 20px 0;
+    color: var(--black-homepage);
+}
+.description-text{
+    font-size: 1.1em;
+    text-align: end;
+    color: var(--black-homepage);
+}
+.description:nth-of-type(2) .description-title, .description:nth-of-type(2) .description-text{
+    text-align: start;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 800px){
+    #welcome-message{
+        font-size: 2em;
+    }
+    #description{
+        font-size: 1.2em;
+    }
+    .description{
+        margin: -8vh 86px;
+        width: 70%;
+        margin: -10vh 30px 0 auto;
+        max-width: 374px;
+    }
+    .section-description:nth-of-type(3) .description{
+        margin: 0 auto -10vh 30px;
+    }
+    .section-description{
+        flex-direction: column;
+    }
+    .description-title{
+        font-size: 1.3em;
+    }
+    .description-text{
+        font-size: 1em;
+    }
+    .parallelogramme{
+        -webkit-transform: skew(-42deg) translate(-28vh,0px);
+        -moz-transform: skew(-42deg) translate(-28vh,0px);
+        -o-transform: skew(-42deg) translate(-28vh,0px);
+        transform: skew(-42deg) translate(-28vh,0px);
+        height: 50vh;
+        width: 100%;
+        margin: 0 85px 0 0;
+    }
+    .parallelogramme img{
+        -webkit-transform: skew(42deg) translate(28vh,0px);
+        -moz-transform: skew(42deg) translate(28vh,0px);
+        -o-transform: skew(42deg) translate(28vh,0px);
+        transform: skew(42deg) translate(28vh,0px);
+    }
+    .section-description:nth-of-type(3) .parallelogramme{
+        -webkit-transform: skew(-42deg) translate(28vh,0px);
+        -moz-transform: skew(-42deg) translate(28vh,0px);
+        -o-transform: skew(-42deg) translate(28vh,0px);
+        transform: skew(-42deg) translate(28vh,0px);
+        margin: 0 0 0 85px;
+    }
+    .section-description:nth-of-type(3) .parallelogramme img{
+        -webkit-transform: skew(42deg) translate(-28vh,0px);
+        -moz-transform: skew(42deg) translate(-28vh,0px);
+        -o-transform: skew(42deg) translate(-28vh,0px);
+        transform: skew(42deg) translate(-28vh,0px);
+    }
+    .section-description:nth-of-type(3){
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+}

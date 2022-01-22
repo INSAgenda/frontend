@@ -1,3 +1,21 @@
+/* General */
+
+main, form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+main {
+    width: 73%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* login-section */
 
 #login-section{
@@ -6,13 +24,12 @@
 }
 
 /* All sections */
-.login-section{
-    width: 50%;
+.identification-section{
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 75vh; 
-    min-height: 400px;
+    margin: 95px 0 0 0;
 }
 
 .login-title-content{
@@ -25,6 +42,7 @@
     font-size: 1.5em;
     font-weight: 500;
     color: var(--title-color);
+    margin: 0 0 30px 0;
 }
 .login-subtitle{
     font-size: 0.9em;
@@ -38,30 +56,33 @@
 }
 
 .login-input-content{
-    width: 100%;
-    min-height: 65%;
+    width: 95%;
+    max-width: 627px;
+    min-height: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 90%;
+    margin: 60px 0 0 0;
 }
 
 /* Input */
 
 .input{
-    width: 78%;
-    height: 10vh;
-    margin: 15px 0;
-    min-height: 42px;
+    height: 10vw;
+    min-height: 53px;
     background-color: var(--input-color);
     color: var(--input-text);
 }
 
-.form-button{
-    height: 100%;
+/* Input container */
+
+.input-container{
+    width: 100%;
     margin: 15px 0;
-    min-height: 38px;
+    display: flex;
+    flex-direction: column;
+    max-width: 627px;
+    position: relative;
 }
 
 .checkbox-content{
@@ -74,6 +95,34 @@
     overflow: hidden;
     margin: 15px 0;
     min-height: 42px;
+}
+/* Error message */
+
+.error-message-text{
+    color: var(--red);
+    font-size: 0.9em;
+    margin: 5px 0 0 15px;
+    position: absolute;
+    bottom: -19px;
+    display: none;
+}
+
+#error-message{
+    color : var(--red);
+}
+
+/* Forget password */
+
+.forget-password{
+    color: var(--red);
+    margin: 0 0 0 auto;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s; ;
+}
+.forget-password:hover{
+    border-color: var(--red);
 }
 
 .language-checkbox:first-child{
@@ -115,7 +164,35 @@ input:checked + .language-checkbox {
     background-color: red;
 }
 
-  
+/* Another possibility */
+
+.possibility-title{
+    font-size: 0.9em;
+    color: var(--calendar-text);
+}
+
+/* Links */
+
+#forgotten-password-link, #register-link {
+    margin-top: .1rem;
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+#forgotten-password-link {
+    align-self: flex-end;
+    color: var(--red);
+    transition: border-color 0.2s;
+    border-bottom: 1px solid transparent;
+}
+#forgotten-password-link:hover{
+    border-color: var(--red);
+}
+
+#register-link {
+    color: var(--faint-text);
+    margin: 23px 0 0 0;
+}
 
 /* Mobile */
 
@@ -131,6 +208,10 @@ input:checked + .language-checkbox {
     }
     .login-title{
         text-align: center;   
+        font-size: 1.3em;
+    }
+    .login-subtitle{
+        font-size: 0.8em;
     }
     #login-divider-bar{
         height: 3px;
@@ -146,7 +227,7 @@ input:checked + .language-checkbox {
         min-height: 42px;
     }
     .login-input-content{
-        margin: 6% 0;
+        margin: 6% 0 0 0;
     }
 }
 

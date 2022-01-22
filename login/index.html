@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>INSAgenda - Login</title>
+    <title>Login - INSAgenda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/insagenda.css">
+    <link rel="icon" href="../styles/flaticon.ico" />  
+    <link rel="stylesheet" href="../styles/identification.css">
+    
 </head>
 
 <body>
-    <form>
-        <label for="email-input">Email :</label><br/>
-        <input type="text" placeholder="email" id="email-input" /><br/>
-        <label for="password-input">Password :</label><br/>
-        <input type="password" id="password-input" /><br/>
-        <button type="button" id="submit-button">Login</button>
-        <div id="error-message" style="display: none;"></div>
-    </form>
-
-    <script type="text/javascript" src="login.js"></script>
+    <header>
+        <a id="header-logo" href="../index.html">
+          <img src="../assets/elements/webLogo.svg" alt="Insagenda logo"> 
+          <span id="header-name">INSAgenda</span>
+        </a>
+    </header>
+    <section class="section-page-title">
+        <h2 class="page-title">Connexion</h2>
+        <div class="divider-bar"></div>
+    </section>    
+    <section class="identification-section">
+        <main>
+            <!-- Form title -->
+            <h1 class="login-title">S’identifier avec son mot de passe</h1>
+            <form>
+                <div class="labeled-input input-container">
+                    <input type="email" placeholder="email" autocomplete=off id="email-input" />
+                    <label for="email-input">Email</label>
+                    <!-- Error message Email -->
+                    <span class="error-message-text">Veuillez entrer une adresse email valide.</span>
+                </div>
+                <div class="labeled-input input-container">
+                    <input type="password" placeholder="password" id="password-input" />
+                    <label for="password-input">Mot de passe</label>
+                    <!-- Error message password -->
+                    <span class="error-message-text">Veuillez entrer un mot de passe valide.</span>
+                </div>   
+                <a id="forgotten-password-link" href="forgotten-password">Mot de passe oublié</a>
+                <input type="button" class="red-button form-button" id="submit-button" value="Connexion">
+                <span id="register-link" href="register">Vous n’avez pas encore de compte ?</span>
+                <a class="white-button" href="../register/">Créer un compte</a>
+                <div id="error-message" style="display: none;"></div>
+            </form>
+        </main>    
+    </section>
+    <script type="text/javascript" src="../login/login.js"></script>
 </body>
-
 </html>
