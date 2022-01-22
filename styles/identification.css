@@ -78,6 +78,7 @@ main {
 
 .input-container{
     width: 100%;
+    height: 3.5rem;
     margin: 15px 0;
     display: flex;
     flex-direction: column;
@@ -86,8 +87,8 @@ main {
 }
 
 .checkbox-content{
-    width: 89%;
-    height: 10vh;
+    width: 100%;
+    height: auto;
     max-width: 693px;
     max-height: 64px;
     display: flex;
@@ -125,6 +126,8 @@ main {
     border-color: var(--red);
 }
 
+/* language-checkbox */
+
 .language-checkbox:first-child{
     border-radius: 32px 0 0 32px;
 }
@@ -132,7 +135,7 @@ main {
     border-radius: 0 32px 32px 0;
 }
 .language-checkbox{
-    width: 20%;
+    width: 100%;
     height: 100%;
     display: flex;
     background-color: var(--input-color);
@@ -170,6 +173,35 @@ input:checked + .language-checkbox {
     font-size: 0.9em;
     color: var(--calendar-text);
 }
+
+/* dropdown-list */
+
+.dropdown-list-box{
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.dropdown-list{
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 1.5rem;
+    border-radius: 2rem;
+    background-color: var(--input-color);
+    color: var(--faint-text);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url(../assets/elements/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 97%;
+}
+
 
 /* Links */
 
@@ -217,9 +249,6 @@ input:checked + .language-checkbox {
         height: 3px;
         width: 90%;
         margin: 0 auto;
-    }
-    .checkbox-content{
-        width: 95%;
     }
     .language-checkbox{
         font-size: 12px;    
