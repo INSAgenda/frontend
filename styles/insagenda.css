@@ -49,15 +49,13 @@ a{
     height: 3vw;
     min-height: 38px;
     transition: filter 0.2s;
-    border: 2px solid var(--red);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--background);
     margin: 15px 0;
+    cursor: pointer;
     -webkit-appearance: none;
     line-height: calc(2rem - 4px);
-    color: var(--red);
     border: 2px solid var(--red);
 
 }
