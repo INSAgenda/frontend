@@ -151,9 +151,9 @@ header{
     display: block;
     background-color: var(--input-color);
     color: var(--faint-text);
+    font-size: 1rem;
     border: none;
     outline: none;
-    font-size: 0.8em;
 }
 
 .labeled-input>label {
@@ -166,7 +166,6 @@ header{
     font-size: .9rem;
     transition: .3s;
     user-select: none;
-    font-size: 16px;
     cursor: text;
 }
 
