@@ -1,29 +1,35 @@
 /* Colors */
 
 :root{
-    --red: #E93329;
+    --red: #d74536;
     --black: #222222;
     --dark_grey: #444444;
     --grey: #F0F0F0;
     --white: #FFFFFF;
-    --background: #F0F0F0;
+    --background: #E5E5E5;
+    --closer-background: #F0F0F0;
     --title-color: #000000;
     --header-color: #FFFFFF;
     --input-color: #FFFFFF;
     --input-text: #44444499;
+    --faint-text: #44444499;
+    --text: black;
     --calendar-color: #FFFFFF;
     --calendar-text: #444444;
 }
 
-/* Dark theme */
+/* Dark-thème */
 
 @media (prefers-color-scheme: dark) {
     :root{
-        --background: #2E2E2E;
+        --background: #232323;
+        --closer-background: #2a2a2a;
         --title-color: #FFFFFF;
         --header-color:#242424;
-        --input-color: #242424;
+        --input-color: #2f2f2f;
         --input-text: #ffffff99;
+        --faint-text: #ffffff99;
+        --text: white;
         --calendar-color: #242424;
         --calendar-text: #E3E3E3;
     }
