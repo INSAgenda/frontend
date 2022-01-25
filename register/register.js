@@ -12,7 +12,7 @@ submit.onclick = async function() {
         return false;
     }
     // TODO: check lenght
-    if (password1.lenght <= 5 || password2.lenght <= 5) {
+    if (password1.length <= 5) {
         error_element.innerHTML = "Passwords must be longer than 5 characters";
         error_element.style.display = "block";
         return false;
