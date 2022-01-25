@@ -17,6 +17,19 @@
     --text: black;
     --calendar-color: #FFFFFF;
     --calendar-text: #444444;
+
+    /* Colors for pre-defined depths. Mostly used for dark theme. */
+
+    --dp00: #f0f0f0;
+    --dp01: #f5f5f5;
+    --dp02: white;
+    --dp03: white;
+    --dp04: white;
+    --dp06: white;
+    --dp08: white;
+    --dp12: white;
+    --dp16: white;
+    --dp24: white;
 }
 
 /* Dark-thème */
