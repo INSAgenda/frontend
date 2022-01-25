@@ -1,60 +1,52 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ins'agenda - Login</title>
+    <title>Login - INSAgenda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
     <link rel="stylesheet" href="../styles/colors.css">
     <link rel="stylesheet" href="../styles/insagenda.css">
     <link rel="icon" href="../styles/flaticon.ico" />  
-    <link rel="stylesheet" href="../login/login.css">
+    <link rel="stylesheet" href="../styles/identification.css">
+    
 </head>
+
 <body>
     <header>
         <a id="header-logo" href="../index.html">
-          <img src="../assets/elements/webLogo.svg" alt="Insagenda logo">
+          <img src="../assets/elements/webLogo.svg" alt="Insagenda logo"> 
+          <span id="header-name">INSAgenda</span>
         </a>
     </header>
     <section class="section-page-title">
-        <h2 class="page-title">Accès rapide</h2>
+        <h2 class="page-title">Connexion</h2>
         <div class="divider-bar"></div>
-    </section>
-    <section id="login-section">
-        <section class="login-section">
-            <div class="login-title-content">
-                <span class="login-title">S’identifier avec son Email étudiant</span>
-                <span class="login-subtitle">Un accès plus rapide.</span>    
-            </div>
-            <form class="login-input-content" action="">
-                <input class="input" placeholder="prenom.nom@insa-rouen.fr" type="email">
-                <input type="button" title="Continuer" value="Continuer" class="form-button">
-            </form>
-        </section>
-        <div id="login-divider-bar"></div>
-        <section class="login-section">
-            <div class="login-title-content">
-                <span class="login-title">Rester anonyme</span>
-                <span class="login-subtitle">Un accès anonyme.</span>    
-            </div>
-            <form class="login-input-content">
-                <input class="input" placeholder="Section" type="text">
-                <input class="input" placeholder="Classe" type="text">
-                <div class="checkbox-content">
-                    <label title="Allemand" class="language-checkbox"><input name="lang" type="radio">Allemand</label>
-                    <label title="Allemand débutant" class="language-checkbox"><input name="lang" type="radio">Allemand débutant</label>
-                    <label title="Espagnol" class="language-checkbox"><input name="lang" type="radio">Espagnol</label>
-                    <label title="Espagnol débutant" class="language-checkbox"><input name="lang" type="radio">Espagnol débutant</label>
-                    <label title="Français langue étrangère" class="language-checkbox"><input name="lang" type="radio">Français langue étrangère</label>
+    </section>    
+    <section class="identification-section">
+        <main>
+            <!-- Form title -->
+            <h1 class="login-title">S’identifier avec son mot de passe</h1>
+            <form>
+                <div class="labeled-input input-container">
+                    <input type="email" placeholder="email" autocomplete=off id="email-input" />
+                    <label for="email-input">Email</label>
+                    <!-- Error message Email -->
+                    <span class="error-message-text">Veuillez entrer une adresse email valide.</span>
                 </div>
-                <div class="checkbox-content">
-                    <label title="Groupe 1" class="language-checkbox group-checkbox"><input name="groupe" type="radio">Groupe 1</label>
-                    <label title="Groupe 2" class="language-checkbox group-checkbox"><input name="groupe" type="radio">Groupe 2</label>
-                </div>
-                <input type="button" title="Continuer anonymement" value="Continuer anonymement" class="form-button">
+                <div class="labeled-input input-container">
+                    <input type="password" placeholder="password" id="password-input" />
+                    <label for="password-input">Mot de passe</label>
+                    <!-- Error message password -->
+                    <span class="error-message-text">Veuillez entrer un mot de passe valide.</span>
+                </div>   
+                <a id="forgotten-password-link" href="forgotten-password">Mot de passe oublié</a>
+                <input type="button" class="red-button form-button" id="submit-button" value="Connexion">
+                <span id="register-link" href="register">Vous n’avez pas encore de compte ?</span>
+                <a class="white-button" href="../register/">Créer un compte</a>
+                <div id="error-message" style="display: none;"></div>
             </form>
-        </section>    
+        </main>    
     </section>
-    <script src="../login/script.js"></script>
+    <script type="text/javascript" src="../login/login.js"></script>
 </body>
 </html>

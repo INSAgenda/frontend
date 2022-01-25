@@ -17,6 +17,8 @@ a{
     cursor: pointer;
 }
 
+/* Buttons */
+
 /* Red button */
 
 .red-button{
@@ -31,6 +33,46 @@ a{
     filter: brightness(0.9);
 }
 .red-button:active{
+    filter: brightness(0.8);
+}
+
+/* White button */
+
+.white-button{
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--red);
+    font-weight: bold;
+    border-radius: 25px;
+    min-width: 240px;
+    max-height: 47px;
+    height: 3vw;
+    min-height: 38px;
+    transition: filter 0.2s;
+    border: 2px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    margin: 15px 0;
+    -webkit-appearance: none;
+    line-height: calc(2rem - 4px);
+    color: var(--red);
+    border: 2px solid var(--red);
+
+}
+.white-button:hover{
+    filter: brightness(0.9);
+}
+.white-button:active{
+    filter: brightness(0.8);
+}
+
+.red-button:hover, .white-button:hover {
+    filter: brightness(0.9);
+}
+
+.red-button:active, .white-button:active {
     filter: brightness(0.8);
 }
 
@@ -51,6 +93,15 @@ header{
 #header-logo{
     height: 70%;
     user-select: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#header-name{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--title-color);
 }
 
 #header-logo img{
@@ -60,6 +111,7 @@ header{
 #EDT-button{
     padding: 8px 32px;
 }
+
 
 /* Section title page */
 
@@ -82,6 +134,60 @@ header{
     margin: 5px 0 20px 0;
 }
 
+/* Labeled input */
+
+.labeled-input {
+    position: relative;
+    margin-top: 1rem;
+    width: 100%;
+    min-width: 20rem;
+}
+
+.labeled-input>input {
+    width: calc(100% - 3rem);
+    height: 3.5rem;
+    padding: 0 1.5rem;
+    border-radius: 2rem;
+    display: block;
+    background-color: var(--input-color);
+    color: var(--faint-text);
+    border: none;
+    outline: none;
+    font-size: 0.8em;
+}
+
+.labeled-input>label {
+    position: absolute;
+    bottom: 0;
+    line-height: 3.5rem;
+    padding-left: 1.5rem;
+    display: block;
+    color: var(--faint-text);
+    font-size: .9rem;
+    transition: .3s;
+    user-select: none;
+    font-size: 16px;
+    cursor: text;
+}
+
+.labeled-input>input::placeholder {
+    color: transparent;
+    user-select: none;
+}
+
+.labeled-input>input:focus ~ label {
+    bottom: 1.5rem;
+    color: var(--text);
+}
+
+.labeled-input>input:focus {
+    color: var(--text);
+}
+
+.labeled-input>input:not(:placeholder-shown) ~ label {
+    bottom: 1.5rem;
+}
+
 /* Input Styles */
 
 .input{
@@ -97,8 +203,9 @@ header{
 }
 
 .form-button{
+    max-height: 47px;
+    height: 3vw;
     min-width: 240px;
-    max-height: 50px;
     background-color: var(--red);
     border: none;
     border-radius: 25px;
@@ -107,14 +214,29 @@ header{
     font-weight: 400;
     cursor: pointer;
     transition: filter 0.2s;
-    padding: 0 43px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
+    margin: 31px 0 10px 0;
 }
 .form-button:hover{
-    filter: brightness(0.9);
-}
-.form-button:active{
     filter: brightness(0.8);
 }
+.form-button:active{
+    filter: brightness(0.6);
+}
+
+/* Input autofill */
+
+input:autofill, input:-webkit-autofill-strong-password, input:-webkit-autofill-strong-password-viewable {
+    background-color: red;
+}
+
+/* Autofill button */
+
+
 
 /* Mobile */
 
