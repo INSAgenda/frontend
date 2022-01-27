@@ -27,38 +27,45 @@
             <form>
                 <!-- Section -->
                 <div class="dropdown-list-box">
-                    <select class="dropdown-list" name="section" id="section-select">
+                    <select required class="dropdown-list" name="section" id="section-select">
                         <option disabled selected value>Section</option>
-                        <option value="dog">STPI1</option>
-                        <option value="cat">STPI2</option>
+                        <option value="stpi1">STPI1</option>
+                        <option value="stpi2">STPI2</option>
                     </select>   
                 </div>
                 <!-- classroom -->
                 <div class="dropdown-list-box">
-                    <select class="dropdown-list" name="classroom" id="classroom-select">
+                    <select required class="dropdown-list" name="classroom" id="classroom-select">
                         <option disabled selected value>Classe</option>
-                        <option value="dog">Classe A</option>
-                        <option value="dog">Classe B</option>
-                        <option value="dog">Classe C</option>
-                        <option value="dog">Classe D</option>
-                        <option value="dog">Classe E</option>
-                        <option value="dog">Classe F</option>
-                        <option value="dog">Classe H</option>
-                        <option value="dog">Classe I</option>
-                        <option value="dog">Classe J</option>
-                        <option value="dog">Classe K</option>
+                        <option value="classea">Classe A</option>
+                        <option value="classeb">Classe B</option>
+                        <option value="classec">Classe C</option>
+                        <option value="classeD">Classe D</option>
+                        <option value="classee">Classe E</option>
+                        <option value="classef">Classe F</option>
+                        <option value="classeh">Classe H</option>
+                        <option value="classei">Classe I</option>
+                        <option value="classej">Classe J</option>
+                        <option value="classek">Classe K</option>
                     </select>   
                 </div>
                 <!-- language-checkbox -->
                 <div class="checkbox-content">
-                    <label class="language-checkbox"><input name="lang" type="radio">Allemand</label>
-                    <label class="language-checkbox"><input name="lang" type="radio">Allemand débutant</label>
-                    <label class="language-checkbox"><input name="lang" type="radio">Espagnol</label>
-                    <label class="language-checkbox"><input name="lang" type="radio">Espagnol Débutant</label>
-                    <label class="language-checkbox"><input name="lang" type="radio">Français langue étrangère</label>
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio">Allemand</label>
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio">Allemand débutant</label>
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio">Espagnol</label>
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio">Espagnol Débutant</label>
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio">Français langue étrangère</label>
                 </div>
+                <!-- Groupe-chexbox -->
+                <div class="checkbox-content">
+                    <label class="language-checkbox group"><input class="language-checkbox-radio" name="groupe" type="radio">Groupe 1</label>
+                    <label class="language-checkbox group"><input class="language-checkbox-radio" name="groupe" type="radio">Groupe 2</label>
+                </div>
+                <input type="button" class="red-button form-button" id="submit-button" value="Confirmer">
             </form>
         </main>
     </section>
+    <script src="../../scripts/indentification.js"></script>
 </body>
 </html>
