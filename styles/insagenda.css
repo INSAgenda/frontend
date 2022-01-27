@@ -214,7 +214,7 @@ header{
     font-weight: 400;
     cursor: pointer;
     transition: filter 0.2s;
-    font-weight: bold;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
