@@ -1,6 +1,6 @@
 /* Colors */
 
-:root{
+:root {
     --red: #d74536;
     --black: #222222;
     --black-homepage: #222222;
@@ -34,35 +34,33 @@
 
 /* Dark-thème */
 
-@media (prefers-color-scheme: dark) {
-    :root{
-        --background: #232323;
-        --closer-background: #2a2a2a;
-        --title-color: #FFFFFF;
-        --black-homepage: #E3E3E3;
-        --header-color:#242424;
-        --input-color: #2f2f2f;
-        --input-text: #ffffff99;
-        --faint-text: #ffffff99;
-        --text: white;
-        --calendar-color: #242424;
-        --calendar-text: #E3E3E3;
+:root[data-theme="dark"] {
+    --background: #232323;
+    --closer-background: #2a2a2a;
+    --title-color: #FFFFFF;
+    --black-homepage: #E3E3E3;
+    --header-color:#242424;
+    --input-color: #2f2f2f;
+    --input-text: #ffffff99;
+    --faint-text: #ffffff99;
+    --text: white;
+    --calendar-color: #242424;
+    --calendar-text: #E3E3E3;
 
-        /* 
-        *   Colors for the dark theme according to material design guidelines (https://material.io/design/color/dark-theme.html).
-        *   These are not random and were calculated using this tool: https://codepen.io/mubelotix/pen/vYWYmZR
-        *   These are completely grey for now but we could very well add a little color in the future
-        */
+    /* 
+    *   Colors for the dark theme according to material design guidelines (https://material.io/design/color/dark-theme.html).
+    *   These are not random and were calculated using this tool: https://codepen.io/mubelotix/pen/vYWYmZR
+    *   These are completely grey for now but we could very well add a little color in the future
+    */
 
-        --dp00: #121212;
-        --dp01: #1E1E1E;
-        --dp02: #232323;
-        --dp03: #252525;
-        --dp04: #272727;
-        --dp06: #2c2c2c;
-        --dp08: #2f2f2f;
-        --dp12: #333333;
-        --dp16: #353535;
-        --dp24: #383838;
-    }
+    --dp00: #121212;
+    --dp01: #1E1E1E;
+    --dp02: #232323;
+    --dp03: #252525;
+    --dp04: #272727;
+    --dp06: #2c2c2c;
+    --dp08: #2f2f2f;
+    --dp12: #333333;
+    --dp16: #353535;
+    --dp24: #383838;
 }

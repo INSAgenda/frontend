@@ -185,6 +185,7 @@ input:checked + .language-checkbox {
     transition: border-color 0.2s;
     border-bottom: 1px solid transparent;
 }
+
 #forgotten-password-link:hover{
     border-color: var(--red);
 }
