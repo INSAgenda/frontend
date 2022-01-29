@@ -1,12 +1,10 @@
-let submit = document.getElementById("submit-button");
+let submit_el = document.getElementById("submit-button");
 let error_element = document.getElementById("error-message");
+let email = document.getElementById("email-input");
+let password = document.getElementById("password-input");
 
-submit.onclick = async function() {
-    let email = document.getElementById("email-input").value;
-    let password = document.getElementById("password-input").value;
-
-    // TODO: check length
-    if (password.length <= 5) {
+async function submit() {
+    if (password.value.length <= 5) {
         error_element.innerHTML = "Password must be longer than 5 characters";
         error_element.style.display = "block";
         return false;
@@ -14,7 +12,7 @@ submit.onclick = async function() {
 
     let response = await fetch('/api/auth/login', {
         method: 'POST',
-        body: "email=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password),
+        body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password.value),
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
         },
@@ -33,3 +31,21 @@ submit.onclick = async function() {
         alert("Unknown error");
     }
 };
+
+submit_el.onclick = submit;
+
+document.onkeydown = async function(e) {
+    if (e.code === "Enter") {
+        if (email.value === "") {
+            email.focus();
+            return;
+        }
+
+        if (password.value === "") {
+            password.focus();
+            return;
+        }
+
+        await submit();
+    }
+}
