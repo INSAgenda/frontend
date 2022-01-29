@@ -5,7 +5,7 @@ submit.onclick = async function() {
     let email = document.getElementById("email-input").value;
     let password = document.getElementById("password-input").value;
 
-    // TODO: check lenght
+    // TODO: check length
     if (password.length <= 5) {
         error_element.innerHTML = "Password must be longer than 5 characters";
         error_element.style.display = "block";
