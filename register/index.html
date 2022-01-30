@@ -25,7 +25,7 @@
     </section>    
     <section class="identification-section">
         <main>
-            <h3 class="login-title">S’inscrire avec son email étudiant</h3>
+            <h3 class="login-title">S'inscrire avec son email étudiant</h3>
             <form>
                 <!-- Email -->
                 <div class="labeled-input">
@@ -50,14 +50,59 @@
                     <!-- Error message confirmation password -->
                     <span class="error-message-text">Les deux mots de passe sont différents.</span>
                 </div>
+            </form>
+            <form style="display: inherit;">
+                <p>Nous ne vous avons pas trouvé dans notre base de données ; nous avons besoin de plus d'informations sur vous.</p>
 
-                <!-- Register button -->
-                <input type="button" class="red-button form-button" id="submit-button" value="Continuer">
+                <!-- Section -->
+                <div class="dropdown-list-box">
+                    <select required class="dropdown-list" name="section" id="section-select">
+                        <option disabled selected value>Section</option>
+                        <option value="STPI1">STPI1</option>
+                        <option disabled value="STPI2">STPI2</option>
+                    </select>   
+                </div>
+
+                <!-- Class -->
+                <div class="dropdown-list-box">
+                    <select required class="dropdown-list" name="classroom" id="classroom-select">
+                        <option disabled selected value>Classe</option>
+                        <option value="A">Classe A</option>
+                        <option value="B">Classe B</option>
+                        <option value="C">Classe C</option>
+                        <option value="D">Classe D</option>
+                        <option value="E">Classe E</option>
+                        <option value="F">Classe F</option>
+                        <option value="H">Classe H</option>
+                        <option value="I">Classe I</option>
+                        <option value="J">Classe J</option>
+                        <option value="K">Classe K</option>
+                    </select>   
+                </div>
+
+                <!-- Language-checkbox -->
+                <div class="checkbox-content">
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio" value="ALL">Allemand</label>
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio" value="ALLD">Allemand Débutant</label>
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio" value="ESP">Espagnol</label>
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio" value="ESPD">Espagnol Débutant</label>
+                    <label class="language-checkbox lang"><input class="language-checkbox-radio" name="lang" type="radio" value="FLE">Français Langue Etrangère</label>
+                </div>
+
+                <!-- Groupe-chexbox -->
+                <div class="checkbox-content">
+                    <label class="language-checkbox group"><input class="language-checkbox-radio" name="group" type="radio" value="1">Groupe 1</label>
+                    <label class="language-checkbox group"><input class="language-checkbox-radio" name="group" type="radio" value="2">Groupe 2</label>
+                </div>
+            </form>
+            <form>
+                <div id="error-message" style="display: none;"></div>
+
+                <!-- Submit button -->
+                <input type="button" class="red-button form-button" id="submit-button" value="S'enregistrer">
 
                 <span id="register-link">Vous avez déjà un compte ?</span>
                 <a class="white-button" href="/login">Se connecter</a>
-
-                <div id="error-message" style="display: none;"></div>
             </form>
         </main>
     </section>
