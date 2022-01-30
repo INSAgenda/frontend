@@ -136,7 +136,6 @@ header{
 
 .labeled-input {
     position: relative;
-    margin-top: 1rem;
     width: 100%;
     min-width: 20rem;
 }
@@ -145,7 +144,7 @@ header{
     width: calc(100% - 3rem);
     height: 3.5rem;
     padding: 0 1.5rem;
-    border-radius: 2rem;
+    border-radius: 17.5rem;
     display: block;
     background-color: var(--input-color);
     color: var(--faint-text);
@@ -211,7 +210,7 @@ header{
     font-weight: 400;
     cursor: pointer;
     transition: filter 0.2s;
-    font-weight: bold;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
