@@ -18,27 +18,49 @@ async function submit() {
         return false;
     }
 
-    let response = await fetch('/api/auth/register', {
-        method: 'POST',
-        body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value),
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-        },
-    });
+    let response;
+    if (stage === 1) {
+        response = await fetch('/api/auth/register', {
+            method: 'POST',
+            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value),
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+    } else {
+        let section_select = document.getElementById("section-select");
+        let section_value = section_select.options[section_select.selectedIndex].value;
+
+        let class_select = document.getElementById("class-select");
+        let class_value = class_select.options[class_select.selectedIndex].value;
+
+        let lang = document.querySelector('input[name="lang"]:checked').value;
+        let class_division = document.querySelector('input[name="group"]:checked').value;
+
+        response = await fetch('/api/auth/register', {
+            method: 'POST',
+            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value) + "&section=" + encodeURIComponent(section_value) + "&class=" + encodeURIComponent(class_value) + "&lang=" + encodeURIComponent(lang) + "&class_division=" + encodeURIComponent(class_division),
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+    }
 
     if (response.status == 200) {
         let json = await response.json();
         localStorage.setItem('api_key', json.api_key);
         localStorage.setItem('counter', 1);
         window.location.replace("/agenda");
-    } else if (response.status == 400 || response.status == 501) {
-        console.log("warning please set up to 500 add fucking handler");
-        stage = 2;
-        document.querySelector("main > form:nth-child(3)").style.display = "initial";
-
+    } else if (response.status == 400 || response.status == 500) {
         let json = await response.json();
-        error_element.innerHTML = json.message_fr; // TODO: display english messages
-        error_element.style.display = "block";
+
+        if (json.kind === "unknown_email") {
+            stage = 2;
+            document.querySelector("main > form:nth-child(3)").style.display = "initial";
+        } else {
+            error_element.innerHTML = json.message_fr; // TODO: display english messages
+            error_element.style.display = "block";
+        }
     } else {
         alert("Unknown error");
     }
