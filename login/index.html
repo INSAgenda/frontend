@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Connexion | INSAgenda</title>
     <meta charset="utf-8">
+    <title>Connexion | INSAgenda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="/styles/colors.css">
     <link rel="stylesheet" href="/styles/insagenda.css">
@@ -15,7 +15,7 @@
     <header>
         <a id="header-logo" href="/">
           <img src="/assets/elements/webLogo.svg" alt="INSAgenda logo"> 
-          <span id="header-name">INSAgenda</span>
+          <h1 id="header-name">INSAgenda</h1>
         </a>
     </header>
     <section class="section-page-title">
@@ -25,29 +25,29 @@
     <section class="identification-section">
         <main>
             <!-- Form title -->
-            <h1 class="login-title">S’identifier avec son mot de passe</h1>
+            <h3 class="login-title">S’identifier avec son mot de passe</h3>
             <form>
                 <div class="labeled-input input-container">
-                    <input type="email" placeholder="email" autocomplete=off id="email-input" />
+                    <input type="email" placeholder="Email" autocomplete="username" id="email-input" />
                     <label for="email-input">Email</label>
                     <!-- Error message Email -->
                     <span class="error-message-text">Veuillez entrer une adresse email valide.</span>
                 </div>
 
                 <div class="labeled-input input-container">
-                    <input type="password" placeholder="password" id="password-input" autocomplete="current-password"/>
+                    <input type="password" placeholder="Password" id="password-input" autocomplete="current-password" minlength="5"/>
                     <label for="password-input">Mot de passe</label>
                     <!-- Error message password -->
                     <span class="error-message-text">Veuillez entrer un mot de passe valide.</span>
                 </div>
 
-                <a id="forgotten-password-link" href="/forgotten-password">Mot de passe oublié</a>
+                <a id="forgotten-password-link" href="/forgotten-password">Mot de passe oublié.</a>
                 <input type="button" class="red-button form-button" id="submit-button" value="Connexion">
 
                 <span id="register-link">Vous n’avez pas encore de compte ?</span>
                 <a class="white-button" href="/register">Créer un compte</a>
 
-                <div id="error-message" style="display: none;"></div>
+                <p id="error-message" style="display: none;"></p>
             </form>
         </main>    
     </section>
