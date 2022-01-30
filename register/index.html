@@ -2,12 +2,13 @@
 <html>
 
 <head>
-    <title>Register - INSAgenda</title>
     <meta charset="utf-8">
+    <title>Inscription | INSAgenda</title>
+    <meta name="description" content="Inscrivez-vous à INSAgenda pour vous permettre d'avoir accès facilement à votre emploi du temps personnalisé.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="/styles/colors.css">
     <link rel="stylesheet" href="/styles/insagenda.css">
-    <link rel="icon" href="/styles/flaticon.ico" />  
+    <link rel="icon" href="assets/flaticon.ico" />  
     <link rel="stylesheet" href="/styles/auth.css">
     <script src="/theme-toggle.js"></script>
 </head>
@@ -15,8 +16,8 @@
 <body>
     <header>
         <a id="header-logo" href="/">
-          <img src="/assets/elements/webLogo.svg" alt="INSAgenda logo"> 
-          <span id="header-name">INSAgenda</span>
+          <img src="/assets/elements/webLogo.svg" alt="logo de INSAgenda"> 
+          <h1 id="header-name">INSAgenda</h1>
         </a>
     </header>
     <section class="section-page-title">
@@ -29,7 +30,7 @@
             <form>
                 <!-- Email -->
                 <div class="labeled-input">
-                    <input type="text" placeholder="email" id="email-input" autocomplete=off />
+                    <input type="text" placeholder="Email" id="email-input" autocomplete="username" />
                     <label for="email-input">Email</label>
                     <!-- Error message Email -->
                     <span class="error-message-text">Veuillez entrer une adresse email valide.</span>
@@ -37,7 +38,7 @@
 
                 <!-- Password -->
                 <div class="labeled-input">
-                    <input type="password" placeholder="password" id="password-input1" autocomplete="new-password" />
+                    <input type="password" placeholder="Password" id="password-input1" autocomplete="new-password" />
                     <label for="password-input1">Mot de passe</label>
                     <!-- Error message password -->
                     <span class="error-message-text">Veuillez entrer un mot de passe valide.</span>
@@ -45,7 +46,7 @@
 
                 <!-- Password confirmation -->
                 <div class="labeled-input">
-                    <input type="password" placeholder="password (confirmation)" id="password-input2" autocomplete="new-password" />
+                    <input type="password" placeholder="Password (confirmation)" id="password-input2" autocomplete="new-password" />
                     <label for="password-input2">Mot de passe (confirmation)</label>
                     <!-- Error message confirmation password -->
                     <span class="error-message-text">Les deux mots de passe sont différents.</span>
