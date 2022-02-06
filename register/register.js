@@ -6,6 +6,8 @@ let password2 = document.getElementById("password-input2");
 let stage = 1;
 
 async function submit() {
+    enable_activity_indicator(["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"],true)
+
     if (password1.value != password2.value) {
         error_element.innerHTML = "Passwords don't match";
         error_element.style.display = "block";
@@ -64,6 +66,8 @@ async function submit() {
     } else {
         alert("Unknown error");
     }
+    enable_activity_indicator(["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"],false)
+
 };
 submit_el.onclick = submit;
 
