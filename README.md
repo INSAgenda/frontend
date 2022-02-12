@@ -37,4 +37,10 @@
 </details>
 
 ## About The Project 
-
+<!-- Add image -->
+<img src="readme/mainpage.png" alt="Logo" width="" height="">
+<br/>
+INSAgenda is a website displays timetables with a new design. It simply retrieves the timetable and displays it with a new design. INSAgenda is an evolving platform, it is constantly updated and improved with new features.
+<br/>
+<br/>
+This repository contains only static files. This excludes the Web-app as well as the backend. All files in this repository will be hosted.
