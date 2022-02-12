@@ -23,6 +23,14 @@
     </li>
     <li>
       <a href="#creation">Creation</a>
+      <ul>
+        <li>
+          <a href="#structure">Structure</a>
+        </li>
+        <li>
+          <a href="#language">Language</a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href="#authors">Authors</a>
@@ -36,11 +44,44 @@
   </ol>
 </details>
 
+<!-- Abour the project -->
 ## About The Project 
-<!-- Add image -->
 <img src="readme/mainpage.png" alt="Logo" width="" height="">
 <br/>
 INSAgenda is a website displays timetables with a new design. It simply retrieves the timetable and displays it with a new design. INSAgenda is an evolving platform, it is constantly updated and improved with new features.
 <br/>
 <br/>
 This repository contains only static files. This excludes the Web-app as well as the backend. All files in this repository will be hosted.
+
+<!-- Creation -->
+## Creation
+### Structure
+The INSAgenda project has this repository which contains the frontend files for the site.
+<br/>
+<br/>
+The INSAgenda structure is : 
+<!-- structure -->
+<pre>
+├── frontend (folder)
+│   ├── assets (folder)
+│   │   └── (Here are the images and the icons)
+│   ├── styles (folder)
+│   │   └── (Here are the main stylesheets)
+│   ├── Next page (folder)
+│   │   ├── page.html (file .html)
+│   │   ├── page.css (file .css)
+│   │   └── page.js (file .js) 
+│   └── index.html (main file .html)
+└──
+</pre>
+In a page's folder, there may not be [.css](https://developer.mozilla.org/fr/docs/Web/CSS) or [.js](https://developer.mozilla.org/fr/docs/Web/JavaScript) files because sometimes they are not needed.
+
+### Language
+The INSAgenda project is written in [HTML](https://developer.mozilla.org/fr/docs/Web/HTML), [CSS](https://developer.mozilla.org/fr/docs/Web/CSS) and [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript). (Just for the front-end)
+<br/>
+<br/>
+Usefulness of language :
+ - [HTML](https://developer.mozilla.org/fr/docs/Web/HTML) : Marking up elements of a web page.
+  - [CSS](https://developer.mozilla.org/fr/docs/Web/CSS) : Tells the browser the style of the page.
+  - [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript) : Allows the user to interact with the page dynamically.
+
