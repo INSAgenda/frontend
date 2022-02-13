@@ -111,3 +111,9 @@ INSAgenda website is a project created by students.
  - [@DimitriTimoz](https://github.com/DimitriTimoz) 
  - [@Mubelotix](https://github.com/Mubelotix) 
  - [@AlexysGromard](https://github.com/AlexysGromard) 
+
+<!-- License -->
+## License
+The INSAgenda project is licensed. All rights reserved.
+<br/>
+You can consult this [license](/) here.
