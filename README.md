@@ -116,4 +116,4 @@ INSAgenda website is a project created by students.
 ## License
 The INSAgenda project is licensed. All rights reserved.
 <br/>
-You can consult this [license](/) here.
+You can consult this [license](/LICENSE) here.
