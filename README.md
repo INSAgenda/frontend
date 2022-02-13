@@ -7,10 +7,10 @@
 
   <p align="center">
     Insagenda is a free website, open source, to consult the timetable at INSA Rouen.
-    <br />
+    <br/>
     <a href="https://insagenda.fr/index.html"><strong>Explore the website »</strong></a>
-    <br />
-    <br />
+    <br/>
+    <br/>
    </p>
 </div>
 
@@ -33,10 +33,10 @@
       </ul>
     </li>
     <li>
-      <a href="#authors">Authors</a>
+      <a href="#usage">Usage</a>
     </li>
     <li>
-      <a href="#structure">Structure</a>
+      <a href="#authors">Authors</a>
     </li>
     <li>
       <a href="#License">License</a>
@@ -85,3 +85,28 @@ Usefulness of language :
   - [CSS](https://developer.mozilla.org/fr/docs/Web/CSS) : Tells the browser the style of the page.
   - [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript) : Allows the user to interact with the page dynamically.
 
+<!-- Usage -->
+## Usage
+To use the INSAgenda service, you must be an INSA Rouen student and have a student email address.
+### Step 1
+Go to the website [insagenda.fr](https://insagenda.fr)
+<img style="border-radius: 7px;" src="readme/step1.png" alt="Step 1">
+### Step 2
+Click on the button "Voir mon EDT"
+<img style="border-radius: 7px;" src="readme/step2.png" alt="Step 2">
+### Step 3
+You must now log in or create your account. To create your account you must use your email provided by INSA.
+<img style="border-radius: 7px;" src="readme/step3.png" alt="Step 2">
+### Step 3 (optional)
+If after your registration, INSAgenda does not find you, you must fill in the information manually.
+<img style="border-radius: 7px;" src="readme/step3bis.png" alt="Step 2">
+### Step 4
+Now, you can see your timetable.
+Good use ! 😉
+<!-- Autors -->
+## Authors
+INSAgenda website is a project created by students.
+<br/>
+ - [@DimitriTimoz <img src="https://avatars.githubusercontent.com/u/45998396?v=4" style="border-radius: 20px; position: absolute; margin-left:6px" width="30px" height= "30px">](https://github.com/DimitriTimoz) 
+ - [@Mubelotix <img src="https://avatars.githubusercontent.com/u/42696684?v=4" style="border-radius: 20px; position: absolute; margin-left:6px" width="30px" height= "30px">](https://github.com/Mubelotix) 
+ - [@AlexysGromard <img src="https://avatars.githubusercontent.com/u/66492231?v=4" style="border-radius: 20px; position: absolute; margin-left:6px" width="30px" height= "30px">](https://github.com/AlexysGromard) 
