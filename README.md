@@ -102,11 +102,12 @@ If after your registration, INSAgenda does not find you, you must fill in the in
 <img style="border-radius: 7px;" src="readme/step3bis.png" alt="Step 2">
 ### Step 4
 Now, you can see your timetable.
+<br/>
 Good use ! 😉
 <!-- Autors -->
 ## Authors
 INSAgenda website is a project created by students.
 <br/>
- - [@DimitriTimoz <img src="https://avatars.githubusercontent.com/u/45998396?v=4" style="border-radius: 20px; position: absolute; margin-left:6px" width="30px" height= "30px">](https://github.com/DimitriTimoz) 
- - [@Mubelotix <img src="https://avatars.githubusercontent.com/u/42696684?v=4" style="border-radius: 20px; position: absolute; margin-left:6px" width="30px" height= "30px">](https://github.com/Mubelotix) 
- - [@AlexysGromard <img src="https://avatars.githubusercontent.com/u/66492231?v=4" style="border-radius: 20px; position: absolute; margin-left:6px" width="30px" height= "30px">](https://github.com/AlexysGromard) 
+ - [@DimitriTimoz](https://github.com/DimitriTimoz) 
+ - [@Mubelotix](https://github.com/Mubelotix) 
+ - [@AlexysGromard](https://github.com/AlexysGromard) 
