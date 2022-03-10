@@ -3,10 +3,15 @@ let error_element = document.getElementById("error-message");
 let email = document.getElementById("email-input");
 let password = document.getElementById("password-input");
 
+
+
 async function submit() {
+    list_selectors = [".form-button", "#register-link", "form>.white-button", "#error-message"];
+    enable_activity_indicator(list_selectors,true)
     if (password.value.length <= 5) {
         error_element.innerHTML = "Password must be longer than 5 characters";
         error_element.style.display = "block";
+        enable_activity_indicator(list_selectors, false)
         return false;
     }
 
@@ -30,6 +35,8 @@ async function submit() {
     } else {
         alert("Unknown error");
     }
+    enable_activity_indicator(list_selectors,false)
+
 };
 
 submit_el.onclick = submit;

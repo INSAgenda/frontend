@@ -6,16 +6,22 @@ let password2 = document.getElementById("password-input2");
 let stage = 1;
 
 async function submit() {
+    list_selectors = ["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"];
+    enable_activity_indicator(list_selectors,true);
+
     if (password1.value != password2.value) {
         error_element.innerHTML = "Passwords don't match";
         error_element.style.display = "block";
+        enable_activity_indicator(list_selectors,false);
         return false;
     }
 
     if (password1.value.length <= 5) {
         error_element.innerHTML = "Passwords must be longer than 5 characters";
         error_element.style.display = "block";
+        enable_activity_indicator(list_selectors,false);
         return false;
+        
     }
 
     let response;
@@ -64,6 +70,7 @@ async function submit() {
     } else {
         alert("Unknown error");
     }
+    enable_activity_indicator(list_selectors,false);
 };
 submit_el.onclick = submit;
 
