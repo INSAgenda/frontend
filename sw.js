@@ -3,7 +3,7 @@ self.addEventListener('install', function(event) {
 });
   
 self.addEventListener('fetch', function(event) {
-    console.debug('The service worker is serving the ressource...');
+    //console.debug('The service worker is serving the ressource...');
 
     event.respondWith(caches.match(event.request).then(function(response) {
         if (response !== undefined) {
@@ -30,7 +30,7 @@ self.addEventListener('fetch', function(event) {
     }));
 
     event.waitUntil(
-        update(event.request).then(console.debug("...and the ressource has been updated."))
+        update(event.request).then(/*console.debug("...and the ressource has been updated.")*/)
     );
 });
 
