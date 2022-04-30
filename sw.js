@@ -11,7 +11,7 @@ self.addEventListener('fetch', function(event) {
         } else {
             return fetch(event.request).then(function (response) {
                     // We don't want to cache api responses
-                    if (event.request.url.contains("/api/")) {
+                    if (event.request.url.includes("/api/")) {
                         return response;
                     }
 
