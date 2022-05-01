@@ -13,6 +13,7 @@
     --background: var(--light);
     --closer-background: var(--medium-light);
     --text: var(--dark-text);
+    --day: var(--medium-light);
 
 }
 
@@ -22,5 +23,5 @@
     --background: var(--dark);
     --closer-background: var(--medium-dark);
     --text: var(--light-text);
-
+    --day: #262627;
 }
