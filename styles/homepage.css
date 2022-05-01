@@ -32,8 +32,8 @@
 #welcome-message{
     font-size: 3em;
     font-weight: 500;
-    color: var(--calendar-text);
-        width: fit-content;
+    color: var(--text);
+    width: fit-content;
 }
 
 #acces-button{
@@ -47,7 +47,7 @@
     max-width: 623px;
     font-size: 1.5em;
     font-weight: 400;
-    color: var(--calendar-text);
+    color: var(--text);
     width: inherit;
 }
 #acces-button{
@@ -59,7 +59,7 @@
 .parallelogramme{
     width: 55vw;
     height: 100vh;
-    background-color: #444445;
+    background-color: var(--background);
     tranform:skew(-13deg) translate(-18vh,0px);
     -webkit-transform:skew(-13deg) translate(-18vh,0px);
 	-moz-transform:skew(-13deg) translate(-18vh,0px);
@@ -105,12 +105,12 @@
     font-size: 2em;
     text-align: end;
     margin: 0 0 20px 0;
-    color: var(--black-homepage);
+    color: var(--text);
 }
 .description-text{
     font-size: 1.1em;
     text-align: end;
-    color: var(--black-homepage);
+    color: var(--text);
 }
 .description:nth-of-type(2) .description-title, .description:nth-of-type(2) .description-text{
     text-align: start;

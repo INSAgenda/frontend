@@ -6,7 +6,7 @@ let password = document.getElementById("password-input");
 
 
 async function submit() {
-    list_selectors = [".form-button", "#register-link", "form>.white-button", "#error-message"];
+    list_selectors = [".form-button", "#register-link", "form>.second-button", "#error-message"];
     enable_activity_indicator(list_selectors,true)
     if (password.value.length <= 5) {
         error_element.innerHTML = "Password must be longer than 5 characters";
