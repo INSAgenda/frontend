@@ -12,7 +12,7 @@ async function submit() {
         return false;
     }
 
-    enable_activity_indicator(selector_list,true);
+    enable_activity_indicator(selector_list, true);
     let response = await fetch('/api/auth/login', {
         method: 'POST',
         body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password.value),
