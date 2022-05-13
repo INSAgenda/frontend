@@ -1,0 +1,84 @@
+                     POLITIQUE DE PROTECTION DES DONNEES
+
+
+Pour fonctionner, INSAgenda a besoin de certaines données personnelles sur ses
+utilisateurs.
+
+I. Données relatives à l'identité
+
+    Nous utilisons la liste des étudiants officielle, fournie gracieusement par
+    l'INSA de Rouen. L'utilisation de ces données est faîte sur la base légale
+    de l'intérêt légitime, définie par le RGPD.
+
+    Données concernées :
+      - Prénom + Nom (et par extension, adresse email @insa-rouen.fr)
+      - Classe
+    
+    Ces données sont utilisées pour vérifier l'identité des utilisateurs, afin
+    d'éviter que n'importe quel individu ne puisse accéder aux emplois du temps
+    des étudiants.
+
+    Les données d'étudiants qui ne sont pas utilisateurs d'INSAgenda restent
+    inutilisées.
+    
+    De plus, elles sont automatiquement supprimées de nos systèmes pour les
+    étudiants quittant l'INSA. En fait, les données sont conservées pour une
+    durée de un an, mais seront récupérées de nouveau si vous faîtes partie
+    des nouvelless listes officielles des étudiants de l'INSA.
+
+II. Conservation et protection
+
+    A. Conservation
+
+        Notre seul serveur de stoquage ne quitte jamais Saint-Etienne-du-
+        Rouvray. Les données ne seront partagées avec aucune organisation.
+
+    B. Protection et accès au système
+    
+        Les échanges entre les serveurs et les clients sont toujours chiffrés.
+        Nos serveurs sont considérablement mieux sécurisés que ceux de l'INSA.
+        Soyez le premier à trouver une faille dans nos systèmes et reportez la
+        à security@insagenda.fr.
+
+        L'accès physique au serveur est défendu autant que possible contre les
+        menaces.
+
+III. Vos droits
+
+    Toute requête concernant vos droits doit être adressée en utilisant
+    l'addresse email contact@insagenda.fr.
+
+    A. Droit d’accès
+    
+        Toute personne peut demander une copie de toutes les données qui le
+        concernent. 
+
+    B. Droit de rectification
+
+        Toute personne peut nous demander de faire rectifier les informations
+        qui le concernent.
+        
+    C. Droit d'effacement (droit à l'oubli)
+    
+        Toute personne peut exiger la suppression de toute donnée personnelle.
+        Cela ne s'applique donc pas aux données qui concernent des groupes de
+        personnes (ex: emploi du temps d'une classe).
+
+        Notez que la suppression des données vous concernant rendrait
+        l'utilisation de nos services impossible.
+
+    D. Droit à la portabilité des données
+
+        Quand vous faîtes usage de votre droit d'accès, nous pouvons vous
+        répondre dans un format structuré, communément utilisé et lisible par
+        une machine si vous le demandez.
+
+    E. Droit d'opposition
+
+        Toute personne peut exiger l'arrêt du traitement de ses données. Ce cas
+        sera traité indifféremment de l'utilisation du droit d'effacement.
+
+    F. Droits relatifs à la prise de décision automatisée
+
+        Aucune prise de décision automatisée ayant un effet juridique sur vous
+        n'est susceptible d'être prise par nos services.
