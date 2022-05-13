@@ -35,7 +35,7 @@
 /* Dark-thème */
 
 :root[data-theme="dark"] {
-    --background: #232323;
+    --background: #121212;
     --closer-background: #2a2a2a;
     --title-color: #FFFFFF;
     --black-homepage: #E3E3E3;

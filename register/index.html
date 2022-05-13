@@ -10,24 +10,19 @@
     <link rel="stylesheet" href="/styles/insagenda.css">
     <link rel="icon" href="assets/flaticon.ico" />  
     <link rel="stylesheet" href="/styles/auth.css">
-    <script src="/theme-toggle.js"></script>
+    [COMMON-HEAD]
 </head>
 
 <body>
-    <header>
-        <a id="header-logo" href="/">
-          <img src="/assets/elements/webLogo.svg" alt="logo de INSAgenda"> 
-          <h1 id="header-name">INSAgenda</h1>
-        </a>
-    </header>
+    [COMMON-HEADER]
     <section class="section-page-title">
         <h2 class="page-title">Inscription</h2>
         <div class="divider-bar"></div>
     </section>    
     <section class="identification-section">
-        <main>
+        <main id="auth" class="centred">
             <h3 class="login-title">S'inscrire avec son email étudiant</h3>
-            <form>
+            <form class="centred">
                 <!-- Email -->
                 <div class="labeled-input">
                     <input type="text" placeholder="Email" id="email-input" autocomplete="username" />
@@ -52,7 +47,7 @@
                     <span class="error-message-text">Les deux mots de passe sont différents.</span>
                 </div>
             </form>
-            <form style="display: none;">
+            <form style="display: none;" class="centred">
                 <p>Nous ne vous avons pas trouvé dans notre base de données ; nous avons besoin de plus d'informations sur vous.</p>
 
                 <!-- Section -->
