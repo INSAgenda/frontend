@@ -101,7 +101,8 @@ html {
         align-items: center;
     }
 
-    #homepage-top-left>.cta {
+    .cta {
+        text-align: center;
         width: 80%;
     }
 }
@@ -191,4 +192,19 @@ html {
 
 #additional-info ul {
     margin-left: 1rem;
+}
+
+@media all and (max-width: 900px) {
+    #additional-info {
+        padding: 0 15%;
+    }
+}
+
+@media all and (max-width: 500px) {
+    #additional-info {
+        padding: 0 4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
