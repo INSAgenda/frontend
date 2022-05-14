@@ -41,6 +41,12 @@ form>* {
     display: none;
 }
 
+.submit-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Dropdown */
 
 .dropdown-list-box, .checkbox-content, .dropdown-list, .language-checkbox {
