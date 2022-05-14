@@ -30,23 +30,32 @@
       <a href="/register" class="classic-button link-to-edt">Accéder</a>
     </div>
   </section>
-  <section id="start-page">
-    <div id="start-page-content">
-      <h2 id="welcome-message">N</h1>
-      <h3 id="description">Ici vous pouvez retrouver votre emploi de façon simplifiée.</h2>
-      <a class="classic-button link-to-edt" title="Accéder à mon emploi du temps" href="/login">Accéder à mon emploi du temps</a>  
+
+  <section id="advantages">
+    <div id="advantages-row">
+      <div>
+        <h4>Fiable</h4>
+        <img src="assets/elements/umbrella.svg">
+        <p>Nous nous asserons que tous vos cours soient affichés. Si votre agenda est modifié, vous serez notifiés.</p>
+      </div>
+      <div>
+        <h4>Sécurisé</h4>
+        <img src="assets/elements/shield.svg">
+        <p>La sécurité de nos services dépasse grandement celle de l'INSA. Vous ne nous croyez pas&nbsp;? Hackez-nous.</p>
+      </div>
+      <div>
+        <h4>Bénévole</h4>
+        <img src="assets/elements/user.svg">
+        <p>Nous nous ne sommes pas affiliés à l'INSA et défendons les intérêts des étudiants.</p>
+      </div>
+      <div>
+        <h4>Ambitieux</h4>
+        <img src="assets/elements/gift.svg">
+        <p>Des fonctionnalités majeures arrivent...</p>
+      </div>
     </div>
   </section>
 
-  <section id="homepage-top">
-    <div class="parallelogramme">
-      <img src="/assets/images/insa.jpg" alt="">
-    </div>
-    <div class="description">
-      <h3 class="description-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-      <p class="description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex massa, dignissim ut finibus a, tincidunt et enim. In ut nisl non metus porttitor commodo. Praesent lobortis ligula vel augue consequat gravida. Nunc sodales purus consequat molestie eleifend. Duis vitae eros gravida.</p>  
-    </div>
-  </section>
   <script>
     if (window.localStorage.getItem("api_key") != null) {
       let elements = document.getElementsByClassName("link-to-edt");
