@@ -9,7 +9,7 @@ html {
 /* Top section */
 
 #homepage-top {
-    height: calc(100vh - 5rem);
+    min-height: calc(100vh - 5rem);
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -66,6 +66,44 @@ html {
 
 .parallelogramme img {
     transform: skew(13deg); 
+}
+
+#screenshot-for-mobile {
+    display: none;
+}
+
+@media all and (max-width: 900px) {
+    .parallelogramme {
+        display: none;
+    }
+
+    #homepage-top-left {
+        margin: 0 3%;
+        width: 94%;
+        justify-content: start;
+    }
+
+    #homepage-top-left>h2 {
+        margin-top: 1.7rem;
+        width: 100%;
+    }
+    
+    #screenshot-for-mobile {
+        margin: 1.7rem 0;
+        display: block;
+        max-width: 100%;
+    }
+}
+
+@media all and (max-width: 500px) {
+    #homepage-top-left {
+        text-align: center;
+        align-items: center;
+    }
+
+    #homepage-top-left>.cta {
+        width: 80%;
+    }
 }
 
 /* Advantages */
