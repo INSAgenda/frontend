@@ -36,7 +36,7 @@ a{
     margin: 1rem 0;
     border-radius: calc(1.25rem + 2px);
     text-align: center;
-    transition: filter 0.2s;
+    transition: all 0.2s;
     cursor: pointer;
 }
 
@@ -53,11 +53,24 @@ a{
 }
 
 .primary-button:hover, .secondary-button:hover {
-    filter: brightness(1.1);
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 12px -12px var(--primary);
 }
 
 .primary-button:active, .secondary-button:active {
-    filter: brightness(0.8);
+    transform: translateY(3px);
+}
+
+:root[data-theme="light"] .secondary-button:active {
+    background-color: white;
+}
+
+:root[data-theme="light"] .secondary-button:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+:root[data-theme="light"] .primary-button:hover {
+    color: white;
 }
 
 /* Header */
