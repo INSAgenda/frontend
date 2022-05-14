@@ -121,6 +121,7 @@ html {
     display: grid;
     grid-template-columns: repeat(4, calc(13% + 3rem));
     grid-auto-rows: 1fr;
+    row-gap: 2rem;
     justify-content: space-evenly;
     height: min-content;
 }
@@ -144,6 +145,33 @@ html {
     width: 50%;
     margin: 1rem 25%;
     aspect-ratio: 1 / 1;
+}
+
+@media all and (max-width: 900px) {
+    #advantages-row {
+        grid-template-columns: repeat(2, calc(25% + 3rem));
+        row-gap: 1rem;
+    }
+}
+
+@media all and (max-width: 550px) {
+    #advantages-row {
+        grid-template-columns: repeat(2, calc(35% + 3rem));
+    }
+}
+
+@media all and (max-width: 450px) {
+    #advantages {
+        overflow: scroll;
+    }
+
+    #advantages-row {
+        padding: 0 2rem;
+        column-gap: 2rem;
+        grid-template-columns: repeat(4, calc(35vw + 3rem));
+        width: calc(4 * (35vw + 3rem) + 3 * 2rem);
+        justify-content: unset;
+    }
 }
 
 /* Additional info */
