@@ -1,4 +1,6 @@
-/* Start section */
+html {
+    color: var(--text);
+}
 
 .purple-text {
     color: var(--primary)
@@ -23,7 +25,6 @@
 
     font-size: 1.1em;
     text-align: end;
-    color: var(--text);
     text-align: start;
 }
 
@@ -31,7 +32,6 @@
     font-weight: bold;
     font-size: 3.5rem;
     width: 120%;
-    color: var(--text);
 }
 
 #homepage-top-left>p {
@@ -40,7 +40,7 @@
     color: #E6E6E6;
 }
 
-#homepage-top-left>a {
+.cta {
     line-height: 3.4rem;
     height: 3.4rem;
     font-size: 2rem;
@@ -68,7 +68,7 @@
     transform: skew(13deg); 
 }
 
-/* Second section */
+/* Advantages */
 
 #advantages {
     min-height: calc(50vh - 2rem);
@@ -88,7 +88,6 @@
 }
 
 #advantages-row>div {
-    color: var(--text);
     padding: 1.5rem;
     width: calc(100% - 3rem);
     height: calc(100% - 3rem);
@@ -107,4 +106,23 @@
     width: 50%;
     margin: 1rem 25%;
     aspect-ratio: 1 / 1;
+}
+
+/* Additional info */
+
+#additional-info {
+    padding: 0 25%;
+}
+
+#additional-info>h3 {
+    font-size: 1.8rem;
+    margin: 1.5rem 0 .5rem 0;
+}
+
+#additional-info>p {
+    text-align: justify;
+}
+
+#additional-info ul {
+    margin-left: 1rem;
 }
