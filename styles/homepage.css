@@ -43,11 +43,12 @@ html {
 .cta {
     line-height: 3.4rem;
     height: 3.4rem;
-    font-size: 2rem;
+    display: block;
+    font-size: 1.8rem;
     border-radius: 1.7rem;
     font-weight: normal;
     width: min-content;
-    padding: 0 2.5rem;
+    padding: 0 3rem;
 }
 
 .parallelogramme {
@@ -178,7 +179,7 @@ html {
 /* Additional info */
 
 #additional-info {
-    padding: 0 25%;
+    padding: 0 25% 1.7rem 25%;
 }
 
 #additional-info>h3 {
@@ -196,13 +197,13 @@ html {
 
 @media all and (max-width: 900px) {
     #additional-info {
-        padding: 0 15%;
+        padding: 0 15% 1.7rem 15%;
     }
 }
 
 @media all and (max-width: 500px) {
     #additional-info {
-        padding: 0 4%;
+        padding: 0 4% 1.7rem 4%;
         display: flex;
         flex-direction: column;
         align-items: center;
