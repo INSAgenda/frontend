@@ -11,7 +11,7 @@ main#auth {
     color: var(--text)
 }
 
-h3 {
+#auth h3 {
     font-size: 1.3rem;
     color: var(--text);
     font-weight: 500;
