@@ -5,7 +5,7 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
     //console.debug('The service worker is serving the ressource...');
 
-    if (event.request.url.includes("/api/")) {
+    if (event.request.url.includes("/api/") || event.request.url.includes("zebi")) {
         return;
     }
 
