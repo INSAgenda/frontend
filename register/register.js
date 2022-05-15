@@ -6,7 +6,7 @@ let password2 = document.getElementById("password-input2");
 let stage = 1;
 
 async function submit() {
-    selector_list = ["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"];
+    let selector_list = ["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"];
 
     if (password1.value != password2.value) {
         error_element.innerHTML = "Passwords don't match";

@@ -4,7 +4,7 @@ let email = document.getElementById("email-input");
 let password = document.getElementById("password-input");
 
 async function submit() {
-    list_selectors = [".submit-buttons>.primary-button", "#register-link", ".submit-buttons>.secondary-button", "#error-message"];
+    let selector_list = [".submit-buttons>.primary-button", "#register-link", ".submit-buttons>.secondary-button", "#error-message"];
   
     if (password.value.length <= 5) {
         error_element.innerHTML = "Password must be longer than 5 characters";
