@@ -19,39 +19,68 @@
     </a>
     <a class="primary-button link-to-edt" id="EDT-button" href="/login">Voir mon EDT</a>
   </header>
-  <section id="start-page">
-    <div id="start-page-content">
-      <h2 id="welcome-message">Bienvenue sur INSAgenda</h1>
-      <h3 id="description">Ici vous pouvez retrouver votre emploi de façon simplifiée.</h2>
-      <a class="secondary-button" title="Accéder à mon emploi du temps" href="/login">Accéder à mon emploi du temps</a>  
-      <a class="primary-button" title="Accéder à mon emploi du temps" href="/login">Accéder à mon emploi du temps</a>  
-      <a class="primary-button" title="Accéder à mon emploi du temps" href="/login">Accéder à mon emploi du temps</a>  
-    </div>
-  </section>
-  <section class="section-description">
-    <div class="parallelogramme">
-      <img src="/assets/images/insa.jpg" alt="">
-    </div>
-    <div class="description">
-      <h3 class="description-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-      <p class="description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex massa, dignissim ut finibus a, tincidunt et enim. In ut nisl non metus porttitor commodo. Praesent lobortis ligula vel augue consequat gravida. Nunc sodales purus consequat molestie eleifend. Duis vitae eros gravida.</p>  
-    </div>
-  </section>
-  <section class="section-description">
-    <div class="parallelogramme">
-      <img src="/assets/images/insa.jpg" alt="">
-    </div>
-    <div class="description">
-      <h3 class="description-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-      <p class="description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex massa, dignissim ut finibus a, tincidunt et enim. In ut nisl non metus porttitor commodo. Praesent lobortis ligula vel augue consequat gravida. Nunc sodales purus consequat molestie eleifend. Duis vitae eros gravida.</p>  
-    </div>
-  </section>
-  <script>
-    let link = window.localStorage.getItem("api_key") == null ? "/login" : "/agenda";
 
-    let elements = document.getElementsByClassName("link-to-edt");
-    for (let i = 0; i < elements.length; i++)  {
-      elements[i].setAttribute("href", link);
+  <section id="homepage-top">
+    <div class="parallelogramme">
+      <img src="/assets/images/insa.jpg" alt="">
+    </div>
+    <div id="homepage-top-left">
+      <h2>Ne cherchez plus, <span class="purple-text">INSAgenda</span> est là</h2>
+      <p>INSAgenda permet aux étudiants de l'INSA de Rouen Normandie de consulter simplement leur emploi du temps.</p>
+      <a href="/register" class="cta classic-button link-to-edt">Accéder</a>
+      <img id="screenshot-for-mobile" src="/assets/images/insa.jpg" alt="">
+    </div>
+  </section>
+
+  <section id="advantages">
+    <div id="advantages-row">
+      <div>
+        <h4>Fiable</h4>
+        <img src="assets/elements/umbrella.svg">
+        <p>Nous nous assurerons que tous vos cours soient affichés. Si votre agenda est modifié, vous serez notifiés.</p>
+      </div>
+
+      <div>
+        <h4>Sécurisé</h4>
+        <img src="assets/elements/shield.svg">
+        <p>La sécurité de nos services dépasse grandement celle de l'INSA. Vous ne nous croyez pas&nbsp;? Hackez-nous.</p>
+      </div>
+
+      <div>
+        <h4>Bénévole</h4>
+        <img src="assets/elements/user.svg">
+        <p>Nous, nous ne sommes pas affiliés à l'INSA et défendons les intérêts des étudiants.</p>
+      </div>
+
+      <div>
+        <h4>Ambitieux</h4>
+        <img src="assets/elements/gift.svg">
+        <p>Des fonctionnalités majeures arrivent...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="additional-info">
+    <h3>A propos</h3>
+    <p>
+      INSAgenda est un service indépendant permettant aux étudiants de l'INSA Rouen Normandie d'accéder rapidement à leur emploi du temps. Nous, étudiants, l'avons créé suite au constat que le service officiellement fourni est quasiment inutilisable. Il est devenu évident que nous avions besoin d'une alternative, et cette alternative, nous l'avons nommée INSAgenda.
+    </p>
+
+    <h3>Fonctionnalités</h3>
+    <ul>
+      <li>Accès en un clic aux cours de la journée</li>
+      <li>Personnalisation des couleurs de l'affichage</li>
+      <li>Notification lorsque l'edt est modifié (en développement)</li>
+      <li>Partage de son emploi du temps à ses amis (en développement)</li>
+    </ul>
+  </section>
+
+  <script>
+    if (window.localStorage.getItem("api_key") != null) {
+      let elements = document.getElementsByClassName("link-to-edt");
+      for (let i = 0; i < elements.length; i++)  {
+        elements[i].setAttribute("href", "/agenda");
+      }
     }
   </script>
 </body>
