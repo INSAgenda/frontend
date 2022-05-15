@@ -193,19 +193,16 @@ header{
     padding: 0 33px;
     border: none;
 }
+
 .input::placeholder{
     color: var(--text);
 }
 
-/* Input autofill */
+/* Prevent input autofill style */
 
-input:autofill, input:-webkit-autofill-strong-password, input:-webkit-autofill-strong-password-viewable {
-    background-color: var(--primary);
+input:-webkit-autofill, input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
 }
-
-/* Autofill button */
-
-
 
 /* Mobile */
 
