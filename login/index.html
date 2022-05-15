@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="/styles/colors.css">
     <link rel="stylesheet" href="/styles/insagenda.css">
-    <link rel="icon" href="assets/flaticon.ico" />  
+    <link rel="icon" href="assets/logo/logo.svg" />  
     <link rel="stylesheet" href="/styles/auth.css">
     [COMMON-HEAD]
 </head>
@@ -38,12 +38,15 @@
                 </div>
 
                 <a id="forgotten-password-link" href="/forgotten-password">Mot de passe oublié.</a>
-                <input type="button" class="red-button form-button" id="submit-button" value="Connexion">
 
-                <span id="register-link">Vous n’avez pas encore de compte ?</span>
-                <a class="white-button" href="/register">Créer un compte</a>
+                <div class="submit-buttons">
+                    <input type="button" class="primary-button" id="submit-button" value="Connexion">
 
-                <p id="error-message" style="display: none;"></p>
+                    <span id="register-link">Vous n’avez pas encore de compte ?</span>
+                    <a class="secondary-button" href="/register">Créer un compte</a>
+
+                    <p id="error-message" style="display: none;"></p>
+                </div>
             </form>
         </main>    
     </section>

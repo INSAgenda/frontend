@@ -11,9 +11,9 @@ main#auth {
     color: var(--text)
 }
 
-h3 {
+#auth h3 {
     font-size: 1.3rem;
-    color: var(--title-color);
+    color: var(--text);
     font-weight: 500;
     margin-bottom: 3rem;
 }
@@ -23,14 +23,14 @@ form>* {
 }
 
 #forgotten-password-link, #register-link {
-    color: var(--faint-text);
+    color: var(--text);
     margin-top: .8rem;
     font-size: .8rem;
     text-decoration: none;
 }
 
 #forgotten-password-link, #error-message {
-    color: var(--red);
+    color: var(--primary);
 }
 
 #forgotten-password-link {
@@ -39,6 +39,12 @@ form>* {
 
 .error-message-text, .language-checkbox>input, .group-checkbox>input {
     display: none;
+}
+
+.submit-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Dropdown */
@@ -57,12 +63,12 @@ form>* {
 
 .dropdown-list {
     padding: 0 1.5rem;
-    color: var(--faint-text);
+    color: var(--text);
     border: none;
     outline: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: url(/assets/elements/select-arrow.svg) 97% center no-repeat var(--input-color);
+    background: url(/assets/elements/select-arrow.svg) 97% center no-repeat var(--closer-background);
 }
 
 /* Language checkbox */
@@ -80,9 +86,9 @@ form>* {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--input-color);
+    background-color: var(--closer-background);
     border: 1px solid var(--background);
-    color: var(--input-text);
+    color: var(--text);
     padding: 0 10px;
     user-select: none;
     transition: filter 0.2s, background-color 0.2s;
@@ -93,8 +99,8 @@ form>* {
 }
 
 .language-checkbox-active {
-    background-color: var(--red);
-    color: white;
+    background-color: var(--primary);
+    color: var(--closer-background);
 }
 
 .group-checkbox {
@@ -122,10 +128,10 @@ form>* {
     width: 64px;
     height: 64px;
     margin: 8px;
-    border: 8px solid var(--red);
+    border: 8px solid var(--primary);
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: var(--red) transparent transparent transparent;
+    border-color: var(--primary) transparent transparent transparent;
   }
   .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;

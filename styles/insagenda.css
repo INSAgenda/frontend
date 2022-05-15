@@ -1,12 +1,12 @@
 /* Font */
 
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('/assets/fonts/Roboto/css2.css');
 
 /* General */
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -21,76 +21,71 @@ a{
 
 /* Buttons */
 
-/* Red button */
-
-.red-button{
-    background-color: var(--red);
+.primary-button, .secondary-button {
+    display: block;
+    box-sizing: content-box;
     text-decoration: none;
-    color: white;
     font-weight: bold;
-    border-radius: 20px;
-    transition: filter 0.2s;
-}
-.red-button:hover{
-    filter: brightness(0.9);
-}
-.red-button:active{
-    filter: brightness(0.8);
-}
-
-/* White button */
-
-.white-button{
-    background-color: transparent;
-    text-decoration: none;
-    color: var(--red);
-    font-weight: bold;
-    border-radius: 25px;
-    min-width: 240px;
-    max-height: 47px;
-    height: 3vw;
-    min-height: 38px;
-    transition: filter 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0;
+    min-width: min-content;
+    white-space: nowrap;
+    height: 2.5rem;
+    width: calc(100% - 5rem - 4px);
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    padding: 0 2.5rem;
+    margin: 1rem 0;
+    border-radius: calc(1.25rem + 2px);
+    text-align: center;
+    transition: all 0.2s;
     cursor: pointer;
-    -webkit-appearance: none;
-    line-height: calc(2rem - 4px);
-    border: 2px solid var(--red);
-
-}
-.white-button:hover{
-    filter: brightness(0.9);
-}
-.white-button:active{
-    filter: brightness(0.8);
 }
 
-.red-button:hover, .white-button:hover {
-    filter: brightness(0.9);
+.primary-button {
+    background-color: var(--primary);
+    color: var(--background);
+    border: 2px solid var(--primary);
 }
 
-.red-button:active, .white-button:active {
-    filter: brightness(0.8);
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.primary-button:hover, .secondary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 12px -12px var(--primary);
+}
+
+.primary-button:active, .secondary-button:active {
+    transform: translateY(3px);
+}
+
+:root[data-theme="light"] .secondary-button:active {
+    background-color: white;
+}
+
+:root[data-theme="light"] .secondary-button:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+:root[data-theme="light"] .primary-button:hover {
+    color: white;
 }
 
 /* Header */
 
-header{
-    background-color: var(--header-color);
-    max-width: 100vw;
-    max-height: 100px;
-    min-height: 70px;
-    height: 3vw;
+header {
+    background-color: var(--closer-background);
+    width: calc(100% - 6rem);
+    height: 5rem;
+    padding: 0 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 4vw 0 4vw;
 }
 
-#header-logo{
+#header-logo {
     height: 70%;
     user-select: none;
     text-decoration: none;
@@ -98,20 +93,15 @@ header{
     align-items: center;
 }
 
-#header-name{
-    font-size: 1.5em;
+#header-name {
+    font-size: 1.5rem;
     font-weight: 500;
-    color: var(--title-color);
+    color: var(--text);
 }
 
-#header-logo img{
+#header-logo img {
     height: 100%;
 }
-
-#EDT-button{
-    padding: 8px 32px;
-}
-
 
 /* Section title page */
 
@@ -123,14 +113,14 @@ header{
 .page-title{
     font-weight: bold;
     font-size: 1.5em;
-    color: var(--title-color);
+    color: var(--text);
 }
 
 .divider-bar{
     width: 114px;
     height: 6px;
     border-radius: 6px;
-    background-color: var(--red);
+    background-color: var(--primary);
     margin: 5px 0 20px 0;
 }
 
@@ -148,8 +138,8 @@ header{
     padding: 0 1.5rem;
     border-radius: 17.5rem;
     display: block;
-    background-color: var(--input-color);
-    color: var(--faint-text);
+    background-color: var(--closer-background);
+    color: var(--text);
     font-size: 1rem;
     border: none;
     outline: none;
@@ -161,7 +151,7 @@ header{
     line-height: 3.5rem;
     padding-left: 1.5rem;
     display: block;
-    color: var(--faint-text);
+    color: var(--text);
     font-size: .9rem;
     transition: .3s;
     user-select: none;
@@ -196,45 +186,16 @@ header{
     padding: 0 33px;
     border: none;
 }
+
 .input::placeholder{
-    color: var(--input-text);
+    color: var(--text);
 }
 
-.form-button{
-    max-height: 47px;
-    height: 3vw;
-    min-width: 240px;
-    background-color: var(--red);
-    border: none;
-    border-radius: 25px;
-    font-size: 19px;
-    color: white;
-    font-weight: 400;
-    cursor: pointer;
-    transition: filter 0.2s;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 38px;
-    margin: 31px 0 10px 0;
+/* Prevent input autofill style */
+
+input:-webkit-autofill, input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
 }
-.form-button:hover{
-    filter: brightness(0.8);
-}
-.form-button:active{
-    filter: brightness(0.6);
-}
-
-/* Input autofill */
-
-input:autofill, input:-webkit-autofill-strong-password, input:-webkit-autofill-strong-password-viewable {
-    background-color: red;
-}
-
-/* Autofill button */
-
-
 
 /* Mobile */
 
@@ -245,5 +206,14 @@ input:autofill, input:-webkit-autofill-strong-password, input:-webkit-autofill-s
     .divider-bar{
         height: 4px;
         width: 85px;
+    }
+
+    header {
+        width: 96%;
+        padding: 0 2%;
+    }
+
+    #EDT-button{
+        padding: 0.5rem 1.5rem;
     }
 }

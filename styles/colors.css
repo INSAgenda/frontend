@@ -1,66 +1,27 @@
 /* Colors */
 
 :root {
-    --red: #d74536;
-    --black: #222222;
-    --black-homepage: #222222;
-    --dark_grey: #444444;
-    --grey: #F0F0F0;
-    --white: #FFFFFF;
-    --background: #E5E5E5;
-    --closer-background: #F0F0F0;
-    --title-color: #000000;
-    --header-color: #FFFFFF;
-    --input-color: #FFFFFF;
-    --input-text: #3a3a3a;
-    --faint-text: #3a3a3a;
-    --text: black;
-    --calendar-color: #FFFFFF;
-    --calendar-text: #444444;
+    /* All colors */
+    --primary: #CB6CE6;
+    --light-text: #F6F6F6;
+    --dark-text: #262626;
+    --dark: #1A1A1B;
+    --medium-dark: #333333;
+    --light: #FFFFFF;
+    --medium-light: #EBEAEA;
 
-    /* Colors for pre-defined depths. Mostly used for dark theme. */
+    --background: var(--medium-light);
+    --closer-background: var(--light);
+    --text: var(--dark-text);
+    --day: var(--medium-light);
 
-    --dp00: #f0f0f0;
-    --dp01: #f5f5f5;
-    --dp02: white;
-    --dp03: white;
-    --dp04: white;
-    --dp06: white;
-    --dp08: white;
-    --dp12: white;
-    --dp16: white;
-    --dp24: white;
 }
 
 /* Dark-thème */
 
 :root[data-theme="dark"] {
-    --background: #121212;
-    --closer-background: #2a2a2a;
-    --title-color: #FFFFFF;
-    --black-homepage: #E3E3E3;
-    --header-color:#242424;
-    --input-color: #2f2f2f;
-    --input-text: #ffffff99;
-    --faint-text: #ffffff99;
-    --text: white;
-    --calendar-color: #242424;
-    --calendar-text: #E3E3E3;
-
-    /* 
-    *   Colors for the dark theme according to material design guidelines (https://material.io/design/color/dark-theme.html).
-    *   These are not random and were calculated using this tool: https://codepen.io/mubelotix/pen/vYWYmZR
-    *   These are completely grey for now but we could very well add a little color in the future
-    */
-
-    --dp00: #121212;
-    --dp01: #1E1E1E;
-    --dp02: #232323;
-    --dp03: #252525;
-    --dp04: #272727;
-    --dp06: #2c2c2c;
-    --dp08: #2f2f2f;
-    --dp12: #333333;
-    --dp16: #353535;
-    --dp24: #383838;
+    --background: var(--dark);
+    --closer-background: var(--medium-dark);
+    --text: var(--light-text);
+    --day: #262627;
 }
