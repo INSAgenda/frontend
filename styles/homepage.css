@@ -6,6 +6,13 @@ html {
     color: var(--primary)
 }
 
+/* Header */
+
+#EDT-button {
+    padding: .5rem 2rem;
+    font-size: 1.2rem;
+}
+
 /* Top section */
 
 #homepage-top {
@@ -37,7 +44,7 @@ html {
 #homepage-top-left>p {
     font-size: 1.7rem;
     margin: 1.4rem 0;
-    color: #E6E6E6;
+    color: var(--text);
 }
 
 .cta {
@@ -73,6 +80,7 @@ html {
     display: none;
 }
 
+
 @media all and (max-width: 900px) {
     .parallelogramme {
         display: none;
@@ -104,7 +112,7 @@ html {
 
     .cta {
         text-align: center;
-        width: 80%;
+        width: 65%;
     }
 }
 
