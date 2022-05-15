@@ -9,16 +9,11 @@
     <link rel="stylesheet" href="/styles/insagenda.css">
     <link rel="icon" href="assets/flaticon.ico" />  
     <link rel="stylesheet" href="/styles/auth.css">
-    <script src="/theme-toggle.js"></script>
+    [COMMON-HEAD]
 </head>
 
 <body>
-    <header>
-        <a id="header-logo" href="/">
-          <img src="/assets/logo/logo.svg" alt="INSAgenda logo"> 
-          <h1 id="header-name">INSAgenda</h1>
-        </a>
-    </header>
+    [COMMON-HEADER]
     <section class="section-page-title">
         <h2 class="page-title">Connexion</h2>
         <div class="divider-bar"></div>
@@ -43,12 +38,15 @@
                 </div>
 
                 <a id="forgotten-password-link" href="/forgotten-password">Mot de passe oublié.</a>
-                <input type="button" class="classic-button form-button" id="submit-button" value="Connexion">
 
-                <span id="register-link">Vous n’avez pas encore de compte ?</span>
-                <a class="second-button" href="/register">Créer un compte</a>
+                <div class="submit-buttons">
+                    <input type="button" class="primary-button" id="submit-button" value="Connexion">
 
-                <p id="error-message" style="display: none;"></p>
+                    <span id="register-link">Vous n’avez pas encore de compte ?</span>
+                    <a class="secondary-button" href="/register">Créer un compte</a>
+
+                    <p id="error-message" style="display: none;"></p>
+                </div>
             </form>
         </main>    
     </section>

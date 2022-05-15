@@ -11,7 +11,7 @@ main#auth {
     color: var(--text)
 }
 
-h3 {
+#auth h3 {
     font-size: 1.3rem;
     color: var(--text);
     font-weight: 500;
@@ -39,6 +39,12 @@ form>* {
 
 .error-message-text, .language-checkbox>input, .group-checkbox>input {
     display: none;
+}
+
+.submit-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Dropdown */

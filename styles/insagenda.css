@@ -1,6 +1,6 @@
 /* Font */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('/assets/fonts/Roboto/css2.css');
 
 /* General */
 *{
@@ -21,59 +21,56 @@ a{
 
 /* Buttons */
 
-/* Pink button */
-
-.classic-button{
-    background-color: var(--primary);
+.primary-button, .secondary-button {
+    display: block;
+    box-sizing: content-box;
     text-decoration: none;
-    color: var(--background);
     font-weight: bold;
-    border-radius: 20px;
-    transition: filter 0.2s;
-}
-.classic-button:hover{
-    filter: brightness(0.9);
-}
-.classic-button:active{
-    filter: brightness(0.8);
-}
-
-/* White button */
-
-.second-button{
-    background-color: transparent;
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: bold;
-    border-radius: 25px;
-    min-width: 240px;
-    max-height: 47px;
-    height: 3vw;
-    min-height: 38px;
-    transition: filter 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0;
+    min-width: min-content;
+    white-space: nowrap;
+    height: 2.5rem;
+    width: calc(100% - 5rem - 4px);
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    padding: 0 2.5rem;
+    margin: 1rem 0;
+    border-radius: calc(1.25rem + 2px);
+    text-align: center;
+    transition: all 0.2s;
     cursor: pointer;
-    -webkit-appearance: none;
-    line-height: calc(2rem - 4px);
+}
+
+.primary-button {
+    background-color: var(--primary);
+    color: var(--background);
     border: 2px solid var(--primary);
-
-}
-.second-button:hover{
-    filter: brightness(0.9);
-}
-.second-button:active{
-    filter: brightness(0.8);
 }
 
-.classic-button:hover, .second-button:hover {
-    filter: brightness(0.9);
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
-.classic-button:active, .second-button:active {
-    filter: brightness(0.8);
+.primary-button:hover, .secondary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 12px -12px var(--primary);
+}
+
+.primary-button:active, .secondary-button:active {
+    transform: translateY(3px);
+}
+
+:root[data-theme="light"] .secondary-button:active {
+    background-color: white;
+}
+
+:root[data-theme="light"] .secondary-button:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+:root[data-theme="light"] .primary-button:hover {
+    color: white;
 }
 
 /* Header */
@@ -189,45 +186,16 @@ header {
     padding: 0 33px;
     border: none;
 }
+
 .input::placeholder{
     color: var(--text);
 }
 
-.form-button{
-    max-height: 47px;
-    height: 3vw;
-    min-width: 240px;
-    background-color: var(--primary);
-    border: none;
-    border-radius: 25px;
-    font-size: 19px;
-    color: var(--background);
-    font-weight: 400;
-    cursor: pointer;
-    transition: filter 0.2s;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 38px;
-    margin: 31px 0 10px 0;
+/* Prevent input autofill style */
+
+input:-webkit-autofill, input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
 }
-.form-button:hover{
-    filter: brightness(0.8);
-}
-.form-button:active{
-    filter: brightness(0.6);
-}
-
-/* Input autofill */
-
-input:autofill, input:-webkit-autofill-strong-password, input:-webkit-autofill-strong-password-viewable {
-    background-color: var(--primary);
-}
-
-/* Autofill button */
-
-
 
 /* Mobile */
 
