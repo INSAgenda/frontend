@@ -1,0 +1,59 @@
+{
+    "lang": "fr-FR",
+    "name": "INSAgenda",
+    "start_url": "/agenda?ref=pwa",
+    "scope": "/agenda",
+    "background_color": "#1A1A1B",
+    "theme_color": "#CB6CE6",
+    "categories": ["education", "news", "productivity", "utilities", "social"],
+    "description": "App permettant aux étudiants de l'INSA de consulter leur emploi du temps.",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "/assets/logo/logo.svg",
+            "sizes": "any"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/assets/screenshots/desktop-darktheme.png",
+            "sizes": "2870x1654",
+            "type": "image/png",
+            "platform": "wide",
+            "label": "Emploi du temps sur pc avec le thème sombre"
+        },
+        {
+            "src": "/assets/screenshots/desktop-lightheme.png",
+            "sizes": "2880x1652",
+            "type": "image/png",
+            "platform": "wide",
+            "label": "Emploi du temps sur pc avec le thème clair"
+        },
+        {
+            "src": "/assets/screenshots/mobile-darktheme.png",
+            "sizes": "732x1438",
+            "type": "image/png",
+            "platform": "narrow",
+            "label": "Emploi du temps sur mobile avec le thème sombre"
+        },
+        {
+            "src": "/assets/screenshots/mobile-lightheme.png",
+            "sizes": "722x1444",
+            "type": "image/png",
+            "platform": "narrow",
+            "label": "Emploi du temps sur mobile avec le thème clair"
+        }
+    ],
+    "shortcut": [
+        {
+            "name": "Agenda",
+            "url": "/agenda?ref=pwa",
+            "description": "Voir les cours d'aujourd'hui"
+        },
+        {
+            "name": "Paramètres",
+            "url": "/agenda#settings?ref=pwa",
+            "description": "Ouvrir les paramètres"
+        }
+    ]
+}
