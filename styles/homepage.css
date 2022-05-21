@@ -6,6 +6,10 @@ html {
     color: var(--primary)
 }
 
+img {
+    aspect-ratio: attr(width) / attr(height);
+}
+
 /* Header */
 
 #EDT-button {
