@@ -66,7 +66,7 @@ async function submit() {
             error_el.style.display = "block";
         }
     } else {
-        alert("Unknown error");
+        alert("Erreur inconnue");
     }
 };
 submit_el.onclick = submit;
