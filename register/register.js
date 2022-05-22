@@ -15,7 +15,7 @@ async function submit() {
     }
 
     if (password1.value.length <= 5) {
-        error_el.innerHTML = "Passwords must be longer than 5 characters";
+        error_el.innerHTML = "Les mots de passe doivent contenir au moins 5 caractères";
         error_el.style.display = "block";
         return false;
     }
