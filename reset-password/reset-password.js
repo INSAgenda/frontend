@@ -47,7 +47,7 @@ async function submit() {
         error_el.innerHTML = json.message_fr; // TODO: display english messages
         error_el.style.display = "block";
     } else {
-        alert("Unknown error");
+        alert("Erreur inconnue");
     }
 };
 
