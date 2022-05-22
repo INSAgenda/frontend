@@ -9,7 +9,7 @@ async function submit() {
     let selector_list = ["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"];
 
     if (password1.value != password2.value) {
-        error_el.innerHTML = "Passwords don't match";
+        error_el.innerHTML = "Les mots de passe ne correspondent pas.";
         error_el.style.display = "block";
         return false;
     }
