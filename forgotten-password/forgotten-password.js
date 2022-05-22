@@ -8,7 +8,7 @@ async function submit() {
 
     confirmation_el.style.display = "none";
     if (email_el.value.length === 0) {
-        error_el.innerHTML = "Please enter an email address";
+        error_el.innerHTML = "Entrez votre adresse email";
         error_el.style.display = "block";
         return false;
     } else {
