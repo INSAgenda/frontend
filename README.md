@@ -1,119 +1,49 @@
 <div align="center">
-  <a href="https://insagenda.fr/index.html">
-    <img src="https://insagenda.fr/assets/elements/webLogo.svg" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Insagenda</h3>
-
-  <p align="center">
-    Insagenda is a free website, open source, to consult the timetable at INSA Rouen.
-    <br/>
-    <a href="https://insagenda.fr/index.html"><strong>Explore the website »</strong></a>
-    <br/>
-    <br/>
-   </p>
+    <a href="https://insagenda.fr/">
+        <img src="https://insagenda.fr/assets/logo/logo.svg" alt="INSAgenda's logo" width="80" height="80">
+    </a>
+    <h3 align="center">INSAgenda (frontend)</h3>
+    <p align="center">
+        Insagenda is a free website, open source, to consult the timetable at INSA Rouen.<br/>
+        <a href="https://insagenda.fr/"><b>Explore our website »</b></a><br/><br/>
+    </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#creation">Creation</a>
-      <ul>
-        <li>
-          <a href="#structure">Structure</a>
-        </li>
-        <li>
-          <a href="#language">Language</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="#usage">Usage</a>
-    </li>
-    <li>
-      <a href="#authors">Authors</a>
-    </li>
-    <li>
-      <a href="#License">License</a>
-    </li>
-  </ol>
-</details>
+## Table of contents
 
-<!-- Abour the project -->
-## About The Project 
-<img src="readme/mainpage.png" alt="Logo" width="" height="">
-<br/>
-INSAgenda is a website displays timetables with a new design. It simply retrieves the timetable and displays it with a new design. INSAgenda is an evolving platform, it is constantly updated and improved with new features.
-<br/>
-<br/>
-This repository contains only static files. This excludes the Web-app as well as the backend. All files in this repository will be hosted.
+1. [About](#about)
+2. [Usage](#usage)
+    - [Serving](#serving)
+    - [Preprocessing](#preprocessing)
+3. [Contributing](#contributing)
+    - [Recommandations](#recommandations)
+    - [License](#license)
 
-<!-- Creation -->
-## Creation
-### Structure
-The INSAgenda project has this repository which contains the frontend files for the site.
-<br/>
-<br/>
-The INSAgenda structure is : 
-<!-- structure -->
-<pre>
-├── frontend (folder)
-│   ├── assets (folder)
-│   │   └── (Here are the images and the icons)
-│   ├── styles (folder)
-│   │   └── (Here are the main stylesheets)
-│   ├── Next page (folder)
-│   │   ├── page.html (file .html)
-│   │   ├── page.css (file .css)
-│   │   └── page.js (file .js) 
-│   └── index.html (main file .html)
-└──
-</pre>
-In a page's folder, there may not be [.css](https://developer.mozilla.org/fr/docs/Web/CSS) or [.js](https://developer.mozilla.org/fr/docs/Web/JavaScript) files because sometimes they are not needed.
+## About
 
-### Language
-The INSAgenda project is written in [HTML](https://developer.mozilla.org/fr/docs/Web/HTML), [CSS](https://developer.mozilla.org/fr/docs/Web/CSS) and [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript). (Just for the front-end)
-<br/>
-<br/>
-Usefulness of language :
- - [HTML](https://developer.mozilla.org/fr/docs/Web/HTML) : Marking up elements of a web page.
-  - [CSS](https://developer.mozilla.org/fr/docs/Web/CSS) : Tells the browser the style of the page.
-  - [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript) : Allows the user to interact with the page dynamically.
+This repository contains all static files hosted on [INSAgenda](https://insagenda.fr/) expect files under the `/agenda` scope. These are in [web-app](https://github.com/INSAgenda/web-app). The backend is closed-source.
 
-<!-- Usage -->
 ## Usage
-To use the INSAgenda service, you must be an INSA Rouen student and have a student email address.
-### Step 1
-Go to the website [insagenda.fr](https://insagenda.fr)
-<img style="border-radius: 7px;" src="readme/step1.png" alt="Step 1">
-### Step 2
-Click on the button "Voir mon EDT"
-<img style="border-radius: 7px;" src="readme/step2.png" alt="Step 2">
-### Step 3
-You must now log in or create your account. To create your account you must use your email provided by INSA.
-<img style="border-radius: 7px;" src="readme/step3.png" alt="Step 2">
-### Step 3 (optional)
-If after your registration, INSAgenda does not find you, you must fill in the information manually.
-<img style="border-radius: 7px;" src="readme/step3bis.png" alt="Step 2">
-### Step 4
-Now, you can see your timetable.
-<br/>
-Good use ! 😉
-<!-- Autors -->
-## Authors
-INSAgenda website is a project created by students.
-<br/>
- - [@DimitriTimoz](https://github.com/DimitriTimoz) 
- - [@Mubelotix](https://github.com/Mubelotix) 
- - [@AlexysGromard](https://github.com/AlexysGromard) 
 
-<!-- License -->
-## License
-The INSAgenda project is licensed. All rights reserved.
-<br/>
-You can consult this [license](/LICENSE) here.
+### Serving
+
+We use a closed-source backend to serve the files. You can download a debug version of the backend [here](https://insagenda.fr/development/backend.tar.gz). It will require a valid database. There is a downloadable empty database [here](https://insagenda.fr/development/database). You will need SQLite3 installed.  
+All the files in this repository are expected by our backend to be contained next to it in a `files` folder.
+  
+We have more in-depth explanations in [the web-app repository](https://github.com/INSAgenda/web-app).
+
+### Preprocessing
+
+There is a list of code snippets in `common-code`. These snippets will be processed by our backend at startup. All occurences of `[COMMON-CODE-WHATEVER]` will be replaced by the content of the file at `/common-code/whatever`. As a result, **you have to relaunch the server each time you want to test changes** in your browser. This unpractical behavior will change in the future. 
+
+## Contributing
+
+### Recommandations
+
+We currently do not have ready-to-use documentation for our endpoints.  
+If you need any information, feel free to ask on [our discord server](https://discord.gg/TpdbUyfcbJ).
+
+### License
+
+This project is unlicensed. This means the source code is protected by copyright laws in the most restrictive way.  
+You can read the code and contribute to it, but you mustn't use it for any other purpose. This is especially true for INSA, as we give them no right whatsoever on our project. We think it's like we worked for them for free and they owe us money.
