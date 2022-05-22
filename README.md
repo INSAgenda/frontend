@@ -4,7 +4,7 @@
     </a>
     <h3 align="center">INSAgenda (frontend)</h3>
     <p align="center">
-        Insagenda is a free website, open source, to consult the timetable at INSA Rouen.<br/>
+        INSAgenda is a free website allowing students to view their course schedule at INSA Rouen.<br/>
         <a href="https://insagenda.fr/"><b>Explore our website »</b></a><br/><br/>
     </p>
 </div>
