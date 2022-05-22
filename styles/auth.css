@@ -29,8 +29,12 @@ form>* {
     text-decoration: none;
 }
 
-#forgotten-password-link, #error-message {
+#forgotten-password-link {
     color: var(--primary);
+}
+
+#error-message {
+    color: var(--error-red);
 }
 
 #forgotten-password-link {

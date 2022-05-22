@@ -1,5 +1,5 @@
 let submit_el = document.getElementById("submit-button");
-let error_element = document.getElementById("error-message");
+let error_el = document.getElementById("error-message");
 let email = document.getElementById("email-input");
 let password1 = document.getElementById("password-input1");
 let password2 = document.getElementById("password-input2");
@@ -9,16 +9,15 @@ async function submit() {
     let selector_list = ["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"];
 
     if (password1.value != password2.value) {
-        error_element.innerHTML = "Passwords don't match";
-        error_element.style.display = "block";
+        error_el.innerHTML = "Les mots de passe ne correspondent pas.";
+        error_el.style.display = "block";
         return false;
     }
 
     if (password1.value.length <= 5) {
-        error_element.innerHTML = "Passwords must be longer than 5 characters";
-        error_element.style.display = "block";
+        error_el.innerHTML = "Les mots de passe doivent contenir au moins 5 caractères";
+        error_el.style.display = "block";
         return false;
-        
     }
 
     enable_activity_indicator(selector_list, true);
@@ -49,6 +48,7 @@ async function submit() {
             },
         });
     }
+    enable_activity_indicator(selector_list, false);
 
     if (response.status == 200) {
         let json = await response.json();
@@ -62,13 +62,12 @@ async function submit() {
             stage = 2;
             document.querySelector("main > form:nth-child(3)").style.display = "initial";
         } else {
-            error_element.innerHTML = json.message_fr; // TODO: display english messages
-            error_element.style.display = "block";
+            error_el.innerHTML = json.message_fr; // TODO: display english messages
+            error_el.style.display = "block";
         }
     } else {
-        alert("Unknown error");
+        alert("Erreur inconnue");
     }
-    enable_activity_indicator(selector_list, false);
 };
 submit_el.onclick = submit;
 

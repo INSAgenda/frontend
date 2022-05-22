@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mot de passe oublié | INSAgenda</title>
+    <meta name="description" content="Demandez à réinitialiser votre mot de passe.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/styles/colors.css">
+    <link rel="stylesheet" href="/styles/insagenda.css">
+    <link rel="icon" href="assets/logo/logo.svg" />
+    <link rel="stylesheet" href="/styles/auth.css">
+    [COMMON-HEAD]
+</head>
+
+<body>
+    [COMMON-HEADER]
+    <section class="section-page-title">
+        <h2 class="page-title">Mot de passe oublié</h2>
+        <div class="divider-bar"></div>
+    </section>    
+    <section id="forgotten-password-section">
+        <main id="auth" class="centred">
+            <!-- Form title -->
+            <h3 class="login-title">S'envoyer un email de récupération de mot de passe</h3>
+            <form class="centred">
+                <div class="labeled-input input-container">
+                    <input type="email" placeholder="Email" autocomplete="email" id="email-input" />
+                    <label for="email-input">Email</label>
+                </div>
+                
+                <!-- Messages -->
+                <span id="error-message" class="error-message-text">Veuillez entrer une adresse email valide.</span>
+                <span id="confirmation-message" class="error-message-text">Si l'email spécifiée correspond bien à un compte, un lien vous a été envoyé.</span>
+
+                <div class="submit-buttons">
+                    <input type="button" class="primary-button" id="submit-button" value="Envoyer">
+
+                    <span id="register-link">Vous n'avez pas encore de compte ?</span>
+                    <a class="secondary-button" href="/register">Créer un compte</a>
+                </div>
+            </form>
+        </main>    
+    </section>
+    <script type="text/javascript" src="/utils.js"></script>
+    <script type="text/javascript" src="/forgotten-password/forgotten-password.js"></script>
+    [COMMON-MANIFEST-SCRIPT]
+</body>

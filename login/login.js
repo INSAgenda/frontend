@@ -20,6 +20,7 @@ async function submit() {
             "Content-Type": "application/x-www-form-urlencoded",
         },
     });
+    enable_activity_indicator(selector_list, false);
 
     if (response.status == 200) {
         let json = await response.json();
@@ -31,9 +32,8 @@ async function submit() {
         error_element.innerHTML = json.message_fr; // TODO: display english messages
         error_element.style.display = "block";
     } else {
-        alert("Unknown error");
+        alert("Erreur inconnue");
     }
-    enable_activity_indicator(selector_list, false);
 };
 
 submit_el.onclick = submit;
