@@ -22,7 +22,7 @@ async function submit() {
     const urlParams = new URLSearchParams(queryString);
     const k = urlParams.get('k');
     if (k === null) {
-        error_el.innerHTML = "Missing key from url";
+        error_el.innerHTML = "Il manque la clé dans l'URL";
         error_el.style.display = "block";
         return false;
     }
