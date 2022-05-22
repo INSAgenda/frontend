@@ -2,7 +2,7 @@
     <a href="https://insagenda.fr/">
         <img src="https://insagenda.fr/assets/logo/logo.svg" alt="INSAgenda's logo" width="80" height="80">
     </a>
-    <h3 align="center">INSAgenda (frontend)</h3>
+    <h1 align="center">INSAgenda (frontend)</h1>
     <p align="center">
         INSAgenda is a free website allowing students to view their course schedule at INSA Rouen.<br/>
         <a href="https://insagenda.fr/"><b>Explore our website »</b></a><br/><br/>
