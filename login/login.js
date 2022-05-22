@@ -32,7 +32,7 @@ async function submit() {
         error_element.innerHTML = json.message_fr; // TODO: display english messages
         error_element.style.display = "block";
     } else {
-        alert("Unknown error");
+        alert("Erreur inconnue");
     }
 };
 
