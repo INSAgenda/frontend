@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Connexion | INSAgenda</title>
+    <meta name="description" content="Connectez-vous facilement à INSAgenda pour récupérer votre emploi du temps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/styles/colors.css">
+    <link rel="stylesheet" href="/styles/insagenda.css">
+    <link rel="icon" href="assets/logo/logo.svg" />  
+    <link rel="stylesheet" href="/styles/auth.css">
+    [COMMON-HEAD]
+</head>
+
+<body>
+    [COMMON-HEADER]
+    <section class="section-page-title">
+        <h2 class="page-title">Mot de passe oublié</h2>
+        <div class="divider-bar"></div>
+    </section>    
+    <section id="forgotten-password-section">
+        <main id="auth" class="centred">
+            <!-- Form title -->
+            <h3 class="login-title">S'envoyer un email de récupération de mot de passe</h3>
+            <form class="centred">
+                <div class="labeled-input input-container">
+                    <input type="email" placeholder="Email" autocomplete="username" id="email-input" />
+                    <label for="email-input">Email</label>
+                    <!-- Error message Email -->
+                    <span class="error-message-text">Veuillez entrer une adresse email valide.</span>
+                </div>
+                <div>
+                    <span id="confirm-message" style="display: none;">Un email a était envoyé à l'adresse email spécifiée si celle-ci existe.</span>
+                </div>
+
+                <div class="submit-buttons">
+                    <input type="button" class="primary-button" id="submit-button" value="Envoyer">
+
+                    <span id="register-link">Vous n’avez pas encore de compte ?</span>
+                    <a class="secondary-button" href="/register">Créer un compte</a>
+
+                    <p id="error-message" style="display: none;"></p>
+                </div>
+            </form>
+        </main>    
+    </section>
+    <script type="text/javascript" src="/utils.js"></script>
+    <script type="text/javascript" src="/forgotten-password/forgotten.js"></script>
+    <!-- [COMMON-manifest-script] -->
+</body>
