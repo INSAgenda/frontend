@@ -19,7 +19,7 @@ main {
 }
 
 h2 {
-    color: #fc3d03;
+    color: var(--error-red);
     margin: 1rem 0;
     font-size: 2rem;
 }

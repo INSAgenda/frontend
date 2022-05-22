@@ -30,7 +30,7 @@ form>* {
 }
 
 #forgotten-password-link, #error-message {
-    color: var(--primary);
+    color: var(--error-red);
 }
 
 #forgotten-password-link {

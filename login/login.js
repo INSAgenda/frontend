@@ -20,6 +20,7 @@ async function submit() {
             "Content-Type": "application/x-www-form-urlencoded",
         },
     });
+    enable_activity_indicator(selector_list, false);
 
     if (response.status == 200) {
         let json = await response.json();
@@ -33,7 +34,6 @@ async function submit() {
     } else {
         alert("Unknown error");
     }
-    enable_activity_indicator(selector_list, false);
 };
 
 submit_el.onclick = submit;

@@ -9,6 +9,7 @@
     --medium-dark: #333333;
     --light: #FFFFFF;
     --medium-light: #EBEAEA;
+    --error-red: #fc3d03;
 
     --background: var(--medium-light);
     --closer-background: var(--light);

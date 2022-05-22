@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Réinitialisation de mot de passe | INSAgenda</title>
+    <meta name="description" content="Choisir un nouveau mot de passe.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/styles/colors.css">
+    <link rel="stylesheet" href="/styles/insagenda.css">
+    <link rel="icon" href="assets/logo/logo.svg" />
+    <link rel="stylesheet" href="/styles/auth.css">
+    [COMMON-HEAD]
+</head>
+
+<body>
+    [COMMON-HEADER]
+    <section class="section-page-title">
+        <h2 class="page-title">Réinitialisation de mot de passe</h2>
+        <div class="divider-bar"></div>
+    </section>    
+    <section id="forgotten-password-section">
+        <main id="auth" class="centred">
+            <!-- Form title -->
+            <h3 class="login-title">Choisir un nouveau mot de passe</h3>
+            <form class="centred">
+                <!-- Password -->
+                <div class="labeled-input">
+                    <input type="password" placeholder="Password" id="password-input1" autocomplete="new-password" />
+                    <label for="password-input1">Mot de passe</label>
+                </div>
+
+                <!-- Password confirmation -->
+                <div class="labeled-input">
+                    <input type="password" placeholder="Password (confirmation)" id="password-input2" autocomplete="new-password" />
+                    <label for="password-input2">Mot de passe (confirmation)</label>
+                </div>
+
+                <!-- Message -->
+                <span id="error-message" class="error-message-text">Veuillez entrer une adresse email valide.</span>
+
+                <div class="submit-buttons">
+                    <input type="button" class="primary-button" id="submit-button" value="Confirmer">
+
+                    <span id="register-link">Vous vous rappellez de votre mot de passe ?</span>
+                    <a class="secondary-button" href="/login">Se connecter</a>
+                </div>
+            </form>
+        </main>    
+    </section>
+    <script type="text/javascript" src="/utils.js"></script>
+    <script type="text/javascript" src="/reset-password/reset-password.js"></script>
+    <!-- [COMMON-manifest-script] -->
+</body>
