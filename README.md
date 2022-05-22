@@ -27,20 +27,20 @@ This repository contains all static files hosted on [INSAgenda](https://insagend
 
 ### Serving
 
-We use a closed-source backend to serve the files. You can download a debug version of the backend [here](https://insagenda.fr/development/backend.tar.gz). It will require a valid database. There is a downloadable empty database [here](https://insagenda.fr/development/database). You will need SQLite3 installed.  
+We use a closed-source backend to serve the files. You can download a debug version of the backend [here](https://insagenda.fr/development/backend.tar.gz). It will require a valid database. There is a downloadable empty database [here](https://insagenda.fr/development/database). You might need SQLite3 installed.  
 All the files in this repository are expected by our backend to be contained next to it in a `files` folder.
   
 We have more in-depth explanations in [the web-app repository](https://github.com/INSAgenda/web-app).
 
 ### Preprocessing
 
-There is a list of code snippets in `common-code`. These snippets will be processed by our backend at startup. All occurences of `[COMMON-CODE-WHATEVER]` will be replaced by the content of the file at `/common-code/whatever`. As a result, **you have to relaunch the server each time you want to test changes** in your browser. This unpractical behavior will change in the future. 
+There is a list of code snippets in `common-code`. These snippets will be processed by our backend at startup. All occurences of `[COMMON-CODE-WHATEVER]` will be replaced by the content of the file at `/common-code/whatever`. As a result, **you have to relaunch the server each time you want to test changes** in your browser. This unpractical behavior will be changed in the future. 
 
 ## Contributing
 
 ### Recommandations
 
-We currently do not have ready-to-use documentation for our endpoints.  
+We currently do not have ready-to-use documentation for all endpoints.  
 If you need any information, feel free to ask on [our discord server](https://discord.gg/TpdbUyfcbJ).
 
 ### License
