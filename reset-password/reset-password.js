@@ -7,7 +7,7 @@ async function submit() {
     let selector_list = [".submit-buttons", ".error-message-text"];
 
     if (password1.value != password2.value) {
-        error_el.innerHTML = "Passwords don't match";
+        error_el.innerHTML = "Les mots de passe ne correspondent pas.";
         error_el.style.display = "block";
         return false;
     }
