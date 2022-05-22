@@ -7,7 +7,7 @@ async function submit() {
     let selector_list = [".submit-buttons", ".error-message-text"];
 
     confirmation_el.style.display = "none";
-    if (email_el.value.lenght === 0) {
+    if (email_el.value.length === 0) {
         error_el.innerHTML = "Please enter an email address";
         error_el.style.display = "block";
         return false;
