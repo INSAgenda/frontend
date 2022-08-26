@@ -31,8 +31,8 @@ async function submit() {
             },
         });
     } else {
-        let section_select = document.getElementById("section-select");
-        let section_value = section_select.options[section_select.selectedIndex].value;
+        let promotion_select = document.getElementById("promotion-select");
+        let promotion_value = promotion_select.options[promotion_select.selectedIndex].value;
 
         let class_select = document.getElementById("class-select");
         let class_value = class_select.options[class_select.selectedIndex].value;
@@ -42,7 +42,7 @@ async function submit() {
 
         response = await fetch('/api/auth/register', {
             method: 'POST',
-            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value) + "&section=" + encodeURIComponent(section_value) + "&class=" + encodeURIComponent(class_value) + "&lang=" + encodeURIComponent(lang) + "&class_division=" + encodeURIComponent(class_division),
+            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value) + "&promotion=" + encodeURIComponent(promotion_value) + "&class=" + encodeURIComponent(class_value) + "&lang=" + encodeURIComponent(lang) + "&class_division=" + encodeURIComponent(class_division),
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
             },
