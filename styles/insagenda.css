@@ -10,6 +10,12 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+.centred {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 body{
     background-color: var(--background);
