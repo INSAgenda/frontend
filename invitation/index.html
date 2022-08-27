@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Invitation | INSAgenda</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="/styles/colors.css">
+    <link rel="stylesheet" href="/styles/insagenda.css">
+    <link rel="icon" href="/assets/logo/logo.svg" />  
+    <link rel="stylesheet" href="/styles/auth.css">
+    [COMMON-HEAD]
+</head>
+<body>
+    [COMMON-HEADER]
+    <section class="section-page-title">
+        <h2 class="page-title">Invitation</h2>
+        <div class="divider-bar"></div>
+    </section>   
+    <section id="identification-section">
+        <main id="auth" class="centred">
+            <h3 class="login-title">Vous serez inscrit avec votre adresse email étudiant</h3>
+            <form class="centred">
+                <!-- Password -->
+                <div class="labeled-input">
+                    <input type="password" placeholder="Password" id="password-input1" autocomplete="new-password" />
+                    <label for="password-input1">Mot de passe</label>
+                    <!-- Error message password -->
+                    <span class="error-message-text">Veuillez entrer un mot de passe valide.</span>
+                </div>
+
+                <!-- Password confirmation -->
+                <div class="labeled-input">
+                    <input type="password" placeholder="Password (confirmation)" id="password-input2" autocomplete="new-password" />
+                    <label for="password-input2">Mot de passe (confirmation)</label>
+                    <!-- Error message confirmation password -->
+                    <span class="error-message-text">Les deux mots de passe sont différents.</span>
+                </div>
+            </form>
+            <form class="submit-buttons" style="margin-top: 3rem;">
+                <div id="error-message" style="display: none;"></div>
+
+                <!-- Submit button -->
+                <input type="button" class="primary-button" id="submit-button" value="S'enregistrer">
+
+                <span id="register-link">Vous avez déjà un compte ?</span>
+                <a id="connection-link" class="secondary-button" href="/login">Se connecter</a>
+            </form>
+        </main>
+    </section>
+
+    <script type="text/javascript" src="/utils.js"></script>
+    <script type="text/javascript" src="/invitation/invitation.js"></script>
+</body>
+</html>
