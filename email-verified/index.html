@@ -9,7 +9,7 @@
         <script common_code="head">async function u(a,b){let c=await (await fetch(b)).text();a.outerHTML=c}var e=document.currentScript;u(e,"/common-code/"+e.getAttribute("common_code")+".html")</script>
     </head>
     <body>
-        [COMMON-HEADER]
+        <script common_code="header">async function u(a,b){let c=await (await fetch(b)).text();a.outerHTML=c}var e=document.currentScript;u(e,"/common-code/"+e.getAttribute("common_code")+".html")</script>
         <main id="verified-email" class="centred">
             <div id="headline">
                 <img id="verified-img" src="/assets/elements/check-circle.svg" alt="Check icon" width="150" height="150"/>
