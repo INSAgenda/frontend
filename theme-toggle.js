@@ -1,5 +1,4 @@
 const storageKey = 'setting-theme'
-const authoThemeKey = 'auto-theme'
 
 
 const getSystemPreference = () => {
@@ -15,7 +14,8 @@ const getColorPreference = () => {
     return getSystemPreference()
 }
 
-const reflectPreference = () => {
+document.reflectTheme = reflectPreference = function (){
+  const authoThemeKey = 'auto-theme'
   if ((localStorage.getItem(authoThemeKey)) && (localStorage.getItem(authoThemeKey) === 'true')){
     document.firstElementChild.setAttribute('data-theme', getSystemPreference());
   }else{
@@ -23,10 +23,10 @@ const reflectPreference = () => {
   }
 }
 
-reflectPreference()
+document.reflectTheme()
 
 window.onload = () => {
-  reflectPreference()
+  document.reflectTheme()
 }
 
 window
@@ -35,3 +35,4 @@ window
     // TODO: same call in webapp when selecting auto-theme
     reflectPreference()
   })
+
