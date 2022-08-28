@@ -17,10 +17,8 @@ const getColorPreference = () => {
 
 const reflectPreference = () => {
   if ((localStorage.getItem(authoThemeKey)) && (localStorage.getItem(authoThemeKey) === 'true')){
-    let theme = getSystemPreference()
     document.firstElementChild.setAttribute('data-theme', getSystemPreference());
   }else{
-    let colorPreference = getColorPreference()
     document.firstElementChild.setAttribute('data-theme', getColorPreference())
   }
 }
