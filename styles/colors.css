@@ -14,8 +14,7 @@
     --background: var(--medium-light);
     --closer-background: var(--light);
     --text: var(--dark-text);
-    --day: var(--medium-light);
-
+    --day: white;
 }
 
 /* Dark-thème */
