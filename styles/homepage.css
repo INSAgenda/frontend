@@ -6,6 +6,11 @@ html {
     color: var(--primary)
 }
 
+#screenshot-for-desktop-box{
+    display: flex;
+    justify-content: center;
+}
+
 #screenshot-for-mobile {
     max-width: 100%;
     height: auto;
