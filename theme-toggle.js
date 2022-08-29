@@ -1,37 +1,38 @@
 const storageKey = 'setting-theme'
 
-const getColorPreference = () => {
-  if (localStorage.getItem(storageKey))
-    return localStorage.getItem(storageKey)
-  else
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
+
+const getSystemPreference = () => {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : 'light'
 }
 
-const setPreference = () => {
-    localStorage.setItem(storageKey, theme.value)
-    reflectPreference()
+const getColorPreference = () => {
+  if (localStorage.getItem(storageKey))
+    return localStorage.getItem(storageKey)
+  else
+    return getSystemPreference()
 }
 
-const reflectPreference = () => {
-  document.firstElementChild
-    .setAttribute('data-theme', theme.value);
+document.reflectTheme = reflectPreference = function (){
+  const authoThemeKey = 'auto-theme'
+  if ((localStorage.getItem(authoThemeKey)) && (localStorage.getItem(authoThemeKey) === 'true')){
+    document.firstElementChild.setAttribute('data-theme', getSystemPreference());
+  }else{
+    document.firstElementChild.setAttribute('data-theme', getColorPreference())
+  }
 }
 
-const theme = {
-  value: getColorPreference(),
-}
-
-reflectPreference()
+document.reflectTheme()
 
 window.onload = () => {
-  reflectPreference()
+  document.reflectTheme()
 }
 
 window
   .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', ({matches:isDark}) => {
-    theme.value = isDark ? 'dark' : 'light'
-    setPreference()
+  .addEventListener('change', ({matches:isDark}) => {   
+    // TODO: same call in webapp when selecting auto-theme
+    reflectPreference()
   })
+
