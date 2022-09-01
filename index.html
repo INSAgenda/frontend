@@ -20,70 +20,16 @@
             <img src="/assets/logo/logo.svg" alt="Insagenda logo"> 
             <h1 id="header-name">INSAgenda</h1>
         </a>
-        <a class="primary-button link-to-edt" id="EDT-button" href="/login">Voir mon EDT</a>
     </header>
-
-    <section id="homepage-top">
-        <div class="parallelogramme">
-            <picture>
-                <source type="image/avif" srcset="/assets/screenshots/desktop-darktheme.avif">
-                <img id="screenshot-for-desktop" src="/assets/screenshots/desktop-darktheme.png" width="2870" height="1654" alt="Screenshot on desktop" >
-            </picture>
+    <section id="home-section">
+        <!-- LeftPart -->
+        <div id="home-description">
+            <h2 id="home-title">Ne cherchez plus, INSAgenda est là.</h2>
+            <p id="home-paragraph">Ici vous pouvez retrouver votre emploi de façon simplifiée.</p>
+            <a class="primary-button" id="register-button" href="/register">S’inscrire à INSAgenda</a>
         </div>
-        <div id="homepage-top-left">
-            <h2>Ne cherchez plus, <span class="purple-text">INSAgenda</span> est là</h2>
-            <p>INSAgenda permet aux étudiants de l'INSA de Rouen Normandie de consulter simplement leur emploi du temps.</p>
-            <a href="/register" class="cta primary-button link-to-edt">Accéder</a>
-            <picture>
-                <source type="image/avif" srcset="/assets/screenshots/mobile-darktheme.avif">
-                <img id="screenshot-for-mobile" src="/assets/screenshots/mobile-darktheme.png" width="732" height="1438" alt="Screenshot on mobile">
-            </picture>
-        </div>
+        <img id="home-image" src="/assets/screenshots/safari-screenshot.png" alt="">
     </section>
-
-    <section id="advantages">
-        <div id="advantages-row">
-            <div>
-                <h3>Fiable</h3>
-                <img src="assets/elements/umbrella.svg" alt="Reliable">
-                <p>Nous nous assurerons que tous vos cours soient affichés. Si votre agenda est modifié, vous serez notifiés.</p>
-            </div>
-
-            <div>
-                <h3>Sécurisé</h3>
-                <img src="assets/elements/shield.svg" alt="Secure">
-                <p>La sécurité de nos services dépasse grandement celle de l'INSA. Vous ne nous croyez pas&nbsp;? Hackez-nous.</p>
-            </div>
-
-            <div>
-                <h3>Bénévole</h3>
-                <img src="assets/elements/user.svg" alt="Volunteer">
-                <p>Nous, nous ne sommes pas affiliés à l'INSA et défendons les intérêts des étudiants.</p>
-            </div>
-
-            <div>
-                <h3>Ambitieux</h3>
-                <img src="assets/elements/gift.svg" alt="Ambitious">
-                <p>Des fonctionnalités majeures arrivent...</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="additional-info">
-        <h3>A propos</h3>
-        <p>
-            INSAgenda est un service indépendant permettant aux étudiants de l'INSA Rouen Normandie d'accéder rapidement à leur emploi du temps. Nous, étudiants, l'avons créé suite au constat que le service officiellement fourni est quasiment inutilisable. Il est devenu évident que nous avions besoin d'une alternative, et cette alternative, nous l'avons nommée INSAgenda.
-        </p>
-
-        <h3>Fonctionnalités</h3>
-        <ul>
-            <li>Accès en un clic aux cours de la journée</li>
-            <li>Personnalisation des couleurs de l'affichage</li>
-            <li>Notification lorsque l'edt est modifié (en développement)</li>
-            <li>Partage de son emploi du temps à ses amis (en développement)</li>
-        </ul>
-    </section>
-
     <script>
         if (window.localStorage.getItem("api_key") != null) {
             let elements = document.getElementsByClassName("link-to-edt");
