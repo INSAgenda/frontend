@@ -15,9 +15,16 @@ form>* {
     margin-top: 1rem;
 }
 
+#with-or-without-password {
+    cursor: pointer;
+    color: var(--primary);
+    text-decoration: underline;
+}
+
 #forgotten-password-link, #register-link {
     color: var(--text);
     margin-top: .8rem;
+    margin-right: .75rem;
     font-size: .8rem;
     text-decoration: none;
 }
@@ -54,7 +61,7 @@ form>* {
 
 .dropdown-list, .checkbox-content {
     height: 3.5rem;
-    border-radius: 17.5rem;
+    border-radius: 1.75rem;
     display: flex;
 }
 

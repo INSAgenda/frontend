@@ -24,7 +24,7 @@
     <section class="identification-section">
         <main id="auth" class="centred">
             <!-- Form title -->
-            <h3 class="login-title">S'identifier avec son mot de passe</h3>
+            <h3 class="login-title">S'identifier <span id="with-or-without-password" title="Cliquez pour changer">avec</span> son mot de passe</h3>
             <form class="centred">
                 <div class="labeled-input input-container">
                     <input type="email" placeholder="Email" autocomplete="username" id="email-input" />
@@ -40,15 +40,15 @@
                     <span class="error-message-text">Veuillez entrer un mot de passe valide.</span>
                 </div>
 
-                <a id="forgotten-password-link" href="/forgotten-password">Mot de passe oublié.</a>
+                <a id="forgotten-password-link" href="/forgotten-password">Mot de passe oublié</a>
+
+                <p id="error-message" style="display: none;"></p>
 
                 <div class="submit-buttons">
                     <input type="button" class="primary-button" id="submit-button" value="Connexion">
 
                     <span id="register-link">Vous n'avez pas encore de compte ?</span>
                     <a class="secondary-button" href="/register">Créer un compte</a>
-
-                    <p id="error-message" style="display: none;"></p>
                 </div>
             </form>
         </main>    
