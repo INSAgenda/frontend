@@ -1,11 +1,13 @@
 let k = new URLSearchParams(window.location.search).get("k");
-window.history.replaceState({}, document.title, "/fast-login");
+let p = window.location.pathname;
+let api_p = p === "/invitation" ? "/api/auth/invitation" : "/api/auth/fast-login";
+window.history.replaceState({}, document.title, p);
 let message = document.getElementById("message");
 let title = document.getElementById("title");
 
 (async () => {
     try {
-        let response = await fetch('/api/auth/fast-login', {
+        let response = await fetch(api_p, {
             method: 'POST',
             body: "k=" + encodeURIComponent(k),
             headers: {
