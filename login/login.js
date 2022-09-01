@@ -119,5 +119,6 @@ document.onkeydown = async function(e) {
 function unknown_error(e) {
     error_element.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie, et nous travaillons à corriger le problème. Merci de réessayer plus tard.";
     error_element.style.display = "block";
+    Sentry.setUser(email.value);
     Sentry.captureException(e);
 }
