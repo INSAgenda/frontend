@@ -28,7 +28,7 @@ async function submit_with_password() {
     }
 
     if (password.value.length < 10) {
-        error_element.innerHTML = "Votre mot de passe doit contenir au moins dix caractères.";
+        error_element.innerHTML = "Votre mot de passe doit contenir au moins 10 caractères.";
         error_element.style.display = "block";
         return false;
     }
