@@ -41,21 +41,17 @@ async function submit_with_password() {
         },
     });
 
-    try {
-        if (response.status == 200) {
-            let json = await response.json();
-            localStorage.setItem('api_key', json.api_key);
-            localStorage.setItem('counter', 1);
-            window.location.replace("/agenda");
-        } else if (response.status == 400 || response.status == 500) {
-            let json = await response.json();
-            error_element.innerText = json.message_fr; // TODO: display english messages
-            error_element.style.display = "block";
-        } else {
-            unknown_error("Unknown error (with password)");
-        }
-    } catch(err) {
-        unknown_error(err);
+    if (response.status == 200) {
+        let json = await response.json();
+        localStorage.setItem('api_key', json.api_key);
+        localStorage.setItem('counter', 1);
+        window.location.replace("/agenda");
+    } else if (response.status == 400 || response.status == 500) {
+        let json = await response.json();
+        error_element.innerText = json.message_fr; // TODO: display english messages
+        error_element.style.display = "block";
+    } else {
+        unknown_error("Unknown error (with password)");
     }
 }
 
@@ -69,22 +65,18 @@ async function submit_without_password() {
         },
     });
 
-    try {
-        if (response.status == 200) {
-            error_element.innerText = "Si votre adresse est correcte, un lien vous a été envoyé !";
-            error_element.style.color = "green";
-            error_element.style.display = "block";
-            await new Promise(resolve => setTimeout(resolve, 3000));
-            window.location.replace("https://partage.insa-rouen.fr/");
-        } else if (response.status == 400 || response.status == 500) {
-                let json = await response.json();
-                error_element.innerText = json.message_fr; // TODO: display english messages
-                error_element.style.display = "block";
-        } else {
-            unknown_error("Unknown error (passwordless)");
-        }
-    } catch(err) {
-        unknown_error(err);
+    if (response.status == 200) {
+        error_element.innerText = "Si votre adresse est correcte, un lien vous a été envoyé !";
+        error_element.style.color = "green";
+        error_element.style.display = "block";
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        window.location.replace("https://partage.insa-rouen.fr/");
+    } else if (response.status == 400 || response.status == 500) {
+        let json = await response.json();
+        error_element.innerText = json.message_fr; // TODO: display english messages
+        error_element.style.display = "block";
+    } else {
+        unknown_error("Unknown error (passwordless)");
     }
 }
 
@@ -93,10 +85,14 @@ async function submit() {
     let selector_list = [".submit-buttons>.primary-button", "#register-link", ".submit-buttons>.secondary-button", "#error-message"];
 
     enable_activity_indicator(selector_list, true);
-    if (password_enabled) {
-        await submit_with_password();
-    } else {
-        await submit_without_password();
+    try {
+        if (password_enabled) {
+            await submit_with_password();
+        } else {
+            await submit_without_password();
+        }
+    } catch(err) {
+        unknown_error(err);
     }
     enable_activity_indicator(selector_list, false);
 };
