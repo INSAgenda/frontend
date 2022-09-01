@@ -51,7 +51,7 @@ async function submit_with_password() {
         error_element.innerText = json.message_fr; // TODO: display english messages
         error_element.style.display = "block";
     } else {
-        unknown_error("Unknown error (with password)");
+        unknown_error(await response.text());
     }
 }
 
@@ -76,7 +76,7 @@ async function submit_without_password() {
         error_element.innerText = json.message_fr; // TODO: display english messages
         error_element.style.display = "block";
     } else {
-        unknown_error("Unknown error (passwordless)");
+        unknown_error(await response.text());
     }
 }
 
