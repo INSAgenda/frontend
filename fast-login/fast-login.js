@@ -34,11 +34,12 @@ let title = document.getElementById("title");
     } catch(e) {
         title.innerText = "Échec";
         title.style.color = "red";
-        message.innerText = "Une erreur inconnue s'est produite.";
+        //message.innerText = "Une erreur inconnue s'est produite.";
+        message.innerText = "Une erreur s'est produite. Nous travaillons actuellement à la résolution de ce bug. Il se produit lorsque votre appareil est configuré pour utiliser l'ancienne version d'Internet (v4)."";
         while (typeof Sentry === 'undefined') {
             await new Promise(resolve => setTimeout(resolve, 200));
         }
         Sentry.captureException(e);
-        message.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie, et nous travaillons à corriger le problème. Merci de réessayer plus tard.";
+        //message.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie, et nous travaillons à corriger le problème. Merci de réessayer plus tard.";
     }
 })();
