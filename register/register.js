@@ -22,7 +22,7 @@ async function submit_inner() {
         return false;
     }
     if (!email.value.includes(".")) {
-        error_el.innerHTML = "Entrez votre adresse email la plus longue (avec le point).";
+        error_el.innerHTML = "Entrez votre adresse email la plus longue. Example: prenom.nom@insa-rouen.fr";
         error_el.style.display = "block";
         return false;
     }
