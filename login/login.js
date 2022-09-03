@@ -1,9 +1,17 @@
 let submit_el = document.getElementById("submit-button");
-let error_element = document.getElementById("error-message");
+let error_el = document.getElementById("error-message");
 let email = document.getElementById("email-input");
 let password = document.getElementById("password-input");
 let with_or_without_password = document.getElementById("with-or-without-password");
 let password_enabled = true;
+
+// Autocomplete 
+email.oninput = function() {
+    if (email.value.endsWith("@") && (email.value.split("@").length - 1) == 1) {
+        email.value = email.value.replace("@", "@insa-rouen.fr");
+        setTimeout(focus_next, 100);
+    }
+}
 
 // Enable/disable password
 with_or_without_password.onclick = function() {
@@ -22,14 +30,14 @@ with_or_without_password.onclick = function() {
 // Submit the form when password is enabled
 async function submit_with_password() {
     if (password.value.length == 0) {
-        error_element.innerHTML = "Veuillez entrer un mot de passe, ou appuyer sur 'avec' pour vous connecter sans mot de passe.";
-        error_element.style.display = "block";
+        error_el.innerHTML = "Veuillez entrer un mot de passe, ou appuyer sur 'avec' pour vous connecter sans mot de passe.";
+        error_el.style.display = "block";
         return false;
     }
 
     if (password.value.length < 5) { // Should be 10 but it was 5 in the past so some users might still have a short password
-        error_element.innerHTML = "Votre mot de passe doit contenir au moins 10 caractères.";
-        error_element.style.display = "block";
+        error_el.innerHTML = "Votre mot de passe doit contenir au moins 10 caractères.";
+        error_el.style.display = "block";
         return false;
     }
 
@@ -48,10 +56,10 @@ async function submit_with_password() {
         window.location.replace("/agenda");
     } else if (response.status == 400 || response.status == 500) {
         let json = await response.json();
-        error_element.innerText = json.message_fr; // TODO: display english messages
-        error_element.style.display = "block";
+        error_el.innerText = json.message_fr; // TODO: display english messages
+        error_el.style.display = "block";
     } else {
-        unknown_error(await response.text());
+        throw new Error("Unknown status code: " + response.status);
     }
 }
 
@@ -66,17 +74,17 @@ async function submit_without_password() {
     });
 
     if (response.status == 200) {
-        error_element.innerText = "Si votre adresse est correcte, un lien vous a été envoyé !";
-        error_element.style.color = "green";
-        error_element.style.display = "block";
+        error_el.innerText = "Si votre adresse est correcte, un lien vous a été envoyé !";
+        error_el.style.color = "green";
+        error_el.style.display = "block";
         await new Promise(resolve => setTimeout(resolve, 3000));
         window.location.replace("https://partage.insa-rouen.fr/");
     } else if (response.status == 400 || response.status == 500) {
         let json = await response.json();
-        error_element.innerText = json.message_fr; // TODO: display english messages
-        error_element.style.display = "block";
+        error_el.innerText = json.message_fr; // TODO: display english messages
+        error_el.style.display = "block";
     } else {
-        unknown_error(await response.text());
+        throw new Error("Unknown status code: " + response.status);
     }
 }
 
@@ -92,34 +100,36 @@ async function submit() {
             await submit_without_password();
         }
     } catch(err) {
-        unknown_error(err);
+        error_el.innerText = "Une erreur inconnue s'est produite.";
+        error_el.style.display = "block";
+        Sentry.setUser({ email: email.value });
+        Sentry.captureException(e);
+        error_el.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie et nous travaillons à la résolution du problème.";    
     }
     enable_activity_indicator(selector_list, false);
 };
 submit_el.onclick = submit;
 
-// Handle enter key
-document.onkeydown = async function(e) {
-    if (e.code === "Enter") {
-        if (email.value === "") {
-            email.focus();
-            return;
-        }
-
-        if (password_enabled && password.value === "") {
-            password.focus();
-            return;
-        }
-
-        await submit();
+// Focus next input of the form
+async function focus_next() {
+    if (email.value === "") {
+        email.focus();
+        return true;
     }
+
+    if (password_enabled && password.value === "") {
+        password.focus();
+        return true;
+    }
+
+    return false;
 }
 
-// Handle unknown errors
-function unknown_error(e) {
-    //error_element.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie, et nous travaillons à corriger le problème. Merci de réessayer plus tard.";
-    error_element.innerText = "Une erreur s'est produite. Nous travaillons actuellement à la résolution de ce bug. Il se produit lorsque votre appareil est configuré pour utiliser l'ancienne version d'Internet (v4).";
-    error_element.style.display = "block";
-    Sentry.setUser({ email: email.value });
-    Sentry.captureException(e);
+// Handle enter key
+document.onkeydown = async function(e) {
+    if (e.code == "Enter") {
+        if (!focus_next()) {
+            await submit();
+        }
+    }
 }

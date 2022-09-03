@@ -110,26 +110,28 @@ submit_el.onclick = submit;
 async function focus_next() {
     if (email.value === "") {
         email.focus();
-        return;
+        return true;
     }
 
     if (password1.value === "") {
         password1.focus();
-        return;
+        return true;
     }
 
     if (password2.value === "") {
         password2.focus();
-        return;
+        return true;
     }
 
-    await submit();
+    return false;
 }
 
-// Submit on enter
+// Handle enter key
 document.onkeydown = async function(e) {
     if (e.code == "Enter") {
-        await focus_next();
+        if (!focus_next()) {
+            await submit();
+        }
     }
 }
 
