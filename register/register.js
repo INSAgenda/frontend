@@ -73,6 +73,7 @@ async function submit_inner() {
     }
 }
 
+// Submit and handle errors
 async function submit() {
     let selector_list = ["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"];
 
