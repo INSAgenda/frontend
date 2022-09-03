@@ -5,8 +5,22 @@ let password1 = document.getElementById("password-input1");
 let password2 = document.getElementById("password-input2");
 let stage = 1;
 
+// Autocomplete 
+email.oninput = function() {
+    if (email.value.endsWith("@") && (email.value.split("@").length - 1) == 1) {
+        email.value = email.value.replace("@", "@insa-rouen.fr");
+        setTimeout(focus_next, 100);
+    }
+}
+
+// Submit function that can throw unhandled errors
 async function submit_inner() {
     // Check values are valid
+    if (email.value == "") {
+        error_el.innerHTML = "Entrez votre adresse email.";
+        error_el.style.display = "block";
+        return false;
+    }
     if (!email.value.includes(".")) {
         error_el.innerHTML = "Entrez votre adresse email la plus longue (avec le point).";
         error_el.style.display = "block";
@@ -91,25 +105,30 @@ async function submit() {
 };
 submit_el.onclick = submit;
 
+// Focus next input of the form
+async function focus_next() {
+    if (email.value === "") {
+        email.focus();
+        return;
+    }
+
+    if (password1.value === "") {
+        password1.focus();
+        return;
+    }
+
+    if (password2.value === "") {
+        password2.focus();
+        return;
+    }
+
+    await submit();
+}
+
 // Submit on enter
 document.onkeydown = async function(e) {
-    if (e.code === "Enter") {
-        if (email.value === "") {
-            email.focus();
-            return;
-        }
-
-        if (password1.value === "") {
-            password1.focus();
-            return;
-        }
-
-        if (password2.value === "") {
-            password2.focus();
-            return;
-        }
-
-        await submit();
+    if (e.code == "Enter") {
+        await focus_next();
     }
 }
 
