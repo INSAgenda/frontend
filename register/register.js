@@ -121,7 +121,6 @@ async function submit() {
     } catch (e) {
         error_el.innerText = "Une erreur inconnue s'est produite.";
         error_el.style.display = "block";
-        console.log("zebi" + e);
         Sentry.setUser({ email: email.value });
         Sentry.captureException(e);
         error_el.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie et nous travaillons à la résolution du problème.";    
