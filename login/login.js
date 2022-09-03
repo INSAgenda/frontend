@@ -117,7 +117,8 @@ document.onkeydown = async function(e) {
 
 // Handle unknown errors
 function unknown_error(e) {
-    error_element.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie, et nous travaillons à corriger le problème. Merci de réessayer plus tard.";
+    //error_element.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie, et nous travaillons à corriger le problème. Merci de réessayer plus tard.";
+    error_element.innerText = "Une erreur s'est produite. Nous travaillons actuellement à la résolution de ce bug. Il se produit lorsque votre appareil est configuré pour utiliser l'ancienne version d'Internet (v4).";
     error_element.style.display = "block";
     Sentry.setUser({ email: email.value });
     Sentry.captureException(e);
