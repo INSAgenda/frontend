@@ -29,12 +29,16 @@ with_or_without_password.onclick = function() {
 
 // Submit the form when password is enabled
 async function submit_with_password() {
+    if (email.value == "") {
+        error_el.innerHTML = "Entrez votre adresse email.";
+        error_el.style.display = "block";
+        return false;
+    }
     if (password.value.length == 0) {
         error_el.innerHTML = "Veuillez entrer un mot de passe, ou appuyer sur 'avec' pour vous connecter sans mot de passe.";
         error_el.style.display = "block";
         return false;
     }
-
     if (password.value.length < 5) { // Should be 10 but it was 5 in the past so some users might still have a short password
         error_el.innerHTML = "Votre mot de passe doit contenir au moins 10 caractères.";
         error_el.style.display = "block";
