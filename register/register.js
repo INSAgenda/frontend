@@ -50,16 +50,39 @@ async function submit_inner() {
     } else {
         let promotion_select = document.getElementById("promotion-select");
         let promotion_value = promotion_select.options[promotion_select.selectedIndex].value;
+        if (promotion_value === "") {
+            error_el.innerHTML = "Veuillez selectionner votre promotion.";
+            error_el.style.display = "block";
+            return false;    
+        }
 
         let class_select = document.getElementById("class-select");
         let class_value = class_select.options[class_select.selectedIndex].value;
+        if (class_value === "") {
+            error_el.innerHTML = "Veuillez selectionner votre classe.";
+            error_el.style.display = "block";
+            return false;    
+        }
 
-        let lang = document.querySelector('input[name="lang"]:checked').value;
-        let class_division = document.querySelector('input[name="group"]:checked').value;
+        let lang_select = document.querySelector('input[name="lang"]:checked');
+        if (lang_select == null) {
+            error_el.innerHTML = "Veuillez selectionner votre langue.";
+            error_el.style.display = "block";
+            return false;    
+        }
+        let lang = lang_select.value;
+
+        let tp_group_select = document.querySelector('input[name="group"]:checked');
+        if (tp_group_select == null) {
+            error_el.innerHTML = "Veuillez selectionner votre groupe de TP.";
+            error_el.style.display = "block";
+            return false;
+        }
+        let tp_group = tp_group_select.value;
 
         response = await fetch('/api/auth/register', {
             method: 'POST',
-            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value) + "&promotion=" + encodeURIComponent(promotion_value) + "&class=" + encodeURIComponent(class_value) + "&lang=" + encodeURIComponent(lang) + "&class_division=" + encodeURIComponent(class_division),
+            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value) + "&promotion=" + encodeURIComponent(promotion_value) + "&class=" + encodeURIComponent(class_value) + "&lang=" + encodeURIComponent(lang) + "&class_division=" + encodeURIComponent(tp_group),
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
             },
@@ -98,6 +121,7 @@ async function submit() {
     } catch (e) {
         error_el.innerText = "Une erreur inconnue s'est produite.";
         error_el.style.display = "block";
+        console.log("zebi" + e);
         Sentry.setUser({ email: email.value });
         Sentry.captureException(e);
         error_el.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie et nous travaillons à la résolution du problème.";    
