@@ -27,7 +27,7 @@ async function submit_with_password() {
         return false;
     }
 
-    if (password.value.length < 10) {
+    if (password.value.length < 5) { // Should be 10 but it was 5 in the past so some users might still have a short password
         error_element.innerHTML = "Votre mot de passe doit contenir au moins 10 caractères.";
         error_element.style.display = "block";
         return false;

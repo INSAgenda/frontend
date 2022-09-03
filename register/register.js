@@ -5,22 +5,25 @@ let password1 = document.getElementById("password-input1");
 let password2 = document.getElementById("password-input2");
 let stage = 1;
 
-async function submit() {
-    let selector_list = ["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"];
-
+async function submit_inner() {
+    // Check values are valid
+    if (!email.value.includes(".")) {
+        error_el.innerHTML = "Entrez votre adresse email la plus longue (avec le point).";
+        error_el.style.display = "block";
+        return false;
+    }
     if (password1.value != password2.value) {
         error_el.innerHTML = "Les mots de passe ne correspondent pas.";
         error_el.style.display = "block";
         return false;
     }
-
-    if (password1.value.length <= 5) {
-        error_el.innerHTML = "Les mots de passe doivent contenir au moins 5 caractères";
+    if (password1.value.length < 10) {
+        error_el.innerHTML = "Le mot de passe doit contenir au moins 10 caractères.";
         error_el.style.display = "block";
         return false;
     }
 
-    enable_activity_indicator(selector_list, true);
+    // Make request
     let response;
     if (stage === 1) {
         response = await fetch('/api/auth/register', {
@@ -48,8 +51,8 @@ async function submit() {
             },
         });
     }
-    enable_activity_indicator(selector_list, false);
 
+    // Handle response
     if (response.status == 200) {
         let json = await response.json();
         localStorage.setItem('api_key', json.api_key);
@@ -66,8 +69,24 @@ async function submit() {
             error_el.style.display = "block";
         }
     } else {
-        alert("Erreur inconnue");
+        throw new Error("Unknown status code: " + response.status);
     }
+}
+
+async function submit() {
+    let selector_list = ["#submit-button", "#register-link", "body > section.identification-section > main > form:nth-child(4) > a"];
+
+    enable_activity_indicator(selector_list, true);
+    try {
+        await submit_inner();
+    } catch (e) {
+        error_el.innerText = "Une erreur inconnue s'est produite.";
+        error_el.style.display = "block";
+        Sentry.setUser({ email: email.value });
+        Sentry.captureException(e);
+        error_el.innerText = "Une erreur inconnue s'est produite. Notre équipe a été avertie et nous travaillons à la résolution du problème.";    
+    }
+    enable_activity_indicator(selector_list, false);
 };
 submit_el.onclick = submit;
 
