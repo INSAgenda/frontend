@@ -6,8 +6,8 @@ let with_or_without_password = document.getElementById("with-or-without-password
 let password_enabled = true;
 
 // Autocomplete 
-email.oninput = function() {
-    if (email.value.endsWith("@") && (email.value.split("@").length - 1) == 1) {
+email.oninput = function(e) {
+    if (e.inputType == "insertText" && email.value.endsWith("@") && (email.value.split("@").length - 1) == 1) {
         email.value = email.value.replace("@", "@insa-rouen.fr");
         setTimeout(focus_next, 100);
     }
@@ -111,7 +111,7 @@ async function submit() {
 submit_el.onclick = submit;
 
 // Focus next input of the form
-async function focus_next() {
+function focus_next() {
     if (email.value === "") {
         email.focus();
         return true;
