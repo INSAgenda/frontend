@@ -77,6 +77,7 @@ async function submit_inner() {
 
         if (json.kind === "unknown_email") {
             stage = 2;
+            error_el.style.display = "none";
             document.querySelector("main > form:nth-child(3)").style.display = "initial";
         } else {
             error_el.innerHTML = json.message_fr; // TODO: display english messages
