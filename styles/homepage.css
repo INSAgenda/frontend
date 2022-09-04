@@ -22,6 +22,7 @@ html {
     font-size: 1.3em;
     font-weight: bold;
     margin-left: 3px;
+    color: #F6F6F6;
 }
 header{
     background-color: #1F0A5310;
@@ -30,11 +31,12 @@ header{
     max-height: 121px;
     min-height: 75px;
     height: 7%;
+    position: fixed;
 }
 /* HomeSection */
 #home-section{
-    width: 100vw;
-    height: 90vh;
+    width: auto;
+    height: 100vh;
     background: linear-gradient(135deg,#DC6ACF, #1F0A53);
     display: flex;
     align-items: center;
@@ -43,19 +45,24 @@ header{
 #home-description{
     max-height: 345px;
     max-width: 666px;
+    min-width: 460px;
     margin: 0 8.75% 0 8.3%;
+    color: #F6F6F6;
 }
 #home-image{
     max-width: 893px;
     max-height: 527px;
-    width: 46vw;
+    width: 100vw;
+    min-width: 500px;
+    margin: -35px;
 }
 #home-title{
     font-size: 3.3em;
-    line-height: 64px;
+    line-height: 60px;
 }
 #home-paragraph{
     max-height: 127px;
+    max-width: 436px;
     height: 12vh;
     font-size: 1.3em;
     line-height: 28px;
@@ -64,8 +71,138 @@ header{
 #register-button{
     background-color: #DC6ACF;
     color: #F6F6F6;
-    width: 300px;
+    max-width: 300px;
+    border: solid 2px transparent;
+}
+
+/* main-page-content */
+#main-page-content{
+    padding: 0 4% 0 10.3%;
+    position: relative;
+}
+#main-page-content *:not(:first-child){
+    position: relative;
 }
 
 /* ROD */
+#steering-rod{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -80px;
+    width: 75%;
+}
+.rod-property{
+    background-color: #AFAFAF;
+}
 
+.h-rod{
+    height: 6px;
+}
+.v-rod{
+    width: 6px;
+    /* Provisoir */
+    height: 400px;
+
+}
+/* ROUNDED */
+.nw-rounded, .sw-rounded, .se-rounded{
+    width: 30px;
+    height: 30px;
+}
+.nw-rounded{
+    border-top-left-radius: 100%;
+    background-image: radial-gradient(circle at 30px 30px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 24px, #CB6CE6 24px);
+    background-color: transparent;
+}
+.sw-rounded{
+    border-bottom-left-radius: 100%;
+    background-image: radial-gradient(circle at 30px 0px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 24px, #AFAFAF 24px);
+    background-color: transparent;
+}
+.se-rounded{
+    border-top-right-radius: 100%;
+    background-image: radial-gradient(circle at 0px 30px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 24px, #AFAFAF 24px);
+    background-color: transparent;
+}
+/* TOP ROD */
+#top-rod{
+    display: flex;
+}
+#top-rod .h-rod{
+    width: 100%;
+    border-radius: 0 25px 25px 0;
+}
+/* BOTTOM ROD */
+#bottom-rod{
+    display: flex;
+}
+#bottom-rod .h-rod{
+    width: 50%;
+}
+/* All elements of the #bottom-rod except the firts  */
+#bottom-rod *:not(:first-child){
+    margin-top: 24px;
+}
+/* Gradient color */
+#top-rod .h-rod{
+    background: #CB6CE6;
+}
+#mid-rod .v-rod{
+    background-image: linear-gradient(to top, #AFAFAF, #CB6CE6);
+    background-size: 100% 100px;
+    background-repeat: no-repeat;
+}
+
+/* All other main section */
+.main-content-section{
+    padding: 53px 0 0 50px;
+}
+.main-content-title{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #B862BC;
+}
+.main-content-title::before{
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-color: var(--background);
+    left: -14px;
+    top: 58px;
+    border-radius: 50%;
+    border: 5px solid #AFAFAF;
+    outline: 8px solid var(--background);
+}
+.main-content-subtitle{
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--text);
+    max-width: 700px;
+}
+
+
+/* Responsiv for mobiles */
+@media screen and (max-width: 600px) {
+    #home-section{
+        flex-direction: column;
+        justify-content: end;
+    }
+    #home-title{
+        font-size: 2.3em;
+        line-height: 44px;
+    }
+    #home-paragraph{
+        font-size: 1.1em;
+        height: 8vh;
+    }
+    #home-description{
+        width: 83%;
+        min-width: 0;
+    }
+    #home-image{
+        margin: 0 0 25px 40%;
+    }
+    
+}
