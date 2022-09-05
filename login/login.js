@@ -2,7 +2,8 @@ let submit_el = document.getElementById("submit-button");
 let error_el = document.getElementById("error-message");
 let email = document.getElementById("email-input");
 let password = document.getElementById("password-input");
-let with_or_without_password = document.getElementById("with-or-without-password");
+let enable_password_el = document.getElementById("enable-password-input");
+let disable_password_el = document.getElementById("disable-password-input");
 let password_enabled = true;
 
 // Autocomplete 
@@ -14,17 +15,17 @@ email.oninput = function(e) {
 }
 
 // Enable/disable password
-with_or_without_password.onclick = function() {
-    password_enabled = !password_enabled;
-    if (password_enabled) {
-        password.parentElement.style.display = "block";
-        with_or_without_password.innerText = "avec";
-        submit_el.value = "Connexion";
-    } else {
-        password.parentElement.style.display = "none";
-        submit_el.value = "Envoyer un lien par email";
-        with_or_without_password.innerText = "sans";
-    }
+enable_password_el.onclick = function() {
+    password_enabled = true;
+    password.parentElement.style.display = "block";
+    with_or_without_password.innerText = "avec";
+    submit_el.value = "Connexion";
+}
+disable_password_el.onclick = function() {
+    password_enabled = false;
+    password.parentElement.style.display = "none";
+    submit_el.value = "Envoyer un lien par email";
+    with_or_without_password.innerText = "sans";
 }
 
 // Submit the form when password is enabled
