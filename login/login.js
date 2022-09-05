@@ -18,14 +18,12 @@ email.oninput = function(e) {
 enable_password_el.onclick = function() {
     password_enabled = true;
     password.parentElement.style.display = "block";
-    with_or_without_password.innerText = "avec";
     submit_el.value = "Connexion";
 }
 disable_password_el.onclick = function() {
     password_enabled = false;
     password.parentElement.style.display = "none";
     submit_el.value = "Envoyer un lien par email";
-    with_or_without_password.innerText = "sans";
 }
 
 // Submit the form when password is enabled
