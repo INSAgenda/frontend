@@ -1,4 +1,5 @@
 /* General */
+
 html {
     color: var(--text);
     font-family: 'roboto', serif;
@@ -18,13 +19,15 @@ html {
 }
 
 /* For the NewHeader : */
-#header-name{
+
+#header-name {
     font-size: 1.3em;
     font-weight: bold;
-    margin-left: 3px;
-    color: #F6F6F6;
+    margin-left: 0.1rem;
+    color: var(--light);
 }
-header{
+
+header {
     background-color: #1F0A5310;
     backdrop-filter: blur(30px);
     position: absolute;
@@ -34,103 +37,83 @@ header{
     position: fixed;
 }
 /* HomeSection */
-#home-section{
+
+#home-section {
     width: auto;
     height: 100vh;
-    background: linear-gradient(135deg,#DC6ACF, #1F0A53);
+    background: linear-gradient(135deg,var(--pink), #1F0A53);
     display: flex;
     align-items: center;
     overflow: hidden;
 }
-#home-description{
-    max-height: 345px;
-    max-width: 666px;
-    min-width: 460px;
-    margin: 0 8.75% 0 8.3%;
-    color: #F6F6F6;
+#home-description {
+    width: 100%;
+    margin-left: 4%;
+    color: var(--light);
 }
-#home-image{
-    max-width: 893px;
-    max-height: 527px;
-    width: 100vw;
-    min-width: 500px;
-    margin: -35px;
+#home-image {
+    max-width: 40rem;
+    width: 65vw;
+    margin: 1rem;
 }
-#home-title{
-    font-size: 3.3em;
-    line-height: 60px;
+#home-title {
+    font-size: 3.3rem;
+    line-height: 3.5rem;
 }
-#home-paragraph{
-    max-height: 127px;
-    max-width: 436px;
-    height: 12vh;
-    font-size: 1.3em;
-    line-height: 28px;
+#home-paragraph {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
     font-weight: lighter;
 }
-#register-button{
-    background-color: #DC6ACF;
-    color: #F6F6F6;
+
+#register-button {
+    background-color: var(--pink);
+    color: var(--light);
     max-width: 300px;
     border: solid 2px transparent;
 }
 
-/* main-page-content */
-#main-page-content{
-    padding: 0 4% 0 10.3%;
-    position: relative;
-}
-#main-page-content *:not(:first-child){
-    position: relative;
-}
 
 /* Nav */
+
 #main-page-nav{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 0.4rem;
 }
+
 .navigation-link{
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
-    color: #F6F6F6;    
+    color: var(--light);    
     text-decoration: none;
-    max-width: 350px;
-    height: 68px;
-    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 2%;
+    text-align: center;
 }
-/* main-page-nav last child */
-#main-page-nav *:last-child{
-    display: none;
-}
+
 
 /* ROD */
 #steering-rod{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: -140px;
-    width: 75%;
-    height: 140%;
+    width: 95%;
+    margin: auto;
+    transform: translateY(calc(-30px - 1.5rem)); /* - size of the corner - size of labels */
 }
-.rod-property{
-    background-color: #AFAFAF;
+
+#mid-rod {
+    border-left: 6px solid ;
+    border-image: linear-gradient(to bottom, var(--pink), var(--light-gray)) 1;
 }
-#mid-rod{
-    height: 100%;
-}
+
 .h-rod{
     height: 6px;
 }
-.v-rod{
-    width: 6px;
-    height: 100%;
 
-}
 /* ROUNDED */
 .nw-rounded, .sw-rounded, .se-rounded{
     width: 30px;
@@ -159,6 +142,7 @@ header{
     width: 100%;
     border-radius: 0 25px 25px 0;
 }
+
 /* BOTTOM ROD */
 #bottom-rod{
     display: flex;
@@ -166,41 +150,21 @@ header{
 #bottom-rod .h-rod{
     width: 50%;
 }
-/* All elements of the #bottom-rod except the firts  */
-#bottom-rod *:not(:first-child){
-    margin-top: 24px;
-}
+
 /* Gradient color */
-#top-rod .h-rod{
-    background: #CB6CE6;
-}
-#mid-rod .v-rod{
-    background-image: linear-gradient(to top, #AFAFAF, #CB6CE6);
-    background-size: 100% 100px;
-    background-repeat: no-repeat;
+#top-rod .h-rod {
+    background: var(--pink);
 }
 
+
 /* All other main section */
-.main-content-section{
-    padding: 53px 0 0 50px;
-}
+
 .main-content-title{
     font-size: 2.5em;
     font-weight: bold;
-    color: #B862BC;
+    color: var(--pink);
 }
-.main-content-title::before{
-    content: '';
-    position: absolute;
-    width: 23px;
-    height: 23px;
-    background-color: var(--background);
-    left: -14px;
-    top: 58px;
-    border-radius: 50%;
-    border: 5px solid #AFAFAF;
-    outline: 8px solid var(--background);
-}
+
 .main-content-subtitle{
     font-size: 1.1em;
     font-weight: 500;
@@ -208,62 +172,22 @@ header{
     max-width: 700px;
 }
 
-/* features */
-#features-content{
-    display: flex;
-    width: 100%;
-    height: 38.9vw;
-    flex-wrap: wrap;
-    align-self: flex-start;
-    max-width: 1198px;
-    max-height: 598px;
-    margin: 2% 3%;
-}
-/* The last 2 children of  .feature-box-property */
-#features-content .feature-box-property:nth-last-child(-n+2){
-    top: -53.5%;
-}
-.feature-box-property{
-    background-color: #D9D9D9;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    margin: 1.2% 0.6%;
-    align-items: center;
-    justify-content: end;
-}
-.feature-box-property img{
-    width: 11.66vw;
-    max-width: 170px;
-}
-.feature-box-property span{
-    width: 80%;
-    height: 4vw;
-    color: #000000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 1.2em;
-    font-size: 1.3vw;
-}
-.feature-box-2-h{
-    width: 40.4%;
-    height: 48.39%;
-}
-.feature-box-2-v{
-    height: 100%;
-    width: 24.18%
-}
-.feature-box-2-v img{
-    margin: auto;
-}
-.feature-box-square{
-    width: 24.18%;
-    height: 48.39%;
+/* Sections */
+.section-title {
+    font-size: 1.7rem;
 }
 
-
+.section-title::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--background);
+    border: 6px solid var(--light-gray);
+    border-radius: 50%;
+    transform: translateX(calc(-50% - 3px));
+    outline: 6px solid var(--background);
+}
 /* Responsiv for mobiles */
 @media screen and (max-width: 600px) {
     #home-section{
@@ -276,19 +200,18 @@ header{
     }
     #home-paragraph{
         font-size: 1.1em;
-        height: 8vh;
+        margin-top: 0.2rem;
+
     }
     #home-description{
         width: 83%;
         min-width: 0;
     }
     #home-image{
-        margin: 0 0 25px 40%;
+        width: 100%;
+        transform: translateX(20%);
     }
-    /* Rod */
-    #steering-rod{
-        width: 86%;
-    }
+
     #main-page-content{
         padding: 0px 4% 0 5.3%;
     }
@@ -296,7 +219,9 @@ header{
     .navigation-link{
         display: none;
     }
+
     #main-page-nav *:last-child{
         display: flex;
+        width: 100%;
     }
 }

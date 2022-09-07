@@ -26,61 +26,28 @@
         <div id="home-description">
             <h2 id="home-title">Ne cherchez plus, INSAgenda est là.</h2>
             <p id="home-paragraph">Ici vous pouvez retrouver votre emploi de façon simplifiée.</p>
-            <a class="primary-button" id="register-button" href="/register">S’inscrire à INSAgenda</a>
+            <a class="primary-button" id="register-button" href="/register">S'inscrire à INSAgenda</a>
         </div>
         <img id="home-image" src="/assets/screenshots/safari-screenshot.png" alt="">
     </section>
-    <section id="main-page-content">
-        <!-- Steering rod -->
-        <div id="steering-rod">
-            <nav id="main-page-nav">
-                <a class="navigation-link" href="#main-content-section">Fonctionnalités</a>
-                <a class="navigation-link" href="#">Plateformes</a>
-                <a class="navigation-link" href="#">Nos priorités</a>
-                <a class="navigation-link" href="#">Open Source</a>
-                <a class="navigation-link" href="#">En savoir plus</a>
-            </nav>
-            <div id="top-rod">
-                <div class="rod-property nw-rounded"></div>
-                <div class="rod-property h-rod"></div>
-            </div>
-            <div id="mid-rod">
-                <div class="rod-property v-rod"></div>
-            </div>
-            <div id="bottom-rod">
-                <div class="rod-property sw-rounded"></div>
-                <div class="rod-property h-rod"></div>
-                <div class="rod-property se-rounded"></div>
-            </div>
-        </div> 
-        <!-- Main content section -->
-        <section class="main-content-section" id="features">
-            <h2 class="main-content-title">Fonctionnalités.</h2>
-            <h3 class="main-content-subtitle">INSAgenda ne cesse d’ajouter des fonctionnalités à sa plateforme. </h3>
-            <div id="features-content">
-                <div class="feature-box-property feature-box-2-h">
-                    <img src="assets/elements/mainPage/image.png" alt="...">
-                    <span>Lorem ipsum dolor.</span>
-                </div>
-                <div class="feature-box-property feature-box-square">
-                    <img src="assets/elements/mainPage/image.png" alt="...">
-                    <span>Lorem ipsum dolor.</span>
-                </div>
-                <div class="feature-box-property feature-box-2-v">
-                    <img src="assets/elements/mainPage/image.png" alt="...">
-                    <span>Lorem ipsum dolor.</span>
-                </div>
-                <div class="feature-box-property feature-box-square">
-                    <img src="assets/elements/mainPage/image.png" alt="...">
-                    <span>Lorem ipsum dolor.</span>
-                </div>
-                <div class="feature-box-property feature-box-2-h">
-                    <img src="assets/elements/mainPage/image.png" alt="...">
-                    <span>Lorem ipsum dolor.</span>
-                </div>
-            </div>
-        </section>   
-    </section>
+    <!-- Steering rod -->
+    <div id="steering-rod">
+        <nav id="main-page-nav">
+            <a class="navigation-link" href="#features">Fonctionnalités</a>
+            <a class="navigation-link" href="#">Plateformes</a>
+            <a class="navigation-link" href="#">Nos priorités</a>
+            <a class="navigation-link" href="#">Open Source</a>
+            <a class="navigation-link" href="#">En savoir plus</a>
+        </nav>
+        <div id="top-rod">
+            <div class="nw-rounded"></div>
+            <div class="h-rod"></div>
+        </div>
+        <div id="mid-rod">
+           
+        </div>
+       
+    </div>   
     <script>
         if (window.localStorage.getItem("api_key") != null) {
             let elements = document.getElementsByClassName("link-to-edt");
@@ -89,7 +56,6 @@
             }
         }
     </script>
-    
     <script common_code="manifest-script">var d=document;async function u(c,i){var f=d.createElement("div");f.innerHTML=await (await fetch(i)).text();for(var g=0;g<f.childNodes.length;g++){var a=f.childNodes[g];if(1==a.nodeType){var h=d.createElement(a.tagName);h.innerHTML=a.innerHTML;for(var b=0;b<a.attributes.length;b++)h.setAttribute(a.attributes[b].name,a.attributes[b].value);c.parentNode.insertBefore(h,c),a.remove()}}c.remove()}var e=d.currentScript;u(e,"/common-code/"+e.getAttribute("common_code")+".html")</script>
 </body>
 </html>
