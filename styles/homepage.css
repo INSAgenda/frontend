@@ -258,7 +258,7 @@ header {
 .feature img {
     object-fit: contain;
     flex-grow: 1;
-    width: 15vw;
+    width: 12vw;
     max-width: 12rem;
     margin: 3vw;
 }
