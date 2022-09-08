@@ -1,6 +1,6 @@
 /* Font */
 
-@import url('/assets/fonts/Roboto/css2.css');
+/* @import url('/assets/fonts/Roboto/css2.css'); */
 
 /* General */
 *{
@@ -89,6 +89,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 5;
 }
 
 #header-logo {

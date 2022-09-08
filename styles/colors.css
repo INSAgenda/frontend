@@ -11,6 +11,9 @@
     --medium-light: #EBEAEA;
     --error-red: #fc3d03;
 
+    /* home page colors */
+    --pink: #CB6CE6;
+    --light-gray: #AEAEAE;
     --background: var(--medium-light);
     --closer-background: var(--light);
     --text: var(--dark-text);
