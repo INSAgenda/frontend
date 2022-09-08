@@ -1,10 +1,14 @@
 /* General */
 
 html {
-    color: var(--text);
+    color: var(--dark-text);
     font-family: 'roboto', serif;
     scroll-behavior: smooth;
     overflow-x: hidden
+}
+
+body {
+    background-color: var(--medium-light);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -103,12 +107,13 @@ header {
     flex-direction: column;
     width: calc(100% - 4rem);
     margin: 0 2rem;
-    transform: translateY(calc(-30px - 1.5rem)); /* - size of the corner - size of labels */
+    transform: translateY(calc(-30px - 1.5rem - 1.5rem)); /* - size of the corner - size of labels - padding */
 }
 
 #mid-rod {
-    border-left: 6px solid ;
+    border-left: 6px solid;
     border-image: linear-gradient(to bottom, var(--pink), var(--light-gray)) 1;
+    padding-top: 1.5rem;
 }
 
 .h-rod{
@@ -177,7 +182,7 @@ header {
 .main-content-subtitle{
     font-size: 1.1em;
     font-weight: 500;
-    color: var(--text);
+    color: var(--dark-text);
     max-width: 700px;
 }
 
@@ -187,11 +192,11 @@ header {
     position: absolute;
     width: 12px;
     height: 12px;
-    background-color: var(--background);
+    background-color: var(--medium-light);
     border: 6px solid var(--light-gray);
     border-radius: 50%;
     transform: translate(calc(-50% - 3px), 3px);
-    outline: 6px solid var(--background);
+    outline: 6px solid var(--medium-light);
 }
 /* Sections */
 .section-title {
@@ -201,7 +206,7 @@ header {
 
 .section-description {
     font-size: 1.8rem;
-    color: var(--text);
+    color: var(--dark-text);
     font-weight: 500;
 }
 
@@ -239,7 +244,7 @@ header {
 
 .feature h5 {
     font-size: 1.2vw;
-    color: var(--text);
+    color: var(--dark-text);
     margin: 0.5rem;
     text-align: center;
 }
@@ -300,7 +305,7 @@ header {
 
 .descriptor {
     font-size: 1.5vw;
-    color: var(--text);
+    color: var(--dark-text);
     margin: 1rem;
     width: 60%;
     min-width: 20rem;
