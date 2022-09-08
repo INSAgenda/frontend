@@ -15,12 +15,6 @@ form>* {
     margin-top: 1rem;
 }
 
-#with-or-without-password {
-    cursor: pointer;
-    color: var(--primary);
-    text-decoration: underline;
-}
-
 #forgotten-password-link, #register-link {
     color: var(--text);
     margin-top: .8rem;
