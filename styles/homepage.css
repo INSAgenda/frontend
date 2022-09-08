@@ -146,10 +146,18 @@ header {
 /* BOTTOM ROD */
 #bottom-rod{
     display: flex;
+    align-items: flex-end;
 }
+
+.se-rounded {
+    transform: translateY(calc(100% - 6px));
+}
+
 #bottom-rod .h-rod{
     width: 50%;
+    background-color: var(--light-gray);
 }
+
 
 /* Gradient color */
 #top-rod .h-rod {
@@ -172,22 +180,34 @@ header {
     max-width: 700px;
 }
 
-/* Sections */
-.section-title {
-    font-size: 1.7rem;
-}
-
-.section-title::before {
+.dot-rod::before{
     content: "";
     display: inline-block;
+    position: absolute;
     width: 12px;
     height: 12px;
     background-color: var(--background);
     border: 6px solid var(--light-gray);
     border-radius: 50%;
-    transform: translateX(calc(-50% - 3px));
+    transform: translate(calc(-50% - 3px), 3px);
     outline: 6px solid var(--background);
 }
+/* Sections */
+.section-title {
+    font-size: 1.7rem;
+    color: var(--pink)
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+#mid-rod section {
+    margin: 1rem 2rem;
+}
+
 /* Responsiv for mobiles */
 @media screen and (max-width: 600px) {
     #home-section{
