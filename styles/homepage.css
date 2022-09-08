@@ -290,7 +290,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin: 2rem 0;
+    margin: 2% 0;
 }
 
 #phone-part > img {
@@ -316,6 +316,8 @@ header {
 
 .descriptor {
     font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
     color: var(--dark-text);
     margin: 1rem;
     width: 60%;
@@ -430,6 +432,8 @@ header {
 
     .descriptor {
         font-size: 2.0rem;
+        margin: auto;
+        min-width: 80vw;
     }
 
     .availables {
