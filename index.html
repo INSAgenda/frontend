@@ -10,9 +10,9 @@
     <meta property="og:url" content="https://insagenda.fr">
     <link rel="stylesheet" href="/styles/colors.css">
     <link rel="stylesheet" href="/styles/insagenda.css">
-    <link rel="stylesheet" href="/styles/homepage.css">
     <link rel="icon" href="/assets/logo/logo.svg" />
     <script common_code="head">var d=document;async function u(c,i){var f=d.createElement("div");f.innerHTML=await (await fetch(i)).text();for(var g=0;g<f.childNodes.length;g++){var a=f.childNodes[g];if(1==a.nodeType){var h=d.createElement(a.tagName);h.innerHTML=a.innerHTML;for(var b=0;b<a.attributes.length;b++)h.setAttribute(a.attributes[b].name,a.attributes[b].value);c.parentNode.insertBefore(h,c),a.remove()}}c.remove()}var e=d.currentScript;u(e,"/common-code/"+e.getAttribute("common_code")+".html")</script>
+    <link rel="stylesheet" href="/styles/homepage.css">
 </head>
 <body>
     <header>
@@ -51,23 +51,23 @@
                     <h4 class="section-description">INSAgenda ne cesse d'ajouter des fonctionnalités à sa plateforme.</h4>
                     <div id="mosaic">
                         <div class="feature">
-                            <img class="feature-illustration" src="/assets/elements/main-page/image.png"/>
+                            <img class="feature-illustration" src="/assets/elements/main-page/magic-wand.png"/>
                             <h5>Connexion sans mot de passe</h5>                            
                         </div>
                         <div class="feature">
-                            <img class="feature-illustration" src="/assets/elements/main-page/image.png"/>
+                            <img class="feature-illustration" src="/assets/elements/main-page/color-wheel.png"/>
                             <h5>Changez la couleurs de vos cours</h5>                            
                         </div>
                         <div class="feature">
-                            <img class="feature-illustration" src="/assets/elements/main-page/image.png"/>
+                            <img class="feature-illustration" src="/assets/elements/main-page/languages.png"/>
                             <h5>Disponible dans 2 langues</h5>                            
                         </div>
                         <div class="feature">
-                            <img class="feature-illustration" src="/assets/elements/main-page/image.png"/>
+                            <img class="feature-illustration" src="/assets/elements/main-page/theme-illustration.png"/>
                             <h5>Compatible thème clair et sombre</h5>                            
                         </div>
                         <div class="feature">
-                            <img class="feature-illustration" src="/assets/elements/main-page/image.png"/>
+                            <img class="feature-illustration" src="/assets/elements/main-page/no-signal.png"/>
                             <h5>Accessible sans réseau</h5>                            
                         </div>
                     </div>
@@ -77,20 +77,34 @@
                 <section id="platforms">
                     <h3 class="section-title">Plateformes.</h3>
                     <h4 class="section-description">INSAgenda se donne comme objectif d'être disponible sur la majorité des plates-formes.</h4>
+                    <div id="plarforms-container">
+                        <div id="phone-part">
+                            <img src="/assets/elements/main-page/phone.png"/>
+                            <div class="descriptor">
+                                <p><b>Votre emploi du temps toujours à portée de main.</b> Vérifiez votre emploi du temps en un clin d'oeil.</p>
+                                <p class="availables">Disponible pour IOS et Android.</p>
+                                <div class="platform-ico">
+                                    <img src="/assets/elements/plartforms/apple-logo.svg"/>
+                                    <img src="/assets/elements/plartforms/android-logo.svg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="desktop-part">
+                            <img src="/assets/elements/main-page/safari-light.png"/>
+                            <div class="descriptor">
+                                <p><b>Votre emploi du temps sur tous vos appareils.</b> Vérifiez votre emploi du temps sur tous les navigateurs.</p>
+                                <p class="availables">Disponible sur tous les navigateurs.</p>
+                                <div class="platform-ico">
+                                    <img src="/assets/elements/plartforms/safari.svg"/>
+                                    <img src="/assets/elements/plartforms/chrome.svg"/>
+                                    <img src="/assets/elements/plartforms/firefox.svg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section> 
             </div>
-            <div class="dot-rod">
-                <section id="priorities">
-                    <h3 class="section-title">Priorités.</h3>
-                    <h4 class="section-description">INSAgenda se donne 4 grandes priorités pour toujours vous offrir un service de meilleur qualité.</h4>
-                </section> 
-            </div>
-            <div class="dot-rod">
-                <section id="open-source">
-                    <h3 class="section-title">Open Source.</h3>
-                    <h4 class="section-description">Le code source de notre projet est disponible sur GitHub.</h4>
-                </section> 
-            </div>
+            
         </div>
         <div id="bottom-rod">
             <div class="sw-rounded"></div>
