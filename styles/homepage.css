@@ -211,7 +211,7 @@ header {
     background-color: var(--medium-light);
     border: 6px solid var(--light-gray);
     border-radius: 50%;
-    transform: translate(calc(-50% - 3px), 3px);
+    transform: translate(calc(-50% - 3px), 10px);
     outline: 6px solid var(--medium-light);
 }
 /* Sections */
@@ -341,6 +341,11 @@ header {
     width: 80vw;
     object-fit: contain;
     margin: 2rem auto;
+}
+
+#github-link {
+    line-height: 2rem;
+    color: var(--dark-text);
 }
 
 /* Responsiv for mobiles */
