@@ -71,7 +71,8 @@ header {
 }
 
 #home-paragraph {
-    margin-top: 2rem;
+    margin-top: 0.4rem;
+    width: 80%;
     font-size: 1.3rem;
     line-height: 1.4rem;
     font-weight: lighter;
@@ -98,10 +99,7 @@ header {
     font-weight: bold;
     color: var(--light);    
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    padding: 9px 20px;
 }
 
 .navigation-link:last-child{
@@ -113,9 +111,9 @@ header {
 #steering-rod {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 4rem);
-    margin: 0 2rem;
-    transform: translateY(calc(-30px - 1.5rem - 1.5rem)); /* - size of the corner - size of labels - padding */
+    width: calc(100% - 14rem);
+    margin: 0 5rem;
+    transform: translateY(calc(-30px - 1.5rem - 2.7rem)); /* - size of the corner - size of labels - padding */
 }
 
 #mid-rod {
@@ -204,12 +202,11 @@ header {
 
 .dot-rod::before{
     content: "";
-    display: inline-block;
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     background-color: var(--medium-light);
-    border: 6px solid var(--light-gray);
+    border: 4px solid var(--light-gray);
     border-radius: 50%;
     transform: translate(calc(-50% - 3px), 10px);
     outline: 6px solid var(--medium-light);
@@ -242,6 +239,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0.8rem;
     margin: 3%;
+    max-width: 904px;
 }
 
 .feature {
@@ -266,8 +264,12 @@ header {
 .feature h5 {
     font-size: 1.2vw;
     color: var(--dark-text);
-    margin: 0.5rem;
     text-align: center;
+    height: 38px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .feature:nth-child(1), .feature:nth-child(5) {
