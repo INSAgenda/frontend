@@ -236,10 +236,15 @@ header {
 
 #mosaic {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template: 
+                "f1 f1 f2 f3"
+                "f4 f5 f5 f3";
+    grid-template-rows: 49%;
     grid-gap: 0.8rem;
     margin: 3%;
-    max-width: 904px;
+    max-width: 1200px;
+    aspect-ratio: 1497/748;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .feature {
@@ -249,42 +254,42 @@ header {
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
-    width: 100%;
-    height: 100%;
 }
 
 .feature img {
     object-fit: contain;
     flex-grow: 1;
-    width: 12vw;
     max-width: 12rem;
-    margin: 3vw;
+    width: 9vw;
 }
 
 .feature h5 {
-    font-size: 1.2vw;
+    font-size: 1vw;
     color: var(--dark-text);
+    max-height: 58px;
+    height: 2.2vw;
+    padding: 5px 5%;
+    width: 85%;
     text-align: center;
-    height: 38px;
-    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.feature:nth-child(1), .feature:nth-child(5) {
-    grid-column: span 2;
-    grid-row: span 1;
+.feature:nth-child(1) {
+    grid-area: f1;
 }
-
-.feature:nth-child(2), .feature:nth-child(4) {
-    grid-column: span 1;
-    grid-row: span 1;
+.feature:nth-child(2){
+    grid-area: f2;
+} 
+.feature:nth-child(3){
+    grid-area: f3;
 }
-
-.feature:nth-child(3) {
-    grid-column: span 1;
-    grid-row: span 2;
+.feature:nth-child(4){
+    grid-area: f4;
+}
+.feature:nth-child(5){
+    grid-area: f5;
 }
 
 /* Platforms */
@@ -403,28 +408,26 @@ header {
 
     /* Mosaic */
     #mosaic {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 0.8rem;
+        grid-template: 
+                    "f2 f3"
+                    "f4 f3"
+                    "f1 f1"
+                    "f5 f5";
+        grid-gap: 0.5rem;
+        aspect-ratio: 343/696;
+        height: -webkit-fill-available; /* For Safari */
+        grid-template-rows: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
-    #mosaic h5 {
-        font-size: 3.2vw;
+    .feature{
+        border-radius: 0.6rem;
     }
-
-    .feature:nth-child(1), .feature:nth-child(3) {
-        grid-column: span 1;
-        grid-row: span 1;
+    .feature img{
+        width: 19vw;
     }
-    
-    .feature:nth-child(2) {
-        grid-column: span 1;
-        grid-row: span 2;
-    }
-    
-    .feature:nth-child(4), .feature:nth-child(5) {
-        grid-column: span 2;
-        grid-row: span 1;
+    .feature h5 {
+        font-size: 2.6vw;
+        height: 6.2vw;
     }
 
     /* Platforms */
