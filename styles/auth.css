@@ -35,7 +35,7 @@ form>* {
     align-self: flex-end;
 }
 
-.error-message-text, .fancy-radio-label>input, .group-checkbox>input {
+.error-message-text, .fancy-radio-label>input {
     display: none;
 }
 
@@ -55,14 +55,9 @@ form>* {
     height: 1rem;
 }
 
-.question-mark-form-tooltip > div {
+.field-desc {
+    transform: translateY(0.5rem);
     display: none;
-    width: 20vw;
-    z-index: 100;
-}
-
-.question-mark-form-tooltip:hover > div {
-    display: block;
 }
 
 /* Dropdown */

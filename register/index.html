@@ -82,69 +82,66 @@
                 </div>
 
                 <!-- Group chexbox -->
+                <p class="field-desc" id="group-field-desc">
+                    Votre groupe principal. En général, les groupes 1 et 2 sont regroupés, ainsi que les groupes 3 et 4.
+                </p>
                 <div class="fancy-radio">
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="1">Groupe 1</label>
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="2">Groupe 2</label>
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="3">Groupe 3</label>
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="4">Groupe 4</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="group" type="radio" value="1">Groupe 1</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="group" type="radio" value="2">Groupe 2</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="group" type="radio" value="3">Groupe 3</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="group" type="radio" value="4">Groupe 4</label>
 
-                    <div class="question-mark-form-tooltip">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-                        </svg>
-                        <div>Votre groupe principal. En général, les groupes 1 et 2 sont regroupés, ainsi que les groupes 3 et 4.</div>
-                    </div>
-                </div>
-
-                <!-- Lv1 group chexbox -->
-                <div class="fancy-radio">
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="1" checked>Groupe 1</label>
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="2">Groupe 2</label>
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="3">Groupe 3</label>
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="4">Groupe 4</label>
-                
-                    <div class="question-mark-form-tooltip">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-                        </svg>
-                        <div>Le groupe avec lequel vous êtes en Anglais.</div>
-                    </div>
+                    <svg class="question-mark-form-tooltip" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" onclick="document.getElementById('group-field-desc').style.display = 'block'">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                    </svg>
                 </div>
 
                 <!-- Language checkbox -->
                 <div class="fancy-radio" id="language-select">
-                    <label class="fancy-radio-label lang"><input class="fancy-radio-input" name="lang" type="radio" value="ALL">Allemand</label>
-                    <label class="fancy-radio-label lang"><input class="fancy-radio-input" name="lang" type="radio" value="ALL-DEB">Allemand Débutant</label>
-                    <label class="fancy-radio-label lang"><input class="fancy-radio-input" name="lang" type="radio" value="ESP">Espagnol</label>
-                    <label class="fancy-radio-label lang"><input class="fancy-radio-input" name="lang" type="radio" value="ESP-DEB">Espagnol Débutant</label>
-                    <label class="fancy-radio-label lang"><input class="fancy-radio-input" name="lang" type="radio" value="FLE">Français Langue Etrangère</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="language" type="radio" value="ALL">Allemand</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="language" type="radio" value="ALL-DEB">Allemand Débutant</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="language" type="radio" value="ESP">Espagnol</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="language" type="radio" value="ESP-DEB">Espagnol Débutant</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="language" type="radio" value="FLE">Français Langue Etrangère</label>
+                </div>
 
-                    <div class="question-mark-form-tooltip">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-                        </svg>
-                        <div>Votre LV2.</div>
-                    </div>
+                <!-- Lv1 group chexbox -->
+                <p class="field-desc" id="lv1-group-field-desc">
+                    Le groupe avec lequel vous êtes en Anglais.
+                </p>
+                <div class="fancy-radio">
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="lv1-group" type="radio" value="1">Groupe LV1 1</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="lv1-group" type="radio" value="2">Groupe LV1 2</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="lv1-group" type="radio" value="3">Groupe LV1 3</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="lv1-group" type="radio" value="4">Groupe LV1 4</label>
+
+                    <svg class="question-mark-form-tooltip" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" onclick="document.getElementById('lv1-group-field-desc').style.display = 'block'">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                    </svg>
                 </div>
 
                 <!-- Lv2 group chexbox -->
-                <div id="group-select">
-                    <p>Votre groupe en LV2 (1 si groupe unique).</p>
-                    <div class="fancy-radio">
-                        <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="1">Groupe 1</label>
-                        <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="2">Groupe 2</label>
-                        <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="3">Groupe 3</label>
-                        <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="4">Groupe 4</label>
-                    </div>
+                <p class="field-desc" id="lv2-group-field-desc">
+                    Le groupe avec lequel vous êtes en LV2.
+                </p>
+                <div class="fancy-radio">
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="lv2-group" type="radio" value="1">Groupe LV2 1</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="lv2-group" type="radio" value="2">Groupe LV2 2</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="lv2-group" type="radio" value="3">Groupe LV2 3</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="lv2-group" type="radio" value="4">Groupe LV2 4</label>
+
+                    <svg class="question-mark-form-tooltip" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" onclick="document.getElementById('lv2-group-field-desc').style.display = 'block'">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                    </svg>
                 </div>
 
                 <!-- TP group chexbox -->
                 <div class="fancy-radio" id="tp-group-select">
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="1">Groupe 1</label>
-                    <label class="fancy-radio-label group"><input class="fancy-radio-input" name="group" type="radio" value="2">Groupe 2</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="tp-group" type="radio" value="1">Groupe 1</label>
+                    <label class="fancy-radio-label"><input class="fancy-radio-input" name="tp-group" type="radio" value="2">Groupe 2</label>
                 </div>
             </form>
             <form class="submit-buttons">
