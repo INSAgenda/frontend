@@ -8,7 +8,9 @@ let tp_group_select = document.getElementById("tp-group-select");
 let email = document.getElementById("email-input");
 let password1 = document.getElementById("password-input1");
 let password2 = document.getElementById("password-input2");
-let stage = 1;
+let stage = 2; // PROVISORY: DO NOT MERGE THIS SHIT
+document.querySelector("main > form:nth-child(3)").style.display = "initial"; // PROVISORY: DO NOT MERGE THIS SHIT
+
 
 // Autocomplete 
 email.oninput = function(e) {

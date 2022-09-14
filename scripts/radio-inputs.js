@@ -4,10 +4,10 @@ for (const radio of radios) {
     radio.addEventListener('click', function () {
         for (const radio of radios) {
             if (radio.checked == false) {
-                radio.parentElement.classList.remove('fancy-radio-active');
+                radio.parentElement.classList.remove('fancy-radio-label-active');
             }
         }
         var parent = this.parentNode;
-        parent.classList.add('fancy-radio-active');
+        parent.classList.add('fancy-radio-label-active');
     });
 }

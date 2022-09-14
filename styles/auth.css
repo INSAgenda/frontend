@@ -35,7 +35,7 @@ form>* {
     align-self: flex-end;
 }
 
-.error-message-text, .fancy-radio>input, .group-checkbox>input {
+.error-message-text, .fancy-radio-label>input, .group-checkbox>input {
     display: none;
 }
 
@@ -45,15 +45,35 @@ form>* {
     align-items: center;
 }
 
+/* Question mark tooltip */
+
+.question-mark-form-tooltip {
+    position: absolute;
+    top: .2rem;
+    right: -1.2rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.question-mark-form-tooltip > div {
+    display: none;
+    width: 20vw;
+    z-index: 100;
+}
+
+.question-mark-form-tooltip:hover > div {
+    display: block;
+}
+
 /* Dropdown */
 
-.dropdown-list-box, .checkbox-content, .dropdown-list, .fancy-radio {
+.dropdown-list-box, .fancy-radio, .dropdown-list, .fancy-radio-label {
     width: 100%;
     font-size: .9rem;
     cursor: pointer;
 }
 
-.dropdown-list, .checkbox-content {
+.dropdown-list, .fancy-radio {
     height: 3.5rem;
     border-radius: 1.75rem;
     display: flex;
@@ -71,15 +91,19 @@ form>* {
 
 /* Language checkbox */
 
-.fancy-radio:first-child {
+.fancy-radio {
+    position: relative;
+}
+
+.fancy-radio-label:first-child {
     border-radius: 1.75rem 0 0 1.75rem;
 }
 
-.fancy-radio:last-child {
+.fancy-radio-label:last-of-type {
     border-radius: 0 1.75rem 1.75rem 0;
 }
 
-.fancy-radio {
+.fancy-radio-label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,17 +115,13 @@ form>* {
     transition: filter 0.2s, background-color 0.2s;
 }
 
-.fancy-radio:hover {
+.fancy-radio-label:hover {
     filter: brightness(0.9);
 }
 
-.fancy-radio-active {
+.fancy-radio-label-active {
     background-color: var(--primary);
     color: var(--closer-background);
-}
-
-.group-checkbox {
-    width: 50%;
 }
 
 @media all and (max-width: 800px) {
@@ -110,6 +130,14 @@ form>* {
         padding: 2rem;
     }
     
+    .question-mark-form-tooltip > div {
+        background-color: #aaa;
+        width: 50vw;
+        right: 52vw;
+        padding: 1vw;
+        position: relative;
+        top: 0;
+    }
 }
 
 .lds-ring {
