@@ -72,11 +72,11 @@ form>* {
 /* Language checkbox */
 
 .language-checkbox:first-child {
-    border-radius: 32px 0 0 32px;
+    border-radius: 1.75rem 0 0 1.75rem;
 }
 
 .language-checkbox:last-child {
-    border-radius: 0 32px 32px 0;
+    border-radius: 0 1.75rem 1.75rem 0;
 }
 
 .language-checkbox {
@@ -87,7 +87,6 @@ form>* {
     background-color: var(--closer-background);
     border: 1px solid var(--background);
     color: var(--text);
-    padding: 0 10px;
     user-select: none;
     transition: filter 0.2s, background-color 0.2s;
 }

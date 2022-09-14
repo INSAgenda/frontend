@@ -1,5 +1,10 @@
 let submit_el = document.getElementById("submit-button");
 let error_el = document.getElementById("error-message");
+let promotion_select = document.getElementById("promotion-select");
+let class_select = document.getElementById("class-select");
+let language_select = document.getElementById("language-select");
+let tp_group_select = document.getElementById("tp-group-select");
+
 let email = document.getElementById("email-input");
 let password1 = document.getElementById("password-input1");
 let password2 = document.getElementById("password-input2");
@@ -11,6 +16,15 @@ email.oninput = function(e) {
         email.value = email.value.replace("@", "@insa-rouen.fr");
         setTimeout(focus_next, 100);
     }
+}
+
+// Change form depending on promotion
+promotion_select.onchange = function() {
+    let promotion = promotion_select.options[promotion_select.selectedIndex].value;
+
+    class_select.style.display = ["STPI1", "STPI2"].includes(promotion) ? "initial" : "none";
+    tp_group_select.style.display = ["STPI1", "STPI2"].includes(promotion) ? "flex" : "none";
+    language_select.style.display = ["STPI1", "STPI2", "ITI3"].includes(promotion) ? "flex" : "none";
 }
 
 // Submit function that can throw unhandled errors
@@ -48,7 +62,6 @@ async function submit_inner() {
             },
         });
     } else {
-        let promotion_select = document.getElementById("promotion-select");
         let promotion_value = promotion_select.options[promotion_select.selectedIndex].value;
         if (promotion_value === "") {
             error_el.innerHTML = "Veuillez selectionner votre promotion.";
@@ -56,7 +69,6 @@ async function submit_inner() {
             return false;    
         }
 
-        let class_select = document.getElementById("class-select");
         let class_value = class_select.options[class_select.selectedIndex].value;
         if (class_value === "") {
             error_el.innerHTML = "Veuillez selectionner votre classe.";
@@ -64,21 +76,21 @@ async function submit_inner() {
             return false;    
         }
 
-        let lang_select = document.querySelector('input[name="lang"]:checked');
-        if (lang_select == null) {
+        let lang_input = document.querySelector('input[name="lang"]:checked');
+        if (lang_input == null) {
             error_el.innerHTML = "Veuillez selectionner votre langue.";
             error_el.style.display = "block";
             return false;    
         }
-        let lang = lang_select.value;
+        let lang = lang_input.value;
 
-        let tp_group_select = document.querySelector('input[name="group"]:checked');
-        if (tp_group_select == null) {
+        let tp_group_input = document.querySelector('input[name="group"]:checked');
+        if (tp_group_input == null) {
             error_el.innerHTML = "Veuillez selectionner votre groupe de TP.";
             error_el.style.display = "block";
             return false;
         }
-        let tp_group = tp_group_select.value;
+        let tp_group = tp_group_input.value;
 
         response = await fetch('/api/auth/register', {
             method: 'POST',
