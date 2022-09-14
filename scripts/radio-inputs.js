@@ -1,13 +1,13 @@
 // Animate radio inputs
-var radios = document.getElementsByClassName('language-checkbox-radio');
+var radios = document.getElementsByClassName('fancy-radio-input');
 for (const radio of radios) {
     radio.addEventListener('click', function () {
         for (const radio of radios) {
             if (radio.checked == false) {
-                radio.parentElement.classList.remove('language-checkbox-active');
+                radio.parentElement.classList.remove('fancy-radio-active');
             }
         }
         var parent = this.parentNode;
-        parent.classList.add('language-checkbox-active');
+        parent.classList.add('fancy-radio-active');
     });
 }
