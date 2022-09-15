@@ -50,6 +50,7 @@ header {
     display: flex;
     align-items: center;
     overflow: hidden;
+    max-height: -webkit-fill-available; /* For mobile safari users */
 }
 
 #home-description {
@@ -106,6 +107,13 @@ header {
 .navigation-link:last-child{
     display: none;
 }
+.navigation-link:last-child::after{
+    content: url("/assets/elements/mainpage-arrow.svg");
+    margin: auto 10px;
+    display: flex;
+    height: 14px;
+}
+
 
 
 /* ROD */
@@ -213,6 +221,8 @@ header {
     outline: 6px solid var(--medium-light);
 }
 /* Sections */
+
+section
 .section-title {
     font-size: 2.5rem;
     color: var(--pink)
@@ -227,6 +237,7 @@ header {
 #mid-rod section {
     margin: 1rem 0px 1rem 2rem;
 }
+
 
 .title-block {
     max-width: 650px;
@@ -398,7 +409,7 @@ header {
 
     #main-page-nav .navigation-link:last-child {
         display: flex;
-        width: 100%;
+        font-size: 1.15rem;
     }
 
     #steering-rod { 
