@@ -218,7 +218,7 @@ header {
 }
 
 .section-description {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--dark-text);
     font-weight: 500;
 }
@@ -228,8 +228,8 @@ header {
 }
 
 .title-block {
-    max-width: 100%;
-    width: 35rem;
+    max-width: 650px;
+    width: 90%;
 }
 
 /* Fetures */
@@ -404,7 +404,17 @@ header {
         margin: 0 1rem;    
     }
 
-    /* Features */
+    /* Property of sections */
+    .title-block{
+        width: 100%;
+        margin: 0 0 18px 0;
+    }
+    .section-title{
+        font-size: 1.7rem;
+    }
+    .section-description{
+        font-size: 1.2rem;
+    }
 
     /* Mosaic */
     #mosaic {
