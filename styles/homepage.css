@@ -53,6 +53,7 @@ header {
 }
 
 #home-description {
+    min-width: 430px;
     width: 100vw;
     margin: 0 4%;
     color: var(--light);
@@ -60,7 +61,7 @@ header {
 }
 
 #home-image {
-    width: 60vw;
+    width: 57vw;
     margin-left: -8vw;
     transform: translateX(2vw);
 }
@@ -71,8 +72,8 @@ header {
 }
 
 #home-paragraph {
-    margin-top: 0.4rem;
-    width: 80%;
+    max-width: 426px;
+    margin: 2% 0 5% 0;
     font-size: 1.3rem;
     line-height: 1.4rem;
     font-weight: lighter;
@@ -367,6 +368,7 @@ header {
     #home-title {
         font-size: 2.3em;
         line-height: 44px;
+        max-width: 426px;
     }
 
     #home-paragraph {
