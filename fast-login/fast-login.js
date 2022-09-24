@@ -17,6 +17,12 @@ let title = document.getElementById("title");
         
         if (response.status == 200) {
             let json = await response.json();
+            let theme = localStorage.getItem("setting-theme");
+            let auto_theme = localStorage.getItem("auto-theme");
+            localStorage.clear();
+            localStorage.setItem("setting-theme", theme);
+            localStorage.setItem("auto-theme", auto_theme);
+            
             localStorage.setItem('api_key', json.api_key);
             localStorage.setItem('counter', 1);
             title.innerText = "Connecté!";
