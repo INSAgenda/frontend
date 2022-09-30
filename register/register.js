@@ -57,39 +57,27 @@ async function submit_inner() {
             },
         });
     } else {
-        let promotion_value = promotion_select.options[promotion_select.selectedIndex].value;
-        if (promotion_value === "") {
-            error_el.innerHTML = "Veuillez selectionner votre promotion.";
-            error_el.style.display = "block";
-            return false;    
+        let group_desc_parts = [];
+        let dropdowns = form.querySelectorAll("div.dropdown-list-box");
+        for (let i = 0; i < dropdowns.length; i++) {
+            let dropdown = dropdowns[i];
+            if (dropdown.style.display === "block") {
+                let select = dropdown.firstElementChild;
+                let name = select.getAttribute("name");
+                let value = select.options[select.selectedIndex].value;
+                if (value === "") {
+                    error_el.innerHTML = "Veuillez selectionner votre " + select.firstElementChild.innerText.toLowerCase() + ".";
+                    error_el.style.display = "block";
+                    return false;        
+                }
+                group_desc_parts.push(name + "=" + value);
+            }
         }
-
-        let class_value = class_select.options[class_select.selectedIndex].value;
-        if (class_value === "") {
-            error_el.innerHTML = "Veuillez selectionner votre classe.";
-            error_el.style.display = "block";
-            return false;    
-        }
-
-        let lang_input = document.querySelector('input[name="lang"]:checked');
-        if (lang_input == null) {
-            error_el.innerHTML = "Veuillez selectionner votre langue.";
-            error_el.style.display = "block";
-            return false;    
-        }
-        let lang = lang_input.value;
-
-        let tp_group_input = document.querySelector('input[name="group"]:checked');
-        if (tp_group_input == null) {
-            error_el.innerHTML = "Veuillez selectionner votre groupe de TP.";
-            error_el.style.display = "block";
-            return false;
-        }
-        let tp_group = tp_group_input.value;
+        let group_desc = group_desc_parts.join("+");
 
         response = await fetch('/api/auth/register', {
             method: 'POST',
-            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value) + "&promotion=" + encodeURIComponent(promotion_value) + "&class=" + encodeURIComponent(class_value) + "&lang=" + encodeURIComponent(lang) + "&class_division=" + encodeURIComponent(tp_group),
+            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value) + "&group_desc=" + encodeURIComponent(group_desc),
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
             },
@@ -109,16 +97,6 @@ async function submit_inner() {
             stage = 2;
             error_el.style.display = "none";
             form.style.display = "initial";
-
-            /*                <div class="dropdown-list-box">
-                    <select required class="dropdown-list" name="promotion" id="promotion-select">
-                        <option disabled selected value>Promotion</option>
-                        <option value="STPI1">STPI1</option>
-                        <option value="STPI2">STPI2</option>
-                        <option value="ITI3">ITI3</option>
-                    </select>   
-                </div>
- */
         } else {
             error_el.innerHTML = json.message_fr; // TODO: display english messages
             error_el.style.display = "block";
