@@ -8,25 +8,18 @@ let tp_group_select = document.getElementById("tp-group-select");
 let email = document.getElementById("email-input");
 let password1 = document.getElementById("password-input1");
 let password2 = document.getElementById("password-input2");
+let form = document.querySelector("main > form:nth-child(3)");
 let stage = 2; // PROVISORY: DO NOT MERGE THIS SHIT
-document.querySelector("main > form:nth-child(3)").style.display = "initial"; // PROVISORY: DO NOT MERGE THIS SHIT
+form.style.display = "initial"; // PROVISORY: DO NOT MERGE THIS SHIT
 
+/* AUTO-GENERATED SCRIPT HERE */
 
-// Autocomplete 
+// Autocomplete
 email.oninput = function(e) {
     if (e.inputType == "insertText" && email.value.endsWith("@") && (email.value.split("@").length - 1) == 1) {
         email.value = email.value.replace("@", "@insa-rouen.fr");
         setTimeout(focus_next, 100);
     }
-}
-
-// Change form depending on promotion
-promotion_select.onchange = function() {
-    let promotion = promotion_select.options[promotion_select.selectedIndex].value;
-
-    class_select.style.display = ["STPI1", "STPI2"].includes(promotion) ? "initial" : "none";
-    tp_group_select.style.display = ["STPI1", "STPI2"].includes(promotion) ? "flex" : "none";
-    language_select.style.display = ["STPI1", "STPI2", "ITI3"].includes(promotion) ? "flex" : "none";
 }
 
 // Submit function that can throw unhandled errors
@@ -115,7 +108,17 @@ async function submit_inner() {
         if (json.kind === "unknown_email") {
             stage = 2;
             error_el.style.display = "none";
-            document.querySelector("main > form:nth-child(3)").style.display = "initial";
+            form.style.display = "initial";
+
+            /*                <div class="dropdown-list-box">
+                    <select required class="dropdown-list" name="promotion" id="promotion-select">
+                        <option disabled selected value>Promotion</option>
+                        <option value="STPI1">STPI1</option>
+                        <option value="STPI2">STPI2</option>
+                        <option value="ITI3">ITI3</option>
+                    </select>   
+                </div>
+ */
         } else {
             error_el.innerHTML = json.message_fr; // TODO: display english messages
             error_el.style.display = "block";
