@@ -46,7 +46,7 @@ header {
 
 #home-section {
     height: 100vh;
-    background: linear-gradient(135deg, var(--pink), #1F0A53);
+    background: linear-gradient(135deg, var(--primary), #1F0A53);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -78,7 +78,7 @@ header {
 }
 
 #register-button {
-    background-color: var(--pink);
+    background-color: var(--primary);
     color: var(--light);
     max-width: 300px;
 }
@@ -120,7 +120,7 @@ header {
 
 #mid-rod {
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom, var(--pink), var(--light-gray)) 1;
+    border-image: linear-gradient(to bottom, var(--primary), var(--light-gray)) 1;
     padding-top: 1.5rem;
 }
 
@@ -136,7 +136,7 @@ header {
 
 .nw-rounded{
     border-top-left-radius: 100%;
-    background-image: radial-gradient(circle at 30px 30px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 24px, var(--pink) 24px);
+    background-image: radial-gradient(circle at 30px 30px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 24px, var(--primary) 24px);
 }
 
 .sw-rounded{
@@ -183,7 +183,7 @@ header {
 
 /* Gradient color */
 #top-rod .h-rod {
-    background: var(--pink);
+    background: var(--primary);
 }
 
 
@@ -192,7 +192,7 @@ header {
 .main-content-title{
     font-size: 2.5em;
     font-weight: bold;
-    color: var(--pink);
+    color: var(--primary);
 }
 
 .main-content-subtitle{
@@ -217,7 +217,7 @@ header {
 /* Sections */
 .section-title {
     font-size: 2.5rem;
-    color: var(--pink)
+    color: var(--primary)
 }
 
 .section-description {

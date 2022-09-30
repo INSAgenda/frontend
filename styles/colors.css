@@ -2,22 +2,21 @@
 
 :root {
     /* All colors */
-    --primary: #CB6CE6;
-    --light-text: #F6F6F6;
-    --dark-text: #262626;
-    --dark: #1A1A1B;
-    --medium-dark: #333333;
-    --light: #FFFFFF;
+    --primary: #DC6ACF;
+    --light-text: #F7F2F6;
+    --dark-text: #262126;
+    --dark: #141214;
+    --medium-dark: #333033;
+    --light: #FFFCFF;
     --medium-light: #EBEAEA;
     --error-red: #fc3d03;
 
     /* home page colors */
-    --pink: #CB6CE6;
-    --light-gray: #AEAEAE;
+    --light-gray: #AEABAE;
     --background: var(--medium-light);
     --closer-background: var(--light);
     --text: var(--dark-text);
-    --day: white;
+    --day: var(--light);
 }
 
 /* Dark-thème */
@@ -26,5 +25,5 @@
     --background: var(--dark);
     --closer-background: var(--medium-dark);
     --text: var(--light-text);
-    --day: #262627;
+    --day: #272627;
 }
