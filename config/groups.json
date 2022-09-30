@@ -1,0 +1,65 @@
+[
+    {
+        "id": "school",
+        "name": "Ecole",
+        "help": "Votre établissement scolaire.",
+        "values": [
+            ["insa-rouen", "INSA Rouen"]
+        ]
+    },
+    {
+        "required_if": "school=insa-rouen",
+        "id": "insa-rouen:department",
+        "name": "Département",
+        "help": "Votre département.",
+        "values": [["AI2", "AI2"], ["AI3", "AI3"], ["AI4", "AI4"], ["ASI5", "ASI5"], ["CGC3", "CGC3"], ["CGC4", "CGC4"], ["CP5", "CP5"], ["EUROMED-SIC", "EUROMED-SIC"], ["EP3", "EP3"], ["EP4", "EP4"], ["EP5", "EP5"], ["GC5", "GC5"], ["GCU3", "GCU3"], ["GCU4", "GCU4"], ["GM3", "GM3"], ["GM4", "GM4"], ["GM5", "GM5"], ["GPGR3", "GPGR3"], ["GPGR4", "GPGR4"], ["ITI3", "ITI3"], ["ITI4", "ITI4"], ["M-IC1", "M-IC1"], ["M-IC2", "M-IC2"], ["MECA3", "MECA3"], ["MECA4", "MECA4"], ["MECA5", "MECA5"], ["MRI5", "MRI5"], ["MS-ESD", "MS-ESD"], ["PERF-E3", "PERF-E3"], ["PERF-E4", "PERF-E4"], ["PERF-E5", "PERF-E5"], ["PERF-II3", "PERF-II3"], ["PERF-II4", "PERF-II4"], ["PERF-II5", "PERF-II5"], ["PERF-ISP3", "PERF-ISP3"], ["PERF-ISP4", "PERF-ISP4"], ["PERF-ISP5", "PERF-ISP5"], ["PERF-NI3", "PERF-NI3"], ["PERF-NI4", "PERF-NI4"], ["PERF-NI5", "PERF-NI5"], ["STPI1", "STPI1"], ["STPI2", "STPI2"]]
+    },
+    {
+        "required_if": "school=insa-rouen",
+        "id": "insa-rouen:language",
+        "name": "Langue étudiée",
+        "help": "Votre LV2.",
+        "values": [
+            ["ALL", "Allemand"],
+            ["ALL-DEB", "Allemand débutant"],
+            ["ESP", "Espagnol"],
+            ["ESP-DEB", "Espagnol débutant"],
+            ["FLE", "Français langue étrangère"]
+        ]
+    },
+    {
+        "required_if": "school=insa-rouen AND (insa-rouen:department=STPI1 OR insa-rouen:department=STPI2)",
+        "id": "insa-rouen:stpi:class",
+        "name": "Classe",
+        "help": "Votre classe",
+        "values": [["A", "A"], ["B", "B"], ["C", "C"], ["D", "D"], ["E", "E"], ["F", "F"], ["G", "G"], ["H", "H"], ["I", "I"], ["J", "J"], ["K", "K"]]
+    },
+    {
+        "required_if": "school=insa-rouen AND (insa-rouen:department=STPI1 OR insa-rouen:department=STPI2)",
+        "id": "insa-rouen:stpi:tp-group",
+        "name": "Groupe de TP",
+        "help": "Votre demie classe",
+        "values": [["1", "Groupe 1"], ["2", "Groupe 2"]]
+    },
+    {
+        "required_if": "school=insa-rouen AND insa-rouen:department=ITI3",
+        "id": "insa-rouen:iti:group",
+        "name": "Groupe",
+        "help": "Votre groupe",
+        "values": [["1", "Groupe 1"], ["2", "Groupe 2"], ["3", "Groupe 3"], ["4", "Groupe 4"]]
+    },
+    {
+        "required_if": "school=insa-rouen AND insa-rouen:department=ITI3",
+        "id": "insa-rouen:iti:lv1-group",
+        "name": "Groupe en LV1",
+        "help": "Votre groupe en anglais",
+        "values": [["1", "Groupe 1"], ["2", "Groupe 2"], ["3", "Groupe 3"], ["4", "Groupe 4"]]
+    },
+    {
+        "required_if": "school=insa-rouen AND insa-rouen:department=ITI3",
+        "id": "insa-rouen:iti:lv2-group",
+        "name": "Groupe en LV2",
+        "help": "Votre groupe en espagnol/allemand/fle",
+        "values": [["1", "Groupe 1"], ["2", "Groupe 2"], ["3", "Groupe 3"], ["4", "Groupe 4"]]
+    }
+]
