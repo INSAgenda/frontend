@@ -35,7 +35,7 @@ form>* {
     align-self: flex-end;
 }
 
-.error-message-text, .language-checkbox>input, .group-checkbox>input {
+.error-message-text, .fancy-radio-label>input {
     display: none;
 }
 
@@ -45,15 +45,30 @@ form>* {
     align-items: center;
 }
 
+/* Question mark tooltip */
+
+.question-mark-form-tooltip {
+    position: absolute;
+    top: .2rem;
+    right: -1.2rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.field-desc {
+    transform: translateY(0.5rem);
+    display: none;
+}
+
 /* Dropdown */
 
-.dropdown-list-box, .checkbox-content, .dropdown-list, .language-checkbox {
+.dropdown-list-box, .fancy-radio, .dropdown-list, .fancy-radio-label {
     width: 100%;
     font-size: .9rem;
     cursor: pointer;
 }
 
-.dropdown-list, .checkbox-content {
+.dropdown-list, .fancy-radio {
     height: 3.5rem;
     border-radius: 1.75rem;
     display: flex;
@@ -71,15 +86,19 @@ form>* {
 
 /* Language checkbox */
 
-.language-checkbox:first-child {
-    border-radius: 32px 0 0 32px;
+.fancy-radio {
+    position: relative;
 }
 
-.language-checkbox:last-child {
-    border-radius: 0 32px 32px 0;
+.fancy-radio-label:first-child {
+    border-radius: 1.75rem 0 0 1.75rem;
 }
 
-.language-checkbox {
+.fancy-radio-label:last-of-type {
+    border-radius: 0 1.75rem 1.75rem 0;
+}
+
+.fancy-radio-label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,22 +106,17 @@ form>* {
     background-color: var(--closer-background);
     border: 1px solid var(--background);
     color: var(--text);
-    padding: 0 10px;
     user-select: none;
     transition: filter 0.2s, background-color 0.2s;
 }
 
-.language-checkbox:hover {
+.fancy-radio-label:hover {
     filter: brightness(0.9);
 }
 
-.language-checkbox-active {
+.fancy-radio-label-active {
     background-color: var(--primary);
     color: var(--closer-background);
-}
-
-.group-checkbox {
-    width: 50%;
 }
 
 @media all and (max-width: 800px) {
@@ -111,6 +125,14 @@ form>* {
         padding: 2rem;
     }
     
+    .question-mark-form-tooltip > div {
+        background-color: #aaa;
+        width: 50vw;
+        right: 52vw;
+        padding: 1vw;
+        position: relative;
+        top: 0;
+    }
 }
 
 .lds-ring {
