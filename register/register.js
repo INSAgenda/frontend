@@ -56,7 +56,7 @@ async function submit_inner() {
             },
         });
     } else {
-        let group_desc_parts = [];
+        let user_groups_parts = [];
         let dropdowns = form.querySelectorAll("div.dropdown-list-box");
         for (let i = 0; i < dropdowns.length; i++) {
             let dropdown = dropdowns[i];
@@ -69,14 +69,14 @@ async function submit_inner() {
                     error_el.style.display = "block";
                     return false;        
                 }
-                group_desc_parts.push(name + "=" + value);
+                user_groups_parts.push(name + "=" + value);
             }
         }
-        let group_desc = group_desc_parts.join("+");
+        let user_groups = user_groups_parts.join("+");
 
         response = await fetch('/api/auth/register', {
             method: 'POST',
-            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value) + "&group_desc=" + encodeURIComponent(group_desc),
+            body: "email=" + encodeURIComponent(email.value) + "&password=" + encodeURIComponent(password1.value) + "&user_groups=" + encodeURIComponent(user_groups),
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
             },
