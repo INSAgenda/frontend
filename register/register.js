@@ -9,8 +9,7 @@ let email = document.getElementById("email-input");
 let password1 = document.getElementById("password-input1");
 let password2 = document.getElementById("password-input2");
 let form = document.querySelector("main > form:nth-child(3)");
-let stage = 2; // PROVISORY: DO NOT MERGE THIS SHIT
-form.style.display = "initial"; // PROVISORY: DO NOT MERGE THIS SHIT
+let stage = 1;
 
 /* AUTO-GENERATED SCRIPT HERE */
 
