@@ -108,7 +108,7 @@ async function submit() {
         } else {
             await submit_without_password();
         }
-    } catch(err) {
+    } catch(e) {
         error_el.innerText = "Une erreur inconnue s'est produite.";
         error_el.style.display = "block";
         Sentry.setUser({ email: email.value });
