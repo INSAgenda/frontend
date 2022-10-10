@@ -484,6 +484,17 @@ section
     line-height: 2rem;
 }
 
+/* Footer */
+footer{
+    background: linear-gradient(135deg, var(--pink), #1F0A53);
+    height: 227px;
+    /* Provisoir */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+}
+
 /* Responsiv for mobiles */
 @media screen and (max-width: 900px) {
     #home-section {
