@@ -206,7 +206,7 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
 
 /* Mobile */
 
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1000px){
     .page-title{
         font-size: 1.3em;  
     }
@@ -222,5 +222,9 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
 
     #EDT-button{
         padding: 0.5rem 1.5rem;
+    }
+
+    .hide-mobile {
+        display: none;
     }
 }
