@@ -1,16 +1,26 @@
 {
     "lang": "fr-FR",
     "name": "INSAgenda",
+    "short_name": "INSAgenda",
     "start_url": "/agenda?ref=pwa",
     "scope": "/agenda",
     "background_color": "#1A1A1B",
+    "theme_color": "#CB6CE6",
     "categories": ["education", "news", "productivity", "utilities", "social"],
-    "description": "App permettant aux étudiants de l'INSA de consulter leur emploi du temps.",
+    "description": "Application d'emploi du temps pour tous les étudiants de l'INSA de Rouen",
     "display": "standalone",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "/assets/logo/logo.svg",
-            "sizes": "any"
+            "sizes": "any",
+            "purpose": "any",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "/assets/logo/logo-render-512x512.png",
+            "sizes": "512x41",
+            "type": "image/png"
         }
     ],
     "screenshots": [
@@ -43,7 +53,7 @@
             "label": "Emploi du temps sur mobile avec le thème clair"
         }
     ],
-    "shortcut": [
+    "shortcuts": [
         {
             "name": "Agenda",
             "url": "/agenda?ref=pwa",
