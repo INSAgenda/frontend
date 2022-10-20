@@ -23,7 +23,7 @@ body {
     line-height: 2.4rem;
     border-radius: 1.2rem;
 }
-button#see-edt{
+a#see-edt{
     color: var(--light-text);
     width: auto;
 }
@@ -517,8 +517,8 @@ section
     }
 
     #home-image {
-        width: 110vw;
-        transform: translateX(10%);
+        width: 97vw;
+        transform: translateX(16%);
     }
 
     #main-page-content {
