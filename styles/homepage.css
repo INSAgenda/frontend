@@ -23,6 +23,10 @@ body {
     line-height: 2.4rem;
     border-radius: 1.2rem;
 }
+button#see-edt{
+    color: var(--light-text);
+    width: auto;
+}
 
 /* For the NewHeader : */
 
@@ -30,7 +34,7 @@ body {
     font-size: 1.3em;
     font-weight: bold;
     margin-left: 0.1rem;
-    color: var(--light);
+    color: var(--light-text);
 }
 
 header {
@@ -102,6 +106,10 @@ header {
     color: var(--light);    
     text-decoration: none;
     padding: 9px 20px;
+    transition: opacity 0.2s;
+}
+.navigation-link:hover{
+    opacity: 0.7;
 }
 
 .navigation-link:last-child{
@@ -236,7 +244,7 @@ section
 .section-description {
     font-size: 1.5rem;
     color: var(--dark-text);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 #mid-rod section {
