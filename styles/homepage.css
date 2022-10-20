@@ -120,7 +120,6 @@ header {
 #steering-rod {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 14rem);
     padding: 0 5rem;
     transform: translateY(calc(-30px - 1.5rem - 2.7rem)); /* - size of the corner - size of labels - padding */
 }
@@ -170,6 +169,7 @@ header {
 #bottom-rod{
     display: flex;
     align-items: flex-end;
+    width: 51%;
 }
 
 .se-rounded {
@@ -177,14 +177,14 @@ header {
 }
 
 #bottom-rod .h-rod {
-    width: 50%;
+    flex-grow: 1;
     background-color: var(--light-gray);
 }
 
-#bottom-rod a {
+#anchor-top-page {
     color: var(--light-gray);
-    transform: translate(-50%, calc(100% + 30px));
-
+    margin: 28px 0 0 0;
+    text-align: center;
 }
 
 
@@ -482,17 +482,6 @@ section
 
 #github-link {
     line-height: 2rem;
-}
-
-/* Footer */
-footer{
-    background: linear-gradient(135deg, var(--pink), #1F0A53);
-    height: 227px;
-    /* Provisoir */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--light);
 }
 
 /* Responsiv for mobiles */
