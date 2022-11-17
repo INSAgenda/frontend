@@ -1,6 +1,5 @@
 const storageKey = 'setting-theme'
 
-
 const getSystemPreference = () => {
   return window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
@@ -16,9 +15,9 @@ const getColorPreference = () => {
 
 document.reflectTheme = reflectPreference = function (){
   const authoThemeKey = 'auto-theme'
-  if ((localStorage.getItem(authoThemeKey)) && (localStorage.getItem(authoThemeKey) === 'true')){
+  if ((localStorage.getItem(authoThemeKey)) && (localStorage.getItem(authoThemeKey) === 'true')) {
     document.firstElementChild.setAttribute('data-theme', getSystemPreference());
-  }else{
+  } else {
     document.firstElementChild.setAttribute('data-theme', getColorPreference())
   }
 }
