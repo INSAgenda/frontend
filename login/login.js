@@ -57,8 +57,10 @@ async function submit_with_password() {
         let theme = localStorage.getItem("setting-theme");
         let auto_theme = localStorage.getItem("auto-theme");
         localStorage.clear();
-        localStorage.setItem("setting-theme", theme);
-        localStorage.setItem("auto-theme", auto_theme);
+        if (theme != null)
+            localStorage.setItem("setting-theme", theme);
+        if (auto_theme != null)
+            localStorage.setItem("auto-theme", auto_theme);
         
         localStorage.setItem('api_key', json.api_key);
         localStorage.setItem('counter', 1);
