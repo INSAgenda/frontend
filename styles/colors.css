@@ -3,14 +3,13 @@
 :root {
     /* All colors */
     --primary: #CB6CE6;
-    --light-text: #F7F2F6;
+    --light-text: #F6F6F6;
     --dark-text: #262626;
     --dark: #1A1A1B;
     --medium-dark: #333333;
     --light: #FFFFFF;
     --medium-light: #EBEAEA;
     --error-red: #fc3d03;
-    --background-footer: #D9D9D9;
 
     /* home page colors */
     --pink: #CB6CE6;
