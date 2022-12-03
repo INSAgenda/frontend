@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <title>INSAgenda | Agenda INSA Rouen</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>INSAgenda | Agenda INSA Rouen</title>
     <meta name="description" content="Venez découvrir votre agenda quotidien à l'INSA de Rouen de manière rapide et efficace.">
     <meta property="og:title" content="INSAgenda">
     <meta property="og:description" content="Venez découvrir votre agenda quotidien à l'INSA de Rouen de manière rapide et efficace.">
     <meta property="og:url" content="https://insagenda.fr">
-    <link rel="stylesheet" href="/styles/colors.css">
-    <link rel="stylesheet" href="/styles/insagenda.css">
-    <link rel="icon" href="/assets/logo/logo.svg" />
+    <link rel="stylesheet" href="/styles/colors.css"/>
+    <link rel="stylesheet" href="/styles/insagenda.css"/>
+    <link rel="icon" href="/assets/logo/logo.svg"/>
+    <link rel="stylesheet" href="/styles/homepage.css"/>
     <script common_code="head">var d=document;async function u(c,i){var f=d.createElement("div");f.innerHTML=await (await fetch(i)).text();for(var g=0;g<f.childNodes.length;g++){var a=f.childNodes[g];if(1==a.nodeType){var h=d.createElement(a.tagName);h.innerHTML=a.innerHTML;for(var b=0;b<a.attributes.length;b++)h.setAttribute(a.attributes[b].name,a.attributes[b].value);c.parentNode.insertBefore(h,c),a.remove()}}c.remove()}var e=d.currentScript;u(e,"/common-code/"+e.getAttribute("common_code")+".html")</script>
-    <link rel="stylesheet" href="/styles/homepage.css">
 </head>
 <body>
     <header>
@@ -25,7 +25,7 @@
         <!-- LeftPart -->
         <div id="home-description">
             <h2 id="home-title">Ne cherchez plus, INSAgenda est là.</h2>
-            <p id="home-paragraph">Ici vous pouvez retrouver votre emploi de façon simplifiée.</p>
+            <p id="home-paragraph">Retrouvez votre emploi du temps, tout simplement.</p>
             <a class="primary-button link-to-edt" id="register-button" href="/register">S'inscrire à INSAgenda</a>
         </div>
         <img id="home-image" src="/assets/screenshots/safari-screenshot.webp" alt="aperçu du site">
@@ -49,7 +49,7 @@
                 <section id="features">
                     <div class="title-block">
                         <h3 class="section-title">Fonctionnalités.</h3>
-                        <h4 class="section-description">INSAgenda ne cesse d'ajouter des fonctionnalités à sa plateforme.</h4>
+                        <h4 class="section-description">INSAgenda est focalisé sur la praticité et la personnalisation.</h4>
                     </div>
                     <div id="mosaic">
                         <div class="feature">
@@ -70,7 +70,7 @@
                         </div>
                         <div class="feature">
                             <img class="feature-illustration" src="/assets/elements/main-page/no-signal.webp" alt="illustration accessibilité sans réseau"/>
-                            <h5>Accessible sans réseau</h5>                            
+                            <h5>Accessible hors-ligne</h5>                            
                         </div>
                     </div>
                 </section> 
@@ -79,7 +79,7 @@
                 <section id="platforms">
                     <div class="title-block">
                         <h3 class="section-title">Plateformes.</h3>
-                        <h4 class="section-description">INSAgenda se doit d'être présent sur la majorité des plateformes.</h4>
+                        <h4 class="section-description">INSAgenda est présent sur la majorité des plateformes.</h4>
                     </div>
                     <div id="plarforms-container">
                         <div id="phone-part">
@@ -112,8 +112,9 @@
                 <section id="open-source">
                     <div class="title-block">
                         <h3 class="section-title">Open Source.</h3>
-                        <h4 class="section-description">Le code source de notre projet est disponible sur GitHub.</h4>
-                        <a id="github-link" href="https://github.com/INSAgenda">Accéder à GitHub.</a>
+                        <h4 class="section-description">Nous travaillons publiquement sur des plateformes ouvertes. Vous pouvez nous y rencontrer, proposer des idées, et même améliorer le logiciel INSAgenda.</h4>
+                        <a class="homepage-link" href="https://github.com/INSAgenda">Accéder à GitHub.</a>
+                        <a class="homepage-link" href="https://discord.gg/TpdbUyfcbJ">Accéder au Discord.</a>
                     </div>
                     
                     <img id="github-overview" src="/assets/elements/main-page/open-source.webp" alt="aperçu du github"/>
