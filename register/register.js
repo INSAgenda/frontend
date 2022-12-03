@@ -13,13 +13,7 @@ let stage = 1;
 
 /* AUTO-GENERATED SCRIPT HERE */
 
-// Autocomplete
-email.oninput = function(e) {
-    if (e.inputType == "insertText" && email.value.endsWith("@") && (email.value.split("@").length - 1) == 1) {
-        email.value = email.value.replace("@", "@insa-rouen.fr");
-        setTimeout(focus_next, 100);
-    }
-}
+email.oninput = function(e) { autocomplete_email_el(e) };
 
 // Submit function that can throw unhandled errors
 async function submit_inner() {

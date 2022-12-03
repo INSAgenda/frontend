@@ -6,13 +6,7 @@ let enable_password_el = document.getElementById("enable-password-input");
 let disable_password_el = document.getElementById("disable-password-input");
 let password_enabled = true;
 
-// Autocomplete 
-email.oninput = function(e) {
-    if (e.inputType == "insertText" && email.value.endsWith("@") && (email.value.split("@").length - 1) == 1) {
-        email.value = email.value.replace("@", "@insa-rouen.fr");
-        setTimeout(focus_next, 100);
-    }
-}
+email.oninput = function(e) { autocomplete_email_el(e) };
 
 // Enable/disable password
 enable_password_el.onclick = function() {
@@ -81,7 +75,7 @@ async function submit_without_password() {
         error_el.style.display = "block";
         return false;
     }
-    
+
     let response = await fetch('/api/auth/new-fast-login', {
         method: 'POST',
         body: "email=" + encodeURIComponent(email.value),
