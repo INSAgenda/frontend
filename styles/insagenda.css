@@ -3,7 +3,7 @@
 @import url('/assets/fonts/Roboto/css2.css');
 
 /* General */
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -17,11 +17,11 @@
     align-items: center;
 }
 
-body{
+body {
     background-color: var(--background);
 }
 
-a{
+a {
     cursor: pointer;
 }
 
@@ -112,18 +112,18 @@ header {
 
 /* Section title page */
 
-.section-page-title{
+.section-page-title {
     padding: 0 4vw 0 4vw;
     margin: 30px 0 0 0;
 }
 
-.page-title{
+.page-title {
     font-weight: bold;
     font-size: 1.5em;
     color: var(--text);
 }
 
-.divider-bar{
+.divider-bar {
     width: 114px;
     height: 6px;
     border-radius: 6px;
@@ -206,11 +206,11 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
 
 /* Mobile */
 
-@media screen and (max-width: 1000px){
-    .page-title{
+@media screen and (max-width: 1000px) {
+    .page-title {
         font-size: 1.3em;  
     }
-    .divider-bar{
+    .divider-bar {
         height: 4px;
         width: 85px;
     }
@@ -218,10 +218,6 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
     header {
         width: 96%;
         padding: 0 2%;
-    }
-
-    #EDT-button{
-        padding: 0.5rem 1.5rem;
     }
 
     .hide-mobile {

@@ -13,17 +13,6 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* Header */
-
-#EDT-button {
-    padding: 0 1rem;
-    font-size: 1.1rem;
-    width: min-content;
-    height: 2.4rem;
-    line-height: 2.4rem;
-    border-radius: 1.2rem;
-}
-
 /* For the NewHeader : */
 
 #header-name {
@@ -42,6 +31,7 @@ header {
     height: 7%;
     position: fixed;
 }
+
 /* HomeSection */
 
 #home-section {
@@ -83,17 +73,16 @@ header {
     max-width: 300px;
 }
 
-
 /* Nav */
 
-#main-page-nav{
+#main-page-nav {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 0.4rem;
 }
 
-.navigation-link{
+.navigation-link {
     font-size: 1.3em;
     font-weight: bold;
     color: var(--light);    
@@ -104,12 +93,12 @@ header {
     text-align: center;
 }
 
-.navigation-link:last-child{
+.navigation-link:last-child {
     display: none;
 }
 
-
 /* ROD */
+
 #steering-rod {
     display: flex;
     flex-direction: column;
@@ -124,43 +113,46 @@ header {
     padding-top: 1.5rem;
 }
 
-.h-rod{
+.h-rod {
     height: 6px;
 }
 
 /* ROUNDED */
-.nw-rounded, .sw-rounded, .se-rounded{
+
+.nw-rounded, .sw-rounded, .se-rounded {
     width: 30px;
     height: 30px;
 }
 
-.nw-rounded{
+.nw-rounded {
     border-top-left-radius: 100%;
     background-image: radial-gradient(circle at 30px 30px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 24px, var(--primary) 24px);
 }
 
-.sw-rounded{
+.sw-rounded {
     border-bottom-left-radius: 100%;
     background-image: radial-gradient(circle at 30px 0px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 24px, #AFAFAF 24px);
 }
 
-.se-rounded{
+.se-rounded {
     border-top-right-radius: 100%;
     background-image: radial-gradient(circle at 0px 30px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 24px, #AFAFAF 24px);
 }
 
 /* TOP ROD */
-#top-rod{
+
+#top-rod {
     display: flex;
 }
 
-#top-rod .h-rod{
+#top-rod .h-rod {
     width: 100%;
     border-radius: 0 3px 3px 0;
 }
 
 /* BOTTOM ROD */
-#bottom-rod{
+
+#bottom-rod {
     display: flex;
     align-items: flex-end;
 }
@@ -180,29 +172,28 @@ header {
 
 }
 
-
 /* Gradient color */
+
 #top-rod .h-rod {
     background: var(--primary);
 }
 
-
 /* All other main section */
 
-.main-content-title{
+.main-content-title {
     font-size: 2.5em;
     font-weight: bold;
     color: var(--primary);
 }
 
-.main-content-subtitle{
+.main-content-subtitle {
     font-size: 1.1em;
     font-weight: 500;
     color: var(--dark-text);
     max-width: 700px;
 }
 
-.dot-rod::before{
+.dot-rod::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -381,6 +372,7 @@ header {
     #main-page-content {
         padding: 0px 4% 0 5.3%;
     }
+    
     /* Nav */
     
     .navigation-link {
@@ -400,6 +392,7 @@ header {
     /* Features */
 
     /* Mosaic */
+
     #mosaic {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -426,6 +419,7 @@ header {
     }
 
     /* Platforms */
+    
     #plarforms-container {
         flex-direction: column;
     }
