@@ -327,6 +327,7 @@ header {
 }
 
 /* Open source */
+
 #github-overview {
     display: flex;
     width: 80vw;
@@ -334,12 +335,14 @@ header {
     margin: 2rem auto;
 }
 
-#github-link {
+.homepage-link {
     line-height: 2rem;
+    margin-right: 1rem;
     color: var(--dark-text);
 }
 
-/* Responsiv for mobiles */
+/* Responsive for mobile */
+
 @media screen and (max-width: 900px) {
     #home-section {
         flex-direction: column;
