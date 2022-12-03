@@ -28,7 +28,7 @@ disable_password_el.onclick = function() {
 
 // Submit the form when password is enabled
 async function submit_with_password() {
-    if (email.value == "") {
+    if (email.value.length == 0) {
         error_el.innerHTML = "Entrez votre adresse email.";
         error_el.style.display = "block";
         return false;
@@ -76,6 +76,12 @@ async function submit_with_password() {
 
 // Submit the form when password is disabled
 async function submit_without_password() {
+    if (email.value.length == 0) {
+        error_el.innerHTML = "Entrez votre adresse email.";
+        error_el.style.display = "block";
+        return false;
+    }
+    
     let response = await fetch('/api/auth/new-fast-login', {
         method: 'POST',
         body: "email=" + encodeURIComponent(email.value),
