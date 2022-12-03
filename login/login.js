@@ -6,27 +6,7 @@ let enable_password_el = document.getElementById("enable-password-input");
 let disable_password_el = document.getElementById("disable-password-input");
 let password_enabled = true;
 
-// Autocomplete 
-email.oninput = function(e) {
-    if (e.inputType == "insertText" && email.value.endsWith("@") && (email.value.split("@").length - 1) == 1) {
-        email.disabled = true;
-        let current_value = email.value;
-        let incoming_chars = "insa-rouen.fr";
-        let i = 0;
-        let interval = setInterval(function() {
-            current_value = current_value + incoming_chars[i];
-            email.value = current_value;
-            i++;
-            if (i == incoming_chars.length) {
-                clearInterval(interval); 
-                setTimeout(function() {
-                    focus_next();
-                    email.disabled = false;
-                }, 500);
-            }
-        }, 15);
-    }
-}
+email.oninput = function(e) { autocomplete_email_el(e) };
 
 // Enable/disable password
 enable_password_el.onclick = function() {
