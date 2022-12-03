@@ -9,8 +9,22 @@ let password_enabled = true;
 // Autocomplete 
 email.oninput = function(e) {
     if (e.inputType == "insertText" && email.value.endsWith("@") && (email.value.split("@").length - 1) == 1) {
-        email.value = email.value.replace("@", "@insa-rouen.fr");
-        setTimeout(focus_next, 100);
+        email.disabled = true;
+        let current_value = email.value;
+        let incoming_chars = "insa-rouen.fr";
+        let i = 0;
+        let interval = setInterval(function() {
+            current_value = current_value + incoming_chars[i];
+            email.value = current_value;
+            i++;
+            if (i == incoming_chars.length) {
+                clearInterval(interval); 
+                setTimeout(function() {
+                    focus_next();
+                    email.disabled = false;
+                }, 500);
+            }
+        }, 15);
     }
 }
 
@@ -81,7 +95,7 @@ async function submit_without_password() {
         error_el.style.display = "block";
         return false;
     }
-    
+
     let response = await fetch('/api/auth/new-fast-login', {
         method: 'POST',
         body: "email=" + encodeURIComponent(email.value),
