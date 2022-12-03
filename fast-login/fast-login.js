@@ -4,6 +4,7 @@ let api_p = p === "/invitation" ? "/api/auth/invitation" : "/api/auth/fast-login
 window.history.replaceState({}, document.title, p);
 let message = document.getElementById("message");
 let title = document.getElementById("title");
+let login_button = document.getElementsByClassName("primary-button")[0];
 
 (async () => {
     try {
@@ -34,6 +35,7 @@ let title = document.getElementById("title");
             title.innerText = "Échec";
             title.style.color = "red";
             message.innerText = json.message_fr;
+            login_button.style.display = "block";
         } else {
             throw new Error(await response.text());
         }
