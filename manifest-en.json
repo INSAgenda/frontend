@@ -76,7 +76,7 @@
         },
         {
             "name": "Settings",
-            "url": "/agenda#settings?ref=pwa",
+            "url": "/settings?ref=pwa",
             "description": "Open settings"
         }
     ]
