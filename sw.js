@@ -3,31 +3,50 @@ self.addEventListener('install', function(event) {
 });
   
 self.addEventListener('fetch', function(event) {
-    //console.debug('The service worker is serving the ressource...');
+    let request = event.request;
 
-    if (event.request.url.includes("/api/") || event.request.url.includes("zebi")) {
+    if (request.url.includes("/api/") || request.url.includes("zebi")) {
         return;
     }
 
-    event.respondWith(caches.match(event.request).then(function(response) {
+    // All these paths are handled by the same app, and we serve the same index.html file on them
+    let url = new URL(request.url);
+    if (request.destination == "document" && (request. url.pathname == "/settings" || url.pathname == "/settings.html" || url.pathname == "/settings/"
+        || url.pathname == "/change-password" || url.pathname == "/change-password.html" || url.pathname == "/change-password/"
+        || url.pathname == "/change-email" || url.pathname == "/change-email.html" || url.pathname == "/change-email/"
+        || url.pathname == "/change-group" || url.pathname == "/change-group.html" || url.pathname == "/change-group/"
+        || url.pathname == "/agenda" || url.pathname == "/agenda.html" || url.pathname == "/agenda/"
+        || url.pathname.startsWith("/survey/"))) {
+
+        request = new Request("/agenda", {
+            body: request.body,
+            cache: request.cache,
+            destination: request.destination,
+            headers: request.headers,
+            method: request.method,
+            priority: request.priority,
+            redirect: request.redirect,
+            url: new URL("/agenda", url.origin),
+        });
+    }
+
+    event.respondWith(caches.match(request).then(function(response) {
         if (response !== undefined) {
             return response;
         } else {
-            return fetch(event.request);
+            return fetch(request);
         }
     }));
 
-    event.waitUntil(
-        update(event.request).then(/*console.debug("...and the ressource has been updated.")*/)
-    );
+    event.waitUntil(update(request));
 });
 
 function update(request) {
-    return caches.open("v1").then(function (cache) {
-        return fetch(request).then(function (response) {
-            return cache.put(request, response.clone()).then(function () {
-                return response;
-            });
+    caches.open("v1").then(function (cache) {
+        fetch(request).then(function (response) {
+            if (response.status == 200) {
+                cache.put(request, response);
+            }
         });
     });
 }
