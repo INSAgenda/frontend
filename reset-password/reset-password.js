@@ -44,7 +44,7 @@ async function submit() {
         window.location.replace("/agenda");
     } else if (response.status == 400 || response.status == 500) {
         let json = await response.json();
-        error_el.innerHTML = json.message_fr; // TODO: display english messages
+        error_el.innerHTML = json.messages["fr"]; // TODO: display english messages
         error_el.style.display = "block";
     } else {
         alert("Erreur inconnue");

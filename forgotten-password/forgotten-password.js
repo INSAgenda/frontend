@@ -29,7 +29,7 @@ async function submit() {
         confirmation_el.style.display = "block";
     } else if (response.status == 400 || response.status == 500) {
         let json = await response.json();
-        error_el.innerHTML = json.message_fr; // TODO: display english messages
+        error_el.innerHTML = json.message["fr"]; // TODO: display english messages
         error_el.style.display = "block";
     } else {
         alert("Erreur inconnue");
