@@ -91,7 +91,11 @@ async function submit_inner() {
             error_el.style.display = "none";
             form.style.display = "initial";
         } else {
-            error_el.innerHTML = json.messages["fr"]; // TODO: display english messages
+            if (json.messages["fr"] !== undefined) {
+                error_el.innerText = json.messages["fr"];
+            } else {
+                error_el.innerText = json.message_fr;
+            }
             error_el.style.display = "block";
         }
     } else {
