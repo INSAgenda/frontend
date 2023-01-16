@@ -34,7 +34,11 @@ let login_button = document.getElementsByClassName("primary-button")[0];
             let json = await response.json();
             title.innerText = "Échec";
             title.style.color = "red";
-            message.innerText = json.message_fr;
+            if (typeof json.messages !== 'undefined') {
+                message.innerText = json.messages["fr"];
+            } else {
+                message.innerText = json.message_fr;
+            }
             login_button.style.display = "block";
         } else {
             throw new Error(await response.text());
