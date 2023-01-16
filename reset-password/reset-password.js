@@ -44,7 +44,7 @@ async function submit() {
         window.location.replace("/agenda");
     } else if (response.status == 400 || response.status == 500) {
         let json = await response.json();
-        if (json.messages["fr"] !== undefined) {
+        if (typeof json.messages !== 'undefined') {
             error_el.innerText = json.messages["fr"];
         } else {
             error_el.innerText = json.message_fr;

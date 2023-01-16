@@ -91,7 +91,7 @@ async function submit_inner() {
             error_el.style.display = "none";
             form.style.display = "initial";
         } else {
-            if (json.messages["fr"] !== undefined) {
+            if (typeof json.messages !== 'undefined') {
                 error_el.innerText = json.messages["fr"];
             } else {
                 error_el.innerText = json.message_fr;
