@@ -16,7 +16,11 @@ self.addEventListener('fetch', function(event) {
         || url.pathname == "/change-email" || url.pathname == "/change-email.html" || url.pathname == "/change-email/"
         || url.pathname == "/change-group" || url.pathname == "/change-group.html" || url.pathname == "/change-group/"
         || url.pathname == "/agenda" || url.pathname == "/agenda.html" || url.pathname == "/agenda/"
+        || url.pathname == "/email-verification" || url.pathname == "/email-verification.html" || url.pathname == "/email-verification/"
+        || url.pathname == "/notifications" || url.pathname == "/notifications.html" || url.pathname == "/notifications/"
+        || url.pathname == "/friends" || url.pathname == "/friends.html" || url.pathname == "/friends/"
         || url.pathname.startsWith("/survey/")
+        || url.pathname.startsWith("/friend-agenda/")
         || url.pathname.startsWith("/event/"))) {
 
         request = new Request("/agenda", {
