@@ -12,11 +12,7 @@ self.addEventListener('fetch', function(event) {
     // All these paths are handled by the same app, and we serve the same index.html file on them
     let url = new URL(request.url);
     if (request.destination == "document" && (request. url.pathname == "/settings" || url.pathname == "/settings.html" || url.pathname == "/settings/"
-        || url.pathname == "/change-password" || url.pathname == "/change-password.html" || url.pathname == "/change-password/"
-        || url.pathname == "/change-email" || url.pathname == "/change-email.html" || url.pathname == "/change-email/"
-        || url.pathname == "/change-group" || url.pathname == "/change-group.html" || url.pathname == "/change-group/"
         || url.pathname == "/agenda" || url.pathname == "/agenda.html" || url.pathname == "/agenda/"
-        || url.pathname == "/email-verification" || url.pathname == "/email-verification.html" || url.pathname == "/email-verification/"
         || url.pathname == "/notifications" || url.pathname == "/notifications.html" || url.pathname == "/notifications/"
         || url.pathname == "/friends" || url.pathname == "/friends.html" || url.pathname == "/friends/"
         || url.pathname.startsWith("/survey/")
@@ -49,7 +45,7 @@ self.addEventListener('fetch', function(event) {
 function update(request) {
     caches.open("v1").then(function (cache) {
         fetch(request).then(function (response) {
-            if (response.status == 200) {
+            if (response.status == 200 || response.status == 404) {
                 cache.put(request, response);
             }
         });
