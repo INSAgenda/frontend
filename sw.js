@@ -45,9 +45,7 @@ self.addEventListener('fetch', function(event) {
 function update(request) {
     caches.open("v1").then(function (cache) {
         fetch(request).then(function (response) {
-            if (response.status == 200 || response.status == 404) {
-                cache.put(request, response);
-            }
+            cache.put(request, response);
         });
     });
 }
