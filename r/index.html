@@ -8,16 +8,14 @@
     <div id="videoContainer"></div>
 
     <script>
-        // draw random between 0 and 1
         let rand = Math.random();
-        // create src to be rick1 if rand > 0.1 else rick2
-        let src = rand > 0.1 ? 'assets/rick1.mp4' : 'assets/rick2.mp4';
+        let src = rand > 0.1 ? '/assets/rick1.mp4' : '/assets/rick2.mp4';
 
         function createVideo() {
             var video = document.createElement('video');
             
             // Set video source and attributes
-            video.src = 'assets/rick1.mp4'; // Replace with your video file path
+            video.src = src;
             video.autoplay = true;
             video.controls = true; // Show video controls
             video.loop = true; // Loop the video
