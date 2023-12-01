@@ -6,7 +6,7 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
     let request = event.request;
 
-    if (request.url.includes("/api/") || request.url.includes("zebi")) {
+    if (request.url.includes("/api/") || request.url.includes("zebi") || request.url.includes("cas-login")) {
         return;
     }
 
