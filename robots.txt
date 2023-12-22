@@ -3,3 +3,5 @@ Allow: /
 Disallow: /private/
 
 Sitemap: https://insagenda.fr/sitemap.xml
+
+# Vires In Numeris
