@@ -14,7 +14,6 @@ self.addEventListener('fetch', function(event) {
     let url = new URL(request.url);
     if (request.destination == "document" && (request. url.pathname == "/settings" || url.pathname == "/settings.html" || url.pathname == "/settings/"
         || url.pathname == "/agenda" || url.pathname == "/agenda.html" || url.pathname == "/agenda/"
-        || url.pathname == "/mastodon" || url.pathname == "/mastodon" || url.pathname == "/mastodon/"
         || url.pathname == "/notifications" || url.pathname == "/notifications.html" || url.pathname == "/notifications/"
         || url.pathname == "/friends" || url.pathname == "/friends.html" || url.pathname == "/friends/"
         || url.pathname.startsWith("/survey/")
