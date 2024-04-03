@@ -13,6 +13,9 @@ const getColorPreference = () => {
 }
 
 document.reflectTheme = reflectPreference = function () {
+    let theme = document.firstElementChild.getAttribute('data-theme');
+    if (theme) return;
+
     if (localStorage.getItem(authoThemeKey) === 'true') {
         document.firstElementChild.setAttribute('data-theme', getSystemPreference());
     } else {
