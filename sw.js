@@ -16,6 +16,7 @@ self.addEventListener('fetch', function(event) {
         || url.pathname == "/agenda" || url.pathname == "/agenda.html" || url.pathname == "/agenda/"
         || url.pathname == "/mastodon" || url.pathname == "/mastodon.html" || url.pathname == "/mastodon/"
         || url.pathname == "/friends" || url.pathname == "/friends.html" || url.pathname == "/friends/"
+        || url.pathname == "/pixel-war" || url.pathname == "/pixel-war.html" || url.pathname == "/pixel-war/"
         || url.pathname.startsWith("/survey/")
         || url.pathname.startsWith("/friend-agenda/")
         || url.pathname.startsWith("/event/"))) {
