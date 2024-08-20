@@ -2,6 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /private/
 
-Sitemap: https://insagenda.fr/sitemap.xml
+Sitemap: https://insagenda.insa.lol/sitemap.xml
 
 # Vires In Numeris
